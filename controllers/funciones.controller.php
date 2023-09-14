@@ -77,4 +77,73 @@ class Funciones
 
 <?php
     }
+
+    static function nameImg($nameMethod = 'random', $tipo = 'png', $dato = 0)
+    {
+        switch ($nameMethod) {
+            case 'random':
+                $name = rand();
+                break;
+            case 'personal':
+                $name = $dato;
+                break;
+            case 'number':
+                $name = rand();
+                break;
+        }
+
+        if ($tipo != NULL) {
+            return $name . "." . $tipo;
+        } else {
+            return $name;
+        }
+    }
+
+    static function esImg($img)
+    {
+        if (getimagesize($img)) {
+            return true;
+        }
+        return false;
+    }
+
+    public function uploadImg($carpeta, $img, $tipe = array(), $size = null)
+    {
+        $msg = '';
+        if ($this->esImg($_FILES['img']['tmp_name'])) {
+            //mover img a la carpeta que le toca
+            $tama = $_FILES['img']['size'];
+            if ($tama <= $size || $size == null) {
+                if (in_array($_FILES['img']['type'], $tipe) || empty($tipe)) {
+                    move_uploaded_file($_FILES['img']['tmp_name'], $carpeta . $img);
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public function uploadImage()
+    {
+        $carpeta = '../views/imagenes/';
+        var_dump($_FILES);
+        $tipos = explode(', ', $_POST['tipo']);
+        $tipoImg = $_FILES['img']['type'];
+
+        if (!empty($_FILES['img']['tmp_name'])) {
+            $img = $this->nameImg('random', 'png', $_FILES['img']['name']);
+            // $subir = uploadImg($carpeta, $img, $tipos, $_POST['maxSize']);    //!Quita este comentario
+            if ($this->uploadImg($carpeta, $img, $tipos, $_POST['maxSize'])) {
+                $subir = true;
+            }
+        } else {
+            $img = 'default.png';
+            $subir = true;
+        }
+
+        // $campos = array('titulo', 'texto', 'categoria_id', 'imagen');
+        // $datos = array('titulo' => $titulo, 'texto' => $texto, 'categoia_id' => $cat_id, 'imagen' => $img);
+        // die();  //!Quita esto
+        return $titulo;
+    }
 }

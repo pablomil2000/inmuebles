@@ -1,7 +1,7 @@
 <!-- Hero Section Begin -->
 <?php
 include('modules/header.php');
-// include('modules/head.php');
+include('modules/head.php');
 ?>
 <!-- Header End -->
 

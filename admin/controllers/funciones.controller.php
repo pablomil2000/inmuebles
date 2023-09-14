@@ -8,35 +8,12 @@ class Funciones
         return hash($algor, $str);
     }
 
-    static public function isLogin($name = 'user', $redirect = 'login')
+    static public function isLogin($name = 'user', $redirect = 'home')
     {
         if (!isset($_SESSION[$name])) {
-
-            if (!is_null($redirect)) {
-                header('location:' . $redirect);
-?>
-                <script>
-                    document.location.href = '<?php echo $redirect; ?>';
-                </script>
-            <?php
-            }
+            header('location:' . $redirect);
         }
-        return true;
-    }
 
-    static public function isGuest($name = 'user', $redirect = 'home')
-    {
-        if (isset($_SESSION[$name])) {
-
-            if (!is_null($redirect)) {
-                header('location:' . $redirect);
-            ?>
-                <script>
-                    document.location.href = '<?php echo $redirect; ?>';
-                </script>
-        <?php
-            }
-        }
         return true;
     }
 
@@ -46,10 +23,10 @@ class Funciones
         return date($formato, strtotime($fecha));
     }
 
-    // Funciones::sweetAlert2(array('icon' => 'success', 'title' => '', 'text' => ''));
+
     static public function sweetAlert2($datos)
     {
-        ?>
+?>
         <script>
             Swal.fire({
                 icon: '<?= $datos['icon'] ?>',
@@ -57,7 +34,6 @@ class Funciones
                 text: '<?= $datos['text'] ?>',
 
             }).then((result) => {
-                console.log(result);
                 <?php
                 if (isset($datos['redirect'])) {
                 ?>
@@ -67,7 +43,7 @@ class Funciones
                 ?>
             })
         </script>
-<?php
+    <?php
     }
 
     static public function RandomString($long = 10)
@@ -88,5 +64,50 @@ class Funciones
 
         // var_dump($date);
         return $date;
+    }
+
+    static function JsRedirect($ruta = 'home')
+    {
+    ?>
+
+        <script>
+            window.location.href = "<?= $ruta ?>";
+        </script>
+
+
+<?php
+    }
+
+    static function uploadImage()
+    {
+        $targetDir = '../views/images/';
+        if (isset($_FILES['img']) && $_FILES['img']['tmp_name'] != '') {
+            $result = false;
+            $msg = '';
+
+            $fileName = Funciones::RandomString() . ".png";
+            $targetFilePath = $targetDir .  $fileName;
+            $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+
+            // Verificar si el archivo es una imagen
+            $allowTypes = array('jpg', 'jpeg', 'png', 'gif');
+            if (in_array($fileType, $allowTypes)) {
+                // Mover el archivo subido al directorio de destino
+                if (move_uploaded_file($_FILES["img"]["tmp_name"], $targetFilePath)) {
+                    $result = true;
+                } else {
+                    $msg = "Hubo un error al subir el archivo.";
+                }
+            } else {
+                $msg = "Solo se permiten subir archivos de imagen (jpg, jpeg, png, gif).";
+            }
+
+            if ($result) {
+                Funciones::sweetAlert2(array("icon" => "success", 'title' => 'Imagen subida', 'text' => ''));
+                return  $fileName;
+            } else {
+                Funciones::sweetAlert2(array('icon' => 'error', 'title' => 'Datos incorrectos', 'text' => $msg));
+            }
+        }
     }
 }
