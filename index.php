@@ -13,7 +13,9 @@ require_once('controllers/carrito.controller.php');     //*Core
 require_once('controllers/validar.controller.php');     //*Core
 
 require_once('controllers/user.controller.php');
-
+require_once('controllers/habitaciones.controller.php');
+require_once('controllers/Inmueble.controller.php');
+require_once('controllers/Localizacion.controller.php');
 
 //? Modelos
 require_once('models/conexion.model.php');              //*Core

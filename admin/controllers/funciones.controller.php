@@ -78,9 +78,8 @@ class Funciones
 <?php
     }
 
-    static function uploadImage()
+    static function uploadImage($targetDir)
     {
-        $targetDir = '../views/images/';
         if (isset($_FILES['img']) && $_FILES['img']['tmp_name'] != '') {
             $result = false;
             $msg = '';

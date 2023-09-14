@@ -9,8 +9,11 @@ class habitacionCtrl extends CrudCtrl
 
         $Funciones = new Funciones();
 
-        $datos2['imagen'] = $Funciones->uploadImage();
-        // var_dump($datos2, $campos);
+        $datos2['imagen'] = $Funciones->uploadImage("../views/images/");
+        $datos2['text_intro'] = $datos['text_intro'];
+        $datos2['text'] = $datos['text'];
+
+        var_dump($datos2, $campos);
 
         return CrudMdl::insert($this->tabla, $campos, $datos2);
     }

@@ -12,15 +12,15 @@
             <ul class="navbar-nav">
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="Home">Home</a>
+                    <a class="nav-link active" href="home">Home</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link " href="Propiedades">Propiedades</a>
+                    <a class="nav-link " href="propiedades">Propiedades</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link " href="Contacto">Contacto</a>
+                    <a class="nav-link " href="contacto">Contacto</a>
                 </li>
 
             </ul>

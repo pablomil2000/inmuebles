@@ -13,5 +13,9 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="views/dist/css/adminlte.min.css">
 
+    <!-- Sweetalert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
 </head>

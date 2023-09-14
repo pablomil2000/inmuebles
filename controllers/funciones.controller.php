@@ -122,28 +122,4 @@ class Funciones
         }
         return false;
     }
-
-    public function uploadImage()
-    {
-        $carpeta = '../views/imagenes/';
-        var_dump($_FILES);
-        $tipos = explode(', ', $_POST['tipo']);
-        $tipoImg = $_FILES['img']['type'];
-
-        if (!empty($_FILES['img']['tmp_name'])) {
-            $img = $this->nameImg('random', 'png', $_FILES['img']['name']);
-            // $subir = uploadImg($carpeta, $img, $tipos, $_POST['maxSize']);    //!Quita este comentario
-            if ($this->uploadImg($carpeta, $img, $tipos, $_POST['maxSize'])) {
-                $subir = true;
-            }
-        } else {
-            $img = 'default.png';
-            $subir = true;
-        }
-
-        // $campos = array('titulo', 'texto', 'categoria_id', 'imagen');
-        // $datos = array('titulo' => $titulo, 'texto' => $texto, 'categoia_id' => $cat_id, 'imagen' => $img);
-        // die();  //!Quita esto
-        return $titulo;
-    }
 }

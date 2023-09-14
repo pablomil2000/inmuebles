@@ -3,6 +3,8 @@
 $habitacionesCtrl = new habitacionCtrl('habitaciones');
 $inmuebleCtrl = new InmuebleCtrl('inmuebles');
 $localizationCtrl = new LocalizacionCtrl('localizacion');
-$habitacionesCarrusel = $habitacionesCtrl->getAll();
+$habitacion = $habitacionesCtrl->getById(array('id' => $_GET['slug']));
 
-include('views/partials/home.view.php');
+var_dump($habitacion);
+
+include('views/partials/habitacion.view.php');

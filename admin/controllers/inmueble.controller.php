@@ -10,7 +10,7 @@ class inmueblesCtrl extends CrudCtrl
 
         $Funciones = new Funciones();
 
-        $datos2['imagen'] = $Funciones->uploadImage();
+        $datos2['imagen'] = $Funciones->uploadImage('../views/images/');
 
         // var_dump($datos2, $campos);
         return CrudMdl::insert($this->tabla, $campos, $datos2);

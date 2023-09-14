@@ -89,13 +89,26 @@
                 <form action="#" method="POST" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="username" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                        <input type="text_intro" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="precio" class="form-label">Texto introduccion</label>
+                        <input class="form-control" type="text" name="text_intro" min="0">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="precio" class="form-label">Texto</label>
+                        <textarea name="text" class="form-control" id="" cols="30" rows="10">
+
+                        </textarea>
                     </div>
 
                     <div class="mb-3">
                         <label for="precio" class="form-label">Precio</label>
                         <input class="form-control" type="number" name="precio" min="0">
                     </div>
+
                     <div class="mb-3">
                         <label for="password" class="form-label">Inmueble</label>
                         <select class="form-control" name="inmueble_id">
