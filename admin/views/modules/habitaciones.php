@@ -1,16 +1,14 @@
 <?php
 
+$habitacionCtrl = new habitacionCtrl('habitaciones');
 $inmueblesCtrl = new inmueblesCtrl('inmuebles');
-$localizacionesCtrl = new localizacionesCtrl('localizacion');
-$localizaciones = $localizacionesCtrl->getAll();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $inmueblesCtrl->insertInmueble(array('nombre', 'localizacion_id', 'imagen'), $_POST);
-    // $inmueblesCtrl->insert(array('nombre', 'password'), array($_POST['nombre'], $_POST['password']));
-    Funciones::sweetAlert2(array('icon' => 'success', 'title' => 'Usuario imueble', 'text' => ''));
+    $habitacionCtrl->insertImg(array('nombre', 'inmueble_id', 'precio', 'imagen'), $_POST);
+    Funciones::sweetAlert2(array('icon' => 'success', 'title' => 'Habitacion creada', 'text' => ''));
 }
 
-
 $inmuebles = $inmueblesCtrl->getAll();
+$habitaciones = $habitacionCtrl->getAll();
 
 
-include('views/partials/inmuebles.view.php');
+include('views/partials/habitaciones.view.php');

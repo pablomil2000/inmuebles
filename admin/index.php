@@ -12,6 +12,8 @@ require_once('controllers/validar.controller.php');     //*Core
 require_once('controllers/user.controller.php');
 require_once('controllers/localizaciones.controller.php');
 require_once('controllers/inmueble.controller.php');
+require_once('controllers/habitaciones.controller.php');
+
 
 //? Modelos
 require_once('models/crud.model.php');  //*Core
