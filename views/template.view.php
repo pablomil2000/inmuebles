@@ -1,7 +1,7 @@
 <!-- Hero Section Begin -->
 <?php
 include('modules/header.php');
-// include('modules/head.php');
+include('modules/head.php');
 ?>
 <!-- Header End -->
 
@@ -20,7 +20,7 @@ if (isset($_GET['ruta'])) {
 
 // require_once('views/modules/' . $ruta . '.php');
 
-PlantillaCtr::whiteList('home', 'inmuebles', 'login', 'inmueble', 'habitacion');
+PlantillaCtr::whiteList('home', 'inmuebles', 'login', 'inmueble', 'habitaciones', 'habitacion');
 ?>
 
 <!-- Footer Section Begin -->

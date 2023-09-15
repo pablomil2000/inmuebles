@@ -13,7 +13,7 @@ class habitacionCtrl extends CrudCtrl
         $datos2['text_intro'] = $datos['text_intro'];
         $datos2['text'] = $datos['text'];
 
-        var_dump($datos2, $campos);
+        //var_dump($datos2, $campos);
 
         return CrudMdl::insert($this->tabla, $campos, $datos2);
     }

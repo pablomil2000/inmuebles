@@ -7,17 +7,17 @@
                 <div class="col-md-12 col-lg-8">
                     <div class="title-single-box">
                         <h1 class="title-single"><?= $habitacion[0]['nombre'] ?></h1>
-                        <span class="color-text-a">Habitaciones</span>
+                        <span class="color-text-a"><a href="index.php?ruta=inmueble&slug=<?= $habitacion[0]['inmueble_id'] ?>">Mas habitaciones</a></span>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-4">
                     <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="#">Home</a>
+                                <a href="home">Home</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                Habitaciones
+                                <a href="habitaciones">Habitaciones</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 <?= $habitacion[0]['nombre'] ?>
@@ -43,26 +43,20 @@
                         <ul class="list-inline text-center color-a">
                             <li class="list-inline-item mr-2">
                                 <strong>Zona: </strong>
-                                <span class="color-text-a">Travel</span>
+                                <span class="color-text-a"><?= $zona[0]['nombre'] ?></span>
                             </li>
                             <li class="list-inline-item">
-                                <strong>Date: </strong>
-                                <span class="color-text-a">19 Apr. 2017</span>
+                                <strong>precio: </strong>
+                                <span class="color-text-a"><?= $habitacion[0]['precio'] ?> €/mes</span>
                             </li>
                         </ul>
                     </div>
                     <div class="post-content color-text-a">
                         <p class="post-intro">
-                            Sed porttitor lectus nibh. Lorem ipsum dolor sit amet, consectetur
-                            <strong>adipiscing</strong> elit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-                            Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+                            <?= $habitacion[0]['text_intro'] ?>
                         </p>
                         <p>
-                            Pellentesque in ipsum id orci porta dapibus. Curabitur non nulla sit amet nisl tempus convallis quis ac
-                            lectus. Curabitur
-                            non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Curabitur non
-                            nulla sit amet nisl tempus convallis quis ac lectus. Donec rutrum congue leo eget malesuada.
-                            Quisque velit nisi.
+                            <?= $habitacion[0]['text'] ?>
                         </p>
                     </div>
                 </div>
