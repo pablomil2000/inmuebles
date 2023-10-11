@@ -9,7 +9,7 @@
             $inmueble = $inmuebleCtrl->getById(array('id' => $habitacion['inmueble_id']));
             $localizacion = $localizationCtrl->getById(array('id' => $inmueble[0]['localizacion_id']));
         ?>
-            <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(views/images/<?= $habitacion['imagen'] ?>)">
+            <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(views/images/habitacion/<?= $habitacion['imagen'] ?>)">
                 <div class="overlay overlay-a"></div>
                 <div class="intro-content display-table">
                     <div class="table-cell">

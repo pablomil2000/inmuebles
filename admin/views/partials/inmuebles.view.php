@@ -27,12 +27,13 @@
                 </button>
             </div>
             <div class="card-body">
-                <table class="table">
+                <table class="table" id="datatable">
                     <thead>
                         <tr>
                             <th>Id</th>
                             <th>Nombre</th>
                             <th>Imagen</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,7 +43,8 @@
                             <tr>
                                 <td scope="row"><?= $inmueble['id'] ?></td>
                                 <td><?= $inmueble['nombre'] ?></td>
-                                <td><img src="../views/images/<?= $inmueble['imagen'] ?>" alt="<?= $inmueble['nombre'] ?>" height="150px"></td>
+                                <td><img src="../views/images/inmuebles/<?= $inmueble['imagen'] ?>" alt="<?= $inmueble['nombre'] ?>" height="150px"></td>
+                                <td><a href="index.php?ruta=editinmuebles&id=<?= $inmueble['id'] ?>"><i class="fa-solid fa-pencil"></i></a></td>
                             </tr>
                         <?php
                         }
@@ -108,3 +110,5 @@
     <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
+
+<script src="views/dist/js/datatable.js"></script>

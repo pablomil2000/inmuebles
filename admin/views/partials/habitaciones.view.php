@@ -27,7 +27,7 @@
                 </button>
             </div>
             <div class="card-body">
-                <table class="table">
+                <table class="table" id="datatable">
                     <thead>
                         <tr>
                             <th>Id</th>
@@ -35,6 +35,8 @@
                             <th>Imagen</th>
                             <th>Precio</th>
                             <th>Inmueble</th>
+                            <th>Disponible</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -44,21 +46,36 @@
                             <tr>
                                 <td scope="row"><?= $habitacion['id'] ?></td>
                                 <td><?= $habitacion['nombre'] ?></td>
-                                <td><img src="../views/images/<?= $habitacion['imagen'] ?>" alt="<?= $habitacion['nombre'] ?>" height="150px"></td>
+                                <td><img src="../views/images/habitacion/<?= $habitacion['imagen'] ?>" alt="<?= $habitacion['nombre'] ?>" height="150px"></td>
                                 <td><?= $habitacion['precio'] ?> €</td>
                                 <td>
                                     <?php
-                                    $habitacion['inmueble_id'];
                                     $inmueble = $inmueblesCtrl->getById(array('id' => $habitacion['inmueble_id']));
                                     ?>
                                     <p class="row"><?= $inmueble[0]['nombre'] ?></p>
-                                    <p class="row"><img src="../views/images/<?= $inmueble[0]['imagen'] ?>" alt="<?= $inmueble[0]['nombre'] ?>" height="150px"></p>
+                                    <p class="row"><img src="../views/images/inmuebles/<?= $inmueble[0]['imagen'] ?>" alt="<?= $inmueble[0]['nombre'] ?>" height="150px"></p>
+                                </td>
+                                <td>
+                                    <?php
+                                    if ($habitacion['disponible']) {
+                                    ?>
+                                        <button type="button" class="btn btn-outline-success">Disponible</button>
+                                    <?php
+                                    } else {
+                                    ?>
+                                        <button type="button" class="btn btn-outline-danger">No disponible</button>
+                                    <?php
+                                    }
+                                    ?>
+                                </td>
+                                <td>
+                                    <a href="index.php?ruta=edithabitaciones&id=<?= $habitacion['id'] ?>"><i class="fa-solid fa-pencil"></i></a>
+                                    <a href="index.php?ruta=deletehabitaciones&id=<?= $habitacion['id'] ?>"><i class="fa-solid fa-trash"></i></a>
                                 </td>
                             </tr>
                         <?php
                         }
                         ?>
-
                     </tbody>
                 </table>
             </div>
@@ -137,3 +154,5 @@
     <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
+
+<script src="views/dist/js/datatable.js"></script>

@@ -7,7 +7,7 @@ class Conexion
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $dbname = "inmobiliaria";
+        $dbname = "inmuebles";
 
         $conexion = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $conexion->exec("set names utf8");

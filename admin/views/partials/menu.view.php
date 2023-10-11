@@ -8,10 +8,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="../../index3.html" class="nav-link">Inicio</a>
-                </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="home" class="nav-link">Inicio</a>
                 </li>
             </ul>
 
@@ -29,7 +26,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="views/index3.html" class="brand-link">
+            <a href="home" class="brand-link">
                 <img src="views/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">Neptuno MVC</span>
             </a>
@@ -42,7 +39,7 @@
                         <img src="views/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Administrador</a>
+                        <a href="#" class="d-block"><?= $user[0]['nombre'] ?></a>
                     </div>
                 </div>
 

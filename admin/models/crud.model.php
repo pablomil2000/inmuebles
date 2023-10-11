@@ -78,6 +78,7 @@ class CrudMdl
 
     static public function update($tabla, $datos, $id)
     {
+        // var_dump($datos);
 
         $c = Conexion::conectar();
         $sql = "UPDATE $tabla SET ";

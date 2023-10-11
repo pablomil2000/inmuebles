@@ -4,7 +4,32 @@ $habitacionesCtrl = new habitacionCtrl('habitaciones');
 $inmuebleCtrl = new InmuebleCtrl('inmuebles');
 $localizationCtrl = new LocalizacionCtrl('localizacion');
 
-$habitacion = $habitacionesCtrl->getAll();
+// $habitaciones = $habitacionesCtrl->getAll();
 
-// $inmueble = $inmuebleCtrl->getById(array('id' => $habitacion[0]['inmueble_id']));
-// $zona = $localizationCtrl->getById(array('id' => $inmueble[0]['localizacion_id']));
+$sql = 'SELECT h.* FROM `inmuebles` i JOIN habitaciones h ON i.id LIKE h.inmueble_id ';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $sql .= ' WHERE ';
+    // var_dump($_POST);
+
+    if (isset($_POST['keyword'])) {
+        $sql .= " h.nombre LIKE '%" . $_POST['keyword'] . "%' AND";
+    }
+
+    if (isset($_POST['zona'])) {
+        $sql .= " localizacion_id LIKE '" . $_POST['zona'] . "' AND";
+    }
+
+    if (isset($_POST['minPrice']) && $_POST['minPrice'] != '%') {
+        $sql .= " precio <= '" . $_POST['minPrice'] . "' AND";
+    }
+
+    $sql = substr($sql, 0, -3);
+}
+
+$sql .= ' GROUP BY i.id';
+var_dump($sql);
+$habitaciones = $habitacionesCtrl->raw($sql)->fetchAll();
+
+
+include('views/partials/habitaciones.view.php');

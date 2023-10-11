@@ -107,6 +107,13 @@ class Funciones
             } else {
                 Funciones::sweetAlert2(array('icon' => 'error', 'title' => 'Datos incorrectos', 'text' => $msg));
             }
+        } else {
+            return 'default.png';
         }
+    }
+
+    static function deleteImage($targetImg)
+    {
+        return unlink($targetImg);
     }
 }

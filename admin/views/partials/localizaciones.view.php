@@ -32,6 +32,7 @@
                         <tr>
                             <th>Id</th>
                             <th>Nombre</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -41,6 +42,7 @@
                             <tr>
                                 <td scope="row"><?= $Localizacion['id'] ?></td>
                                 <td><?= $Localizacion['nombre'] ?></td>
+                                <td><a href="index.php?ruta=editLocation&id=<?= $Localizacion['id'] ?>"><i class="fa-solid fa-pencil"></i></a></td>
                             </tr>
                         <?php
                         }

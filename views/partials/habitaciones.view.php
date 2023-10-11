@@ -1,22 +1,23 @@
 <main id="main">
+
     <!-- ======= Intro Single ======= -->
     <section class="intro-single">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-8">
                     <div class="title-single-box">
-                        <h1 class="title-single">Inmueble</h1>
-                        <span class="color-text-a"><?= $zona[0]['nombre'] ?></span>
+                        <h1 class="title-single">Habitaciones</h1>
+                        <!-- <span class="color-text-a">Grid News</span> -->
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-4">
                     <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="index.html">Home</a>
+                                <a href="home">Home</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                News Grid
+                                Habitaciones
                             </li>
                         </ol>
                     </nav>
@@ -25,50 +26,54 @@
         </div>
     </section><!-- End Intro Single-->
 
-    <section class="news-single nav-arrow-b mb-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="news-img-box">
-                        <img src="views/images/inmuebles/<?= $inmueble[0]['imagen'] ?>" alt="" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- End News Single-->
-
     <!-- =======  Blog Grid ======= -->
     <section class="news-grid grid">
         <div class="container">
             <div class="row">
+
                 <?php
                 foreach ($habitaciones as $key => $habitacion) {
+
+                    $inmueble = $inmuebleCtrl->getById(array('id' => $habitacion['inmueble_id']));
+                    $zona = $localizationCtrl->getById(array('id' => $inmueble[0]['localizacion_id']));
+
                 ?>
                     <div class="col-md-4">
-                        <div class="card-box-b card-shadow news-box">
+                        <div class="card-box-b card-shadow news-box" style="height: 40vh;">
                             <div class="img-box-b">
-                                <img src="views/images/habitacion/<?= $habitacion['imagen'] ?>" alt="" class="img-b img-fluid">
+                                <img src="views/images/habitacion/<?= $habitacion['imagen'] ?>" alt="" class="img-b img-fluid" width="100%">
                             </div>
                             <div class="card-overlay">
                                 <div class="card-header-b">
+                                    <div class="card-category-b">
+                                        <!-- <a href="#" class="category-b">Travel</a> -->
+                                    </div>
                                     <div class="card-title-b">
                                         <h2 class="title-2">
-                                            <a href="index.php?ruta=habitacion&slug=<?= $habitacion['id'] ?>"><?= $habitacion['nombre'] ?></a>
+                                            <a href="index.php?ruta=habitacion&slug=<?= $habitacion['id'] ?>">
+                                                <?= $habitacion['nombre'] ?>
+                                            </a>
                                         </h2>
+                                        <span class="date-b">
+                                            Zona: <?= $zona[0]['nombre'] ?>
+                                        </span>
                                     </div>
                                     <div class="card-date">
-                                        <span class="date-b"><?= $habitacion['precio'] ?> €/mes</span>
+                                        <span class="date-b">
+                                            <?= $habitacion['precio'] ?> €/mes
+                                        </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 <?php
                 }
                 ?>
+
             </div>
-            <div class="row">
+
+            <div class="row d-flex">
                 <div class="col-sm-12">
                     <nav class="pagination-a">
                         <ul class="pagination justify-content-end">

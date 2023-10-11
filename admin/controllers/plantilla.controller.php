@@ -12,8 +12,9 @@ class PlantillaCtr
 
         $redirect = 'home';
         $validas1[] = 'home';
-
+        $ruta = 'home';
         if (isset($_GET['ruta'])) {
+
             $ruta = Validar::vlt_String($_GET['ruta']);
 
             if (in_array($ruta, $validas1)) {

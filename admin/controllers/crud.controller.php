@@ -42,7 +42,7 @@ class CrudCtrl
         return CrudMdl::update($this->tabla, $datos, $id);
     }
 
-    function delete($datos)
+    public function delete($datos)
     {
         return CrudMdl::delete($this->tabla, $datos);
     }

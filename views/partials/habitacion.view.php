@@ -35,7 +35,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="news-img-box">
-                        <img src="views/images/<?= $habitacion[0]['imagen'] ?>" alt="" class="img-fluid">
+                        <img src="views/images/habitacion/<?= $habitacion[0]['imagen'] ?>" alt="" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">

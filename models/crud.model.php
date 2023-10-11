@@ -105,4 +105,11 @@ class CrudMdl
         $stmt->execute();
         return $stmt->rowCount();
     }
+
+    static public function raw($sql)
+    {
+        $c = Conexion::conectar();
+        $query = $c->query($sql);
+        return $query;
+    }
 }
