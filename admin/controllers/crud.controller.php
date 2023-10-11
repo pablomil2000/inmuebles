@@ -42,6 +42,11 @@ class CrudCtrl
         return CrudMdl::update($this->tabla, $datos, $id);
     }
 
+    public function update2($datos, $condiciones)
+    {
+        return CrudMdl::update2($this->tabla, $datos, $condiciones);
+    }
+
     public function delete($datos)
     {
         return CrudMdl::delete($this->tabla, $datos);

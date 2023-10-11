@@ -11,8 +11,7 @@ $galeriaCtrl = new galeriaCtrl('galeria');
 $Funciones = new Funciones();
 
 
-$habitacion = $habitacionCtrl->getById(array('id' => $id));
-$inmuebles = $inmueblesCtrl->getAll();
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // $habitacionCtrl->updateImg($habitacion, array('nombre', 'inmueble_id', 'precio', 'imagen', 'text_intro', 'text'), $_POST);
@@ -21,12 +20,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             mkdir("../views/images/habitacion/$id");
         }
         $datos2['name'] = $Funciones->uploadImage("../views/images/habitacion/$id/");
-        $datos2['inmueble_id'] = $id;
-        $galeriaCtrl->insert(array('name', 'inmueble_id'), $datos2);
+        $datos2['habitacion_id'] = $id;
+        $galeriaCtrl->insert(array('name', 'habitacion_id'), $datos2);
     }
 
     Funciones::sweetAlert2(array('icon' => 'success', 'title' => 'Habitacion actualizada', 'text' => ''));
 }
+
+
+$habitacion = $habitacionCtrl->getById(array('id' => $id));
+$inmuebles = $inmueblesCtrl->getAll();
+$galerias = $galeriaCtrl->getById(array('habitacion_id' => $id));
+
 
 $habitacion = $habitacionCtrl->getById(array('id' => $id));
 

@@ -94,6 +94,24 @@ class CrudMdl
         return $c->exec($sql);
     }
 
+    static public function update2($tabla, $datos, $condiciones)
+    {
+        // var_dump($datos);
+
+        $c = Conexion::conectar();
+        $sql = "UPDATE $tabla SET ";
+
+
+        foreach ($datos as $campo => $value) {
+            $sql .= "$campo = '$value', ";
+        }
+
+        $sql = rtrim($sql, ", ") . " ";
+
+        $sql .= "WHERE $condiciones";
+        return $c->exec($sql);
+    }
+
     static public function delete($tabla, $datos)
     {
         $c = Conexion::conectar();

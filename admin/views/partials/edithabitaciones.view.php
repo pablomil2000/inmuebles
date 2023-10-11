@@ -72,8 +72,38 @@
                             No disponible
                         </label>
                     </div>
-                    <div class="mb-3 col-12">
+                    <div class="mb-3 col-6">
                         <input class="form-control" type="file" name="img" id="">
+                    </div>
+                    <div class="mb-3 col-6">
+                        <div class="d-flex">
+                            <?php
+                            foreach ($galerias as $key => $galeria) {
+                            ?>
+                                <div class="card m-3" style="width: 18rem;">
+                                    <img class="card-img-top" src="<?= $galeriaCtrl->getImage($id, $galeria['name']) ?>" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            <?php
+
+                                            if ($galeria['destacada']) {
+                                            ?>
+                                                <i class="fa-solid fa-star"></i>
+                                            <?php
+                                            } else {
+                                            ?>
+                                                <a href="index.php?ruta=destacar&id=<?= $galeria['id'] ?>"><i class="fa-regular fa-star"></i></a>
+                                            <?php
+                                            }
+                                            ?>
+                                        </p>
+                                    </div>
+                                </div>
+                            <?php
+                            }
+                            ?>
+
+                        </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Actualizar inmueble</button>
                 </form>
