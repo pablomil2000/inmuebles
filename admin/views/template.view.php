@@ -8,7 +8,7 @@
 Funciones::isLogin('admin', '../login');
 
 
-include('views/modules/menu.php');
+// include('views/modules/menu.php');
 
 //<!-- Content start -->
 PlantillaCtr::whiteList(array('admin', 'logout'), true, array('admin', 'usuarios', 'localizaciones', 'inmuebles', 'habitaciones', 'editLocation', 'edithabitaciones', 'editinmuebles', 'deletehabitaciones'));

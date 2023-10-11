@@ -13,11 +13,11 @@ require_once('controllers/user.controller.php');
 require_once('controllers/localizaciones.controller.php');
 require_once('controllers/inmueble.controller.php');
 require_once('controllers/habitaciones.controller.php');
+require_once('controllers/galeria.controller.php');
 
 
 //? Modelos
 require_once('models/crud.model.php');  //*Core
-
 
 
 PlantillaCtr::load();

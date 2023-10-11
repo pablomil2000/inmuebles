@@ -46,7 +46,7 @@
                             <tr>
                                 <td scope="row"><?= $habitacion['id'] ?></td>
                                 <td><?= $habitacion['nombre'] ?></td>
-                                <td><img src="../views/images/habitacion/<?= $habitacion['imagen'] ?>" alt="<?= $habitacion['nombre'] ?>" height="150px"></td>
+                                <td><img src="<?= $galeriaCtrl->getDest($habitacion['id']) ?>" alt="<?= $habitacion['nombre'] ?>" height="150px"></td>
                                 <td><?= $habitacion['precio'] ?> €</td>
                                 <td>
                                     <?php
