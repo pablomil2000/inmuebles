@@ -88,7 +88,7 @@
 
                                             if ($galeria['destacada']) {
                                             ?>
-                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star text-primary"></i>
                                             <?php
                                             } else {
                                             ?>
@@ -96,6 +96,7 @@
                                             <?php
                                             }
                                             ?>
+                                            <a href="index.php?ruta=deleteimage&id=<?= $galeria['id'] ?>"><i class="fa-solid fa-trash"></i></a>
                                         </p>
                                     </div>
                                 </div>
