@@ -9,29 +9,32 @@
             $inmueble = $inmuebleCtrl->getById(array('id' => $habitacion['inmueble_id']));
             $localizacion = $localizationCtrl->getById(array('id' => $inmueble[0]['localizacion_id']));
         ?>
-            <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(views/images/habitacion/<?= $habitacion['imagen'] ?>)">
-                <div class="overlay overlay-a"></div>
-                <div class="intro-content display-table">
-                    <div class="table-cell">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-8">
-                                    <div class="intro-body">
-                                        <p class="intro-title-top"><?= $localizacion[0]['nombre'] ?>
-                                        </p>
-                                        <h1 class="intro-title mb-4 ">
-                                            <span class="color-b"><?= $habitacion['nombre'] ?></span>
-                                        </h1>
-                                        <p class="intro-subtitle intro-price">
-                                            <a href="index.php?ruta=habitacion&slug=<?= $habitacion['id'] ?>"><span class="price-a">Desde | <?= $habitacion['precio'] ?> €</span></a>
-                                        </p>
+            <a href="index.php?ruta=habitacion&slug=<?= $habitacion['id'] ?>">
+
+                <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(<?= $galeriaCtrl->getDest($habitacion['id']) ?>)">
+                    <div class="overlay overlay-a"></div>
+                    <div class="intro-content display-table">
+                        <div class="table-cell">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <div class="intro-body">
+                                            <p class="intro-title-top"><?= $localizacion[0]['nombre'] ?>
+                                            </p>
+                                            <h1 class="intro-title mb-4 ">
+                                                <span class="color-b"><?= $habitacion['nombre'] ?></span>
+                                            </h1>
+                                            <p class="intro-subtitle intro-price">
+                                                <a href="index.php?ruta=habitacion&slug=<?= $habitacion['id'] ?>"><span class="price-a">Desde | <?= $habitacion['precio'] ?> €</span></a>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
         <?php
         }
         ?>
@@ -59,56 +62,63 @@
 
         <div id="property-carousel" class="swiper">
             <div class="swiper-wrapper">
-                <div class="carousel-item-b swiper-slide">
-                    <div class="card-box-a card-shadow">
-                        <div class="img-box-a">
-                            <img src="assets/img/property-10.jpg" alt="" class="img-a img-fluid">
-                        </div>
-                        <div class="card-overlay">
-                            <div class="card-overlay-a-content">
-                                <div class="card-header-a">
-                                    <h2 class="card-title-a">
-                                        <a href="property-single.html">204 Montal
-                                            <br /> South Bela Two</a>
-                                    </h2>
-                                </div>
-                                <div class="card-body-a">
-                                    <div class="price-box d-flex">
-                                        <span class="price-a">rent | $ 12.000</span>
+                <?php
+                foreach ($haitacionesDestacadas as $key => $habitacion) {
+                ?>
+                    <div class="carousel-item-b swiper-slide">
+                        <div class="card-box-a card-shadow">
+                            <div class="">
+                                <img src="<?= $galeriaCtrl->getDest($habitacion['id']) ?>" alt="" class="img-a img-fluid">
+                            </div>
+                            <div class="card-overlay">
+                                <div class="card-overlay-a-content">
+                                    <div class="card-header-a">
+                                        <h2 class="card-title-a">
+                                            <a href="property-single.html"><?= $habitacion["nombre"] ?></a>
+                                        </h2>
                                     </div>
-                                    <a href="property-single.html" class="link-a">Click here to view
-                                        <span class="bi bi-chevron-right"></span>
-                                    </a>
-                                </div>
-                                <div class="card-footer-a">
-                                    <ul class="card-info d-flex justify-content-around">
-                                        <li>
-                                            <h4 class="card-info-title">Area</h4>
-                                            <span>340m
-                                                <sup>2</sup>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <h4 class="card-info-title">Beds</h4>
-                                            <span>2</span>
-                                        </li>
-                                        <li>
-                                            <h4 class="card-info-title">Baths</h4>
-                                            <span>4</span>
-                                        </li>
-                                        <li>
-                                            <h4 class="card-info-title">Garages</h4>
-                                            <span>1</span>
-                                        </li>
-                                    </ul>
+                                    <div class="card-body-a">
+                                        <div class="price-box d-flex">
+                                            <span class="price-a">rent | <?= $habitacion['precio'] ?> €</span>
+                                        </div>
+                                        <a href="property-single.html" class="link-a">Click here to view
+                                            <span class="bi bi-chevron-right"></span>
+                                        </a>
+                                    </div>
+                                    <div class="card-footer-a">
+                                        <ul class="card-info d-flex justify-content-around">
+                                            <li>
+                                                <h4 class="card-info-title">Area</h4>
+                                                <span>340m
+                                                    <sup>2</sup>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <h4 class="card-info-title">Beds</h4>
+                                                <span>2</span>
+                                            </li>
+                                            <li>
+                                                <h4 class="card-info-title">Baths</h4>
+                                                <span>4</span>
+                                            </li>
+                                            <li>
+                                                <h4 class="card-info-title">Garages</h4>
+                                                <span>1</span>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div><!-- End carousel item -->
+                    </div><!-- End carousel item -->
+                <?php
+                }
+
+                ?>
+
             </div>
         </div>
-        <div class="propery-carousel-pagination carousel-pagination"></div>
+        <!-- <div class="propery-carousel-pagination carousel-pagination"></div> -->
 
     </div>
 </section><!-- End Latest Properties Section -->
