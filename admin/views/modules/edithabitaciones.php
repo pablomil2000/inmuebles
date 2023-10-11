@@ -14,7 +14,19 @@ $Funciones = new Funciones();
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // $habitacionCtrl->updateImg($habitacion, array('nombre', 'inmueble_id', 'precio', 'imagen', 'text_intro', 'text'), $_POST);
+    $datos['nombre'] = $_POST['nombre'];
+    $datos['text_intro'] = $_POST['text_intro'];
+    $datos['text'] = $_POST['text'];
+    $datos['precio'] = $_POST['precio'];
+    if (isset($_POST['disponible'])) {
+        $datos['disponible'] = 1;
+    } else {
+        $datos['disponible'] = 0;
+    }
+    $datos['inmueble_id'] = $_POST['inmueble_id'];
+
+
+    $habitacionCtrl->update(array('nombre' => $datos['nombre'], 'text_intro' => $datos['text_intro'], 'text' => $datos['text'], 'precio' => $datos['precio'], 'disponible' => $datos['disponible'], 'inmueble_id' => $datos['inmueble_id']), $id);
     if (isset($_FILES['img']) && $_FILES['img']['tmp_name'] != '') {
         if (!is_dir("../views/images/habitacion/$id")) {
             mkdir("../views/images/habitacion/$id");

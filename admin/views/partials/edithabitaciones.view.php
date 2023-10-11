@@ -25,20 +25,48 @@
                 <h3>Editar habitacion</h3>
             </div>
             <div class="card-body">
-                <form action="#" method="POST" enctype="multipart/form-data" class="row">
+                <form action="#" method="POST" enctype="multipart/form-data" class="row form-switch">
                     <div class="mb-3 col-12">
                         <label for="username" class="form-label">Nombre</label>
-                        <input type="text_intro" class="form-control" id="nombre" name="nombre" required value="<?= $habitacion[0]['nombre'] ?>">
+                        <input type="text" class="form-control" id="nombre" name="nombre" required value="<?= $habitacion[0]['nombre'] ?>">
                     </div>
 
                     <div class="mb-3 col-12">
                         <label for="precio" class="form-label">Texto introduccion</label>
-                        <input class="form-control" type="text" name="text_intro" value="<?= $habitacion[0]['text'] ?>">
+                        <input class="form-control" type="text" name="text_intro" value="<?= $habitacion[0]['text_intro'] ?>">
                     </div>
 
-                    <div class="mb-3 col-12">
+                    <div class="mb-3 col-8">
                         <label for="precio" class="form-label">Texto</label>
-                        <textarea name="text" class="form-control" id="" cols="30" rows="10"><?= $habitacion[0]['text'] ?></textarea>
+                        <textarea name="text" class="form-control" id="summernote" cols="30" rows="10"><?= $habitacion[0]['text'] ?></textarea>
+                    </div>
+
+                    <div class="mb-3 col-4 container">
+                        <label for="precio" class="form-label">Características</label>
+                        <ul class="form-check form-switch">
+                            <li>
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Habitacion doble</label>
+                            </li>
+                            <li>
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Baño privado</label>
+
+                            </li>
+                            <li>
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Terraza</label>
+                            </li>
+                            <li>
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Calefaccion</label>
+                            </li>
+                            <li>
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Piscina</label>
+                            </li>
+                        </ul>
+
                     </div>
 
                     <div class="mb-3 col-12">
@@ -60,17 +88,11 @@
                     </div>
 
                     <div class="mb-3 col-6">
-                        <label for="password" class="form-label">Disponible</label>
+                        <label for="password" class="form-label">¿Disponible?</label>
 
-                        <label class="btn btn-outline-success" for="success-outlined">
-                            <input type="radio" class="btn-check" name="disponible" id="success-outlined" autocomplete="off" <?= $habitacion[0]['disponible'] == 1 ? 'checked' : '' ?> value="1">
-                            Disponible
-                        </label>
+                        <input name="disponible" <?= $habitacion[0]['disponible'] ? 'checked' : '' ?> type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+                        <label class="btn btn-outline-success" for="btn-check-outlined">Disponible</label><br>
 
-                        <label class="btn btn-outline-danger" for="danger-outlined">
-                            <input type="radio" class="btn-check" name="disponible" id="danger-outlined" autocomplete="off" <?= $habitacion[0]['disponible'] != 1 ? 'checked' : '' ?> value="0">
-                            No disponible
-                        </label>
                     </div>
                     <div class="mb-3 col-6">
                         <input class="form-control" type="file" name="img" id="">
@@ -121,3 +143,6 @@
     </section>
     <!-- /.content -->
 </div>
+
+
+<script src="views/dist/js/summernotes.js"></script>
