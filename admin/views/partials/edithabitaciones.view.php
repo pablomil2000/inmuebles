@@ -45,24 +45,24 @@
                         <label for="precio" class="form-label">Características</label>
                         <ul class="form-check form-switch">
                             <li>
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" <?= $habitacion[0]['doble'] ? 'checked' : '' ?> name="doble">
                                 <label class="form-check-label" for="flexSwitchCheckDefault">Habitacion doble</label>
                             </li>
                             <li>
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" <?= $habitacion[0]['banio'] ? 'checked' : '' ?> name="banio">
                                 <label class="form-check-label" for="flexSwitchCheckDefault">Baño privado</label>
 
                             </li>
                             <li>
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" <?= $habitacion[0]['terraza'] ? 'checked' : '' ?> name="terraza">
                                 <label class="form-check-label" for="flexSwitchCheckDefault">Terraza</label>
                             </li>
                             <li>
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" <?= $habitacion[0]['calefaccion'] ? 'checked' : '' ?> name="calefaccion">
                                 <label class="form-check-label" for="flexSwitchCheckDefault">Calefaccion</label>
                             </li>
                             <li>
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" <?= $habitacion[0]['piscina'] ? 'checked' : '' ?> name="piscina">
                                 <label class="form-check-label" for="flexSwitchCheckDefault">Piscina</label>
                             </li>
                         </ul>

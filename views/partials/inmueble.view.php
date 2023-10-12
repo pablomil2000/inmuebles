@@ -46,8 +46,8 @@
                 ?>
                     <div class="col-md-4">
                         <div class="card-box-b card-shadow news-box">
-                            <div class="img-box-b">
-                                <img src="views/images/habitacion/<?= $habitacion['imagen'] ?>" alt="" class="img-b img-fluid">
+                            <div class="img-box-b h-5 ">
+                                <img src="<?= $galeryCtrl->getDest($habitacion['id']) ?>" alt="" class="img-b img-fluid rounded mx-auto d-block">
                             </div>
                             <div class="card-overlay">
                                 <div class="card-header-b">

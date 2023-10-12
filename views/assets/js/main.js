@@ -121,7 +121,7 @@
    * Property carousel
    */
   new Swiper('#property-carousel', {
-    speed: 600,
+    speed: 300,
     loop: true,
     autoplay: {
       delay: 5000,

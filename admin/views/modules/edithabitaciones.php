@@ -18,15 +18,33 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $datos['text_intro'] = $_POST['text_intro'];
     $datos['text'] = $_POST['text'];
     $datos['precio'] = $_POST['precio'];
-    if (isset($_POST['disponible'])) {
-        $datos['disponible'] = 1;
-    } else {
-        $datos['disponible'] = 0;
-    }
+
+    $datos['doble'] = Validar::vlt_checkBox('doble');
+    $datos['banio'] = Validar::vlt_checkBox('banio');
+    $datos['terraza'] = Validar::vlt_checkBox('terraza');
+    $datos['calefaccion'] = Validar::vlt_checkBox('calefaccion');
+    $datos['piscina'] = Validar::vlt_checkBox('piscina');
+
+    $datos['disponible'] = Validar::vlt_checkBox('disponible');
+
     $datos['inmueble_id'] = $_POST['inmueble_id'];
 
-
-    $habitacionCtrl->update(array('nombre' => $datos['nombre'], 'text_intro' => $datos['text_intro'], 'text' => $datos['text'], 'precio' => $datos['precio'], 'disponible' => $datos['disponible'], 'inmueble_id' => $datos['inmueble_id']), $id);
+    $habitacionCtrl->update(
+        array(
+            'nombre' => $datos['nombre'],
+            'text_intro' => $datos['text_intro'],
+            'text' => $datos['text'],
+            'precio' => $datos['precio'],
+            'disponible' => $datos['disponible'],
+            'inmueble_id' => $datos['inmueble_id'],
+            'doble' => $datos['doble'],
+            'banio' => $datos['banio'],
+            'terraza' => $datos['terraza'],
+            'calefaccion' => $datos['calefaccion'],
+            'piscina' => $datos['piscina']
+        ),
+        $id
+    );
     if (isset($_FILES['img']) && $_FILES['img']['tmp_name'] != '') {
         if (!is_dir("../views/images/habitacion/$id")) {
             mkdir("../views/images/habitacion/$id");
@@ -36,7 +54,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $galeriaCtrl->insert(array('name', 'habitacion_id'), $datos2);
     }
 
-    Funciones::sweetAlert2(array('icon' => 'success', 'title' => 'Habitacion actualizada', 'text' => ''));
+    Funciones::sweetAlert2(array(
+        'icon' => 'success',
+        'title' => 'Habitacion actualizada',
+        'text' => ''
+    ));
 }
 
 

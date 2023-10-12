@@ -33,10 +33,23 @@
     <section class="news-single nav-arrow-b">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-8">
                     <div class="news-img-box">
-                        <img src="views/images/habitacion/<?= $habitacion[0]['imagen'] ?>" alt="" class="img-fluid">
+                        <img src="<?= $galeriaCtrl->getDest($_GET['slug']) ?>" alt="" class="img-fluid">
                     </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <?php
+                    foreach ($galery as $key => $image) {
+                    ?>
+                        <div class="news-img-box mb-1">
+                            <img src="<?= $galeriaCtrl->route . $slug . "/" . $image['name'] ?>" alt="" class="img-fluid">
+                        </div>
+                    <?php
+                    }
+                    ?>
+
                 </div>
                 <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
                     <div class="post-information">
@@ -48,6 +61,43 @@
                             <li class="list-inline-item">
                                 <strong>precio: </strong>
                                 <span class="color-text-a"><?= $habitacion[0]['precio'] ?> €/mes</span>
+                            </li>
+
+                            <hr />
+
+                            <li class="list-inline-item">
+                                <strong>Tipo de habitacion: </strong>
+                                <span class="color-text-a">
+                                    <?= $habitacion[0]['doble'] ? 'Doble' : 'Individual' ?>
+                                </span>
+                            </li>
+
+                            <li class="list-inline-item">
+                                <strong>¿Baño privado?: </strong>
+                                <span class="color-text-a">
+                                    <?= $habitacion[0]['doble'] ? "<i class='fa-solid fa-circle-check'></i>" : "<i class='fa-solid fa-circle-check'></i>" ?>
+                                </span>
+                            </li>
+
+                            <li class="list-inline-item">
+                                <strong>¿Piscina?: </strong>
+                                <span class="color-text-a">
+                                    <?= $habitacion[0]['doble'] ? 'Doble' : 'Individual' ?>
+                                </span>
+                            </li>
+
+                            <li class="list-inline-item">
+                                <strong>¿Calefaccion?: </strong>
+                                <span class="color-text-a">
+                                    <?= $habitacion[0]['doble'] ? 'Doble' : 'Individual' ?>
+                                </span>
+                            </li>
+
+                            <li class="list-inline-item">
+                                <strong>Terraza?: </strong>
+                                <span class="color-text-a">
+                                    <?= $habitacion[0]['doble'] ? 'Doble' : 'Individual' ?>
+                                </span>
                             </li>
                         </ul>
                     </div>
