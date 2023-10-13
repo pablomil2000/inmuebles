@@ -4,6 +4,7 @@ $habitacionCtrl = new habitacionCtrl('habitaciones');
 $inmueblesCtrl = new inmueblesCtrl('inmuebles');
 $Funciones = new Funciones();
 $galeriaCtrl = new galeriaCtrl('galeria');
+$localizacionCtrl = new localizacionesCtrl('localizacion');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 

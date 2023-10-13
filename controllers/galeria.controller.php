@@ -16,6 +16,11 @@ class galeriaCtrl extends CrudCtrl
         return ("views/images/default.png");
     }
 
+    public function getImage($id, $name)
+    {
+        return ($this->route . "$id/" . $name);
+    }
+
     public function __get($name)
     {
         return $this->$name;

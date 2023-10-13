@@ -39,9 +39,9 @@
 
                 ?>
                     <div class="col-md-4">
-                        <div class="card-box-b card-shadow news-box" style="height: 40vh;">
+                        <div class="card-box-b card-shadow news-box">
                             <div class="img-box-b">
-                                <img src="views/images/habitacion/<?= $habitacion['imagen'] ?>" alt="" class="img-b img-fluid" width="100%">
+                                <img src="<?= $galeriaCtrl->getDest($habitacion['id']) ?>" alt="" class="img-b img-fluid" width="100%">
                             </div>
                             <div class="card-overlay">
                                 <div class="card-header-b">

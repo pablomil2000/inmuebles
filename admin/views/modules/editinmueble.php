@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     Funciones::sweetAlert2(array('icon' => 'success', 'title' => 'Habitacion actualizada', 'text' => ''));
 }
 
-$habitacion = $habitacionCtrl->getById(array('id' => $id));
+$habitaciones = $habitacionCtrl->getById(array('id' => $id));
 
 
 

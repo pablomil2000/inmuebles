@@ -65,40 +65,28 @@
 
                             <hr />
 
-                            <li class="list-inline-item">
-                                <strong>Tipo de habitacion: </strong>
-                                <span class="color-text-a">
-                                    <?= $habitacion[0]['doble'] ? 'Doble' : 'Individual' ?>
-                                </span>
-                            </li>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Tipo habitacion</th>
+                                        <th scope="col">¿Baño</th>
+                                        <th scope="col">¿Piscina</th>
+                                        <th scope="col">¿Calefaccion</th>
+                                        <th scope="col">Terraza</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><?= $habitacion[0]['doble'] ? 'Doble' : 'Individual' ?></td>
+                                        <td><?= $habitacion[0]['banio'] ? "Si" : "No" ?></td>
+                                        <td><?= $habitacion[0]['piscina'] ? 'Si' : 'No' ?></td>
+                                        <td><?= $habitacion[0]['calefaccion'] ? 'Si' : 'No' ?></td>
+                                        <td><?= $habitacion[0]['terraza'] ? 'Si' : 'No' ?></td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                            <li class="list-inline-item">
-                                <strong>¿Baño privado?: </strong>
-                                <span class="color-text-a">
-                                    <?= $habitacion[0]['doble'] ? "Si" : "X" ?>
-                                </span>
-                            </li>
 
-                            <li class="list-inline-item">
-                                <strong>¿Piscina?: </strong>
-                                <span class="color-text-a">
-                                    <?= $habitacion[0]['doble'] ? 'Doble' : 'Individual' ?>
-                                </span>
-                            </li>
-
-                            <li class="list-inline-item">
-                                <strong>¿Calefaccion?: </strong>
-                                <span class="color-text-a">
-                                    <?= $habitacion[0]['doble'] ? 'Doble' : 'Individual' ?>
-                                </span>
-                            </li>
-
-                            <li class="list-inline-item">
-                                <strong>Terraza?: </strong>
-                                <span class="color-text-a">
-                                    <?= $habitacion[0]['doble'] ? 'Doble' : 'Individual' ?>
-                                </span>
-                            </li>
                         </ul>
                     </div>
                     <div class="post-content color-text-a">

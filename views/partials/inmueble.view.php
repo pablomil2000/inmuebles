@@ -40,12 +40,14 @@
     <!-- =======  Blog Grid ======= -->
     <section class="news-grid grid">
         <div class="container">
+            <h3>Habitaciones</h3>
             <div class="row">
                 <?php
                 foreach ($habitaciones as $key => $habitacion) {
+                    // var_dump($habitacion);
                 ?>
                     <div class="col-md-4">
-                        <div class="card-box-b card-shadow news-box">
+                        <div class="card-box-b <?= $habitacion['disponible'] ? 'card-shadow' : 'card-shadow2' ?> news-box">
                             <div class="img-box-b h-5 ">
                                 <img src="<?= $galeryCtrl->getDest($habitacion['id']) ?>" alt="" class="img-b img-fluid rounded mx-auto d-block">
                             </div>
@@ -55,6 +57,10 @@
                                         <h2 class="title-2">
                                             <a href="index.php?ruta=habitacion&slug=<?= $habitacion['id'] ?>"><?= $habitacion['nombre'] ?></a>
                                         </h2>
+
+                                        <h3 class="text-white">
+                                            <?= $habitacion['disponible'] ? '' : 'NO DISPONIBLE' ?>
+                                        </h3>
                                     </div>
                                     <div class="card-date">
                                         <span class="date-b"><?= $habitacion['precio'] ?> €/mes</span>

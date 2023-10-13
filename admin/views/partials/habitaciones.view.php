@@ -35,6 +35,7 @@
                             <th>Imagen</th>
                             <th>Precio</th>
                             <th>Inmueble</th>
+                            <th>Zona</th>
                             <th>Disponible</th>
                             <th>Acciones</th>
                         </tr>
@@ -54,6 +55,12 @@
                                     ?>
                                     <p class="row"><?= $inmueble[0]['nombre'] ?></p>
                                     <p class="row"><img src="../views/images/inmuebles/<?= $inmueble[0]['imagen'] ?>" alt="<?= $inmueble[0]['nombre'] ?>" height="150px"></p>
+                                </td>
+                                <td>
+                                    <?php
+                                    $localizacion = $localizacionCtrl->getById(array('id' => $inmueble[0]['localizacion_id']));
+                                    ?>
+                                    <p class="row"><?= $localizacion[0]['nombre'] ?></p>
                                 </td>
                                 <td>
                                     <?php

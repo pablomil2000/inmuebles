@@ -13,7 +13,7 @@ $galeryCtrl = new galeriaCtrl('galeria');
 
 $inmueble = $inmuebleCtrl->getById(array('id' => $id));
 $zona = $localizationCtrl->getById(array('id' => $inmueble[0]['localizacion_id']));
-$habitaciones = $habitacionesCtrl->getById(array('inmueble_id' => $id));
+$habitaciones = $habitacionesCtrl->rawSql(' WHERE inmueble_id LIKE ' . $id, 'ORDER By disponible DESC', '');
 
 // var_dump($habitaciones);
 

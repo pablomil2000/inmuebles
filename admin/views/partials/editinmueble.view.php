@@ -46,13 +46,31 @@
                     <div class="mb-3">
                         <input class="form-control" type="file" name="img" id="">
                     </div>
-                    <button type="submit" class="btn btn-primary">Crear inmueble</button>
+                    <button type="submit" class="btn btn-primary">Actualizar inmueble</button>
                 </form>
 
             </div>
             <!-- /.card-body -->
-            <div class="card-footer">
+            <div class="card-footer row">
                 <!-- Footer -->
+                <?php
+
+                foreach ($habitaciones as $key => $habitacion) {
+                ?>
+                    <div class="card col-3 m-3 p-2">
+                        <img class="card-img-top" src="<?= $galeryCtrl->getDest($habitacion['id']) ?>" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $habitacion['nombre'] ?></h5>
+                            <p class="card-text"><?= $habitacion['text_intro'] ?></p>
+                            <a href="index.php?ruta=edithabitaciones&id=<?= $habitacion['id'] ?>" class="btn btn-outline-primary">Ver mas <i class="fa-solid fa-pencil"></i></a>
+
+                        </div>
+                    </div>
+                <?php
+                }
+                ?>
+
+
             </div>
             <!-- /.card-footer-->
         </div>
