@@ -75,7 +75,7 @@
                             <li class="list-inline-item">
                                 <strong>¿Baño privado?: </strong>
                                 <span class="color-text-a">
-                                    <?= $habitacion[0]['doble'] ? "<i class='fa-solid fa-circle-check'></i>" : "<i class='fa-solid fa-circle-check'></i>" ?>
+                                    <?= $habitacion[0]['doble'] ? "Si" : "X" ?>
                                 </span>
                             </li>
 
