@@ -22,9 +22,10 @@
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAlta">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAlta">
                     Añadir hahbitaciones
                 </button>
+
             </div>
             <div class="card-body">
                 <table class="table" id="datatable">

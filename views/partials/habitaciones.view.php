@@ -7,7 +7,7 @@
                 <div class="col-md-12 col-lg-8">
                     <div class="title-single-box">
                         <h1 class="title-single">Habitaciones</h1>
-                        <!-- <span class="color-text-a">Grid News</span> -->
+                        <span class="color-text-a">Estas son las habitaciones que mejor se adaptan a tus necesidades</span>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-4">
@@ -39,7 +39,7 @@
 
                 ?>
                     <div class="col-md-4">
-                        <div class="card-box-b card-shadow news-box">
+                        <div class="card-box-b <?= $habitacion['disponible'] ? 'card-shadow' : 'card-shadow2' ?> news-box">
                             <div class="img-box-b">
                                 <img src="<?= $galeriaCtrl->getDest($habitacion['id']) ?>" alt="" class="img-b img-fluid" width="100%">
                             </div>
@@ -54,6 +54,9 @@
                                                 <?= $habitacion['nombre'] ?>
                                             </a>
                                         </h2>
+                                        <h4 class="text-white">
+                                            <?= $habitacion['disponible'] ? '' : 'NO DISPONIBLE' ?>
+                                        </h4>
                                         <span class="date-b">
                                             Zona: <?= $zona[0]['nombre'] ?>
                                         </span>

@@ -7,7 +7,7 @@
         <div class="col-md-12 col-lg-8">
           <div class="title-single-box">
             <h1 class="title-single">Inmuebles</h1>
-            <!-- <span class="color-text-a">Grid News</span> -->
+            <span class="color-text-a">Estos son los inmuebles que mejor se adaptan a tus necesidades</span>
           </div>
         </div>
         <div class="col-md-12 col-lg-4">
@@ -32,52 +32,57 @@
       <div class="row">
 
         <?php
-        foreach ($inmuebles as $key => $inmueble) {
+        if (count($inmuebles)) {
+          foreach ($inmuebles as $key => $inmueble) {
+            $precio = array();
 
-          $precio = array();
+            $habitaciones = $habitacionesCtrl->getById(array('inmueble_id' => $inmueble['id']));
 
-          $habitaciones = $habitacionesCtrl->getById(array('inmueble_id' => $inmueble['id']));
-
-          // var_dump($habitaciones);
-          foreach ($habitaciones as $key => $habitacion) {
-            $precio[] = $habitacion['precio'];
-          }
+            // var_dump($habitaciones);
+            foreach ($habitaciones as $key => $habitacion) {
+              $precio[] = $habitacion['precio'];
+            }
         ?>
-          <div class="col-md-4">
-            <div class="card-box-b card-shadow news-box" style="height: 40vh;">
-              <div class="img-box-b">
-                <img src="views/images/inmuebles/<?= $inmueble['imagen'] ?>" alt="" class="img-b img-fluid" width="100%">
-              </div>
-              <div class="card-overlay">
-                <div class="card-header-b">
-                  <div class="card-category-b">
-                    <!-- <a href="#" class="category-b">Travel</a> -->
-                  </div>
-                  <div class="card-title-b">
-                    <h2 class="title-2">
-                      <a href="index.php?ruta=inmueble&slug=<?= $inmueble['id'] ?>">
-                        <?= $inmueble['nombre'] ?>
-                      </a>
-                    </h2>
-                    <span class="date-b">
-                      <?= $localizationCtrl->getByid(array('id' => $inmueble['localizacion_id']))[0]['nombre'] ?>
-                    </span>
-                  </div>
-                  <div class="card-date">
-                    <span class="date-b">
-                      <?php
-                      if (count($precio) && count($precio) == 1) {
-                        echo $precio[0] . ' €/mes';
-                      } elseif (count($precio) && count($precio) > 1) {
-                        echo 'Desde ' . min($precio) . ' €/mes';
-                      }
-                      ?>
-                    </span>
+            <div class="col-md-4">
+              <div class="card-box-b card-shadow news-box">
+                <div class="img-box-b">
+                  <img src="views/images/inmuebles/<?= $inmueble['imagen'] ?>" alt="" class="img-b img-fluid" width="100%">
+                </div>
+                <div class="card-overlay">
+                  <div class="card-header-b">
+                    <div class="card-category-b">
+                      <!-- <a href="#" class="category-b">Travel</a> -->
+                    </div>
+                    <div class="card-title-b">
+                      <h2 class="title-2">
+                        <a href="index.php?ruta=inmueble&slug=<?= $inmueble['id'] ?>">
+                          <?= $inmueble['nombre'] ?>
+                        </a>
+                      </h2>
+                      <span class="date-b">
+                        <?= $localizationCtrl->getByid(array('id' => $inmueble['localizacion_id']))[0]['nombre'] ?>
+                      </span>
+                    </div>
+                    <div class="card-date">
+                      <span class="date-b">
+                        <?php
+                        if (count($precio) && count($precio) == 1) {
+                          echo $precio[0] . ' €/mes';
+                        } elseif (count($precio) && count($precio) > 1) {
+                          echo 'Desde ' . min($precio) . ' €/mes';
+                        }
+                        ?>
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          <?php
+          }
+        } else {
+          ?>
+          <h3>No hay inmuebles disponibles</h3>
         <?php
         }
         ?>

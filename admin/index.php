@@ -21,3 +21,10 @@ require_once('models/crud.model.php');  //*Core
 
 
 PlantillaCtr::load();
+
+/*TODO:
+    Quitar estilo enlaces
+    Editar usuarios
+    Borrar ubiaciones
+    Borrar inmuebles
+*/

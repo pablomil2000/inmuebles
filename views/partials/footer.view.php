@@ -5,19 +5,16 @@
                 <nav class="nav-footer">
                     <ul class="list-inline">
                         <li class="list-inline-item">
-                            <a href="#">Home</a>
+                            <a href="home">Home</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#">About</a>
+                            <a href="inmuebles">Inmuebles</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#">Property</a>
+                            <a href="habitaciones">Habitaciones</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#">Blog</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#">Contact</a>
+                            <a href="contacto">Contacto</a>
                         </li>
                     </ul>
                 </nav>
@@ -47,18 +44,9 @@
                 </div>
                 <div class="copyright-footer">
                     <p class="copyright color-text-a">
-                        &copy; Copyright
-                        <span class="color-a">EstateAgency</span> All Rights Reserved.
+                        &copy; Developed
+                        <span class="color-a">Pablo Martín López</span>
                     </p>
-                </div>
-                <div class="credits">
-                    <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
-          -->
-                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
                 </div>
             </div>
         </div>

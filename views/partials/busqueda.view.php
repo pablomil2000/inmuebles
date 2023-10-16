@@ -5,7 +5,7 @@
 </script>
 
 
-<form class="form-a" method="post" action="inmuebles" id="form">
+<form class="form-a" method="post" action="<?= isset($_POST['type']) ? $_POST['type'] : 'inmuebles' ?>" id="form">
     <div class="row">
         <div class="col-md-12 mb-2">
             <div class="form-group">
@@ -15,10 +15,10 @@
         </div>
         <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
-                <label class="pb-2" for="Type">Type</label>
-                <select class="form-control form-select form-control-a" id="Type" onchange="cambiarAction(this.form)">
-                    <option value="inmuebles">Inmueble</option>
-                    <option value="habitaciones">Habitacion</option>
+                <label class="pb-2" for="Type">Tipo</label>
+                <select class="form-control form-select form-control-a" id="Type" onchange="cambiarAction(this.form)" name="type">
+                    <option value="inmuebles" <?= isset($_POST['type']) && $_POST['type'] == 'inmuebles' ? 'selected' : '' ?>>Inmueble</option>
+                    <option value="habitaciones" <?= isset($_POST['type']) && $_POST['type'] == 'habitaciones' ? 'selected' : '' ?>>Habitacion</option>
                 </select>
             </div>
         </div>
@@ -31,7 +31,7 @@
                     <?php
                     foreach ($localizaciones as $key => $localizacio) {
                     ?>
-                        <option value="<?= $localizacio['id'] ?>"><?= $localizacio['nombre'] ?></option>
+                        <option <?= isset($_POST['zona']) && $_POST['zona'] == $localizacio['id'] ? 'selected' : '' ?> value="<?= $localizacio['id'] ?>"><?= $localizacio['nombre'] ?></option>
                     <?php
                     }
                     ?>
@@ -41,41 +41,37 @@
         </div>
         <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
-                <label class="pb-2" for="bedrooms">Bedrooms</label>
-                <select class="form-control form-select form-control-a" id="bedrooms">
-                    <option>Any</option>
-                    <option>01</option>
-                    <option>02</option>
-                    <option>03</option>
+                <label class="pb-2" for="bedrooms">Habitacion doble</label>
+                <select class="form-control form-select form-control-a" id="bedrooms" name="doble">
+                    <option value="%">Elegir</option>
+                    <option value="0">No</option>
+                    <option value="1">Si</option>
                 </select>
             </div>
         </div>
         <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
-                <label class="pb-2" for="garages">Garages</label>
+                <label class="pb-2" for="garages">Terraza</label>
                 <select class="form-control form-select form-control-a" id="garages">
-                    <option>Any</option>
-                    <option>01</option>
-                    <option>02</option>
-                    <option>03</option>
-                    <option>04</option>
+                    <option value="%">Elegir</option>
+                    <option value="1">Si</option>
+                    <option value="0">No</option>
                 </select>
             </div>
         </div>
         <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
-                <label class="pb-2" for="bathrooms">Bathrooms</label>
+                <label class="pb-2" for="bathrooms">Baño privado</label>
                 <select class="form-control form-select form-control-a" id="bathrooms">
-                    <option>Any</option>
-                    <option>01</option>
-                    <option>02</option>
-                    <option>03</option>
+                    <option value="%">Elegir</option>
+                    <option value="1">Si</option>
+                    <option value="0">No</option>
                 </select>
             </div>
         </div>
         <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
-                <label class="pb-2" for="price">Min Price</label>
+                <label class="pb-2" for="price">Precio maximo</label>
                 <select class="form-control form-select form-control-a" id="price" name="minPrice">
                     <option value="%">Unlimite</option>
 

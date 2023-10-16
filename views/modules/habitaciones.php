@@ -19,9 +19,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['zona'])) {
         $sql .= " localizacion_id LIKE '" . $_POST['zona'] . "' AND";
     }
+
+    if (isset($_POST['doble'])) {
+        $sql .= " doble LIKE '" . $_POST['doble'] . "' AND";
+    }
+
+
+
+
     if (isset($_POST['minPrice']) && $_POST['minPrice'] != '%') {
         $sql .= " precio <= '" . $_POST['minPrice'] . "' AND";
     }
+
+    $sql .= " h.disponible LIKE '1' AND";
 
     $sql = substr($sql, 0, -3);
 }

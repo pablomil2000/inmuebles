@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $datos2['name'] = $Funciones->uploadImage("../views/images/habitacion/$id/");
         $datos2['inmueble_id'] = $id;
         $datos2['destacada'] = true;
-        $galeriaCtrl->insert(array('name', 'inmueble_id', 'destacada'), $datos2);
+        $galeriaCtrl->insert(array('name', 'habitacion_id', 'destacada'), $datos2);
     }
     Funciones::sweetAlert2(array('icon' => 'success', 'title' => 'Habitacion creada', 'text' => ''));
 }
