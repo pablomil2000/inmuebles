@@ -1,8 +1,8 @@
 <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-        <b>Version</b> 3.2.0
+        <b>Version </b>0.19
     </div>
-    <strong>Copyright &copy; Curso <?= date("Y") ?> - <?= date("Y") + 1 ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://plataforma2.siges21.com/my/">2ºDAW</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong> IES La Arboleda
+    <strong>Copyright &copy; Pablo Martín López <?= date("Y") ?> - <?= date("Y") + 1 ?></strong>
 </footer>
 
 <!-- Control Sidebar -->

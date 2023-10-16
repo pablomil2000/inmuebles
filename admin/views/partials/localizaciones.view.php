@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="home" class="text-decoration-none">Home</a></li>
                         <li class="breadcrumb-item active">Usuarios</li>
                     </ol>
                 </div>
@@ -22,7 +22,7 @@
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAlta">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAlta">
                     Añadir ubicacion
                 </button>
             </div>
@@ -42,7 +42,15 @@
                             <tr>
                                 <td scope="row"><?= $Localizacion['id'] ?></td>
                                 <td><?= $Localizacion['nombre'] ?></td>
-                                <td><a href="index.php?ruta=editLocation&id=<?= $Localizacion['id'] ?>"><i class="fa-solid fa-pencil"></i></a></td>
+                                <td>
+                                    <a href="index.php?ruta=editLocation&id=<?= $Localizacion['id'] ?>">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </a>
+                                    <a class="text-danger" href="index.php?ruta=deleteLocation&id=<?= $Localizacion['id'] ?>">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </a>
+                                </td>
+
                             </tr>
                         <?php
                         }
@@ -70,7 +78,7 @@
         <div class="modal-content">
             <div class="modal-header bg-primary">
                 <h4 class="modal-title">Añadir usuarios</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -84,7 +92,7 @@
                 </form>
             </div>
             <div class="modal-footer ">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar </button>
+                <button type="button" class="btn btn-default" data-bs-dismiss="modal">Cancelar </button>
                 <!-- <button type="button" class="btn btn-primary">Guardar Usuario</button> -->
             </div>
         </div>

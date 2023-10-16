@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Filtros busqueda
     if (isset($_POST['keyword'])) {
-        $sql .= " h.nombre LIKE '%" . $_POST['keyword'] . "%' AND";
+        $sql .= "(h.nombre LIKE '%" . $_POST['keyword'] . "%' OR h.text_intro LIKE '%" . $_POST['keyword'] . "%' OR h.text LIKE '%" . $_POST['keyword'] . "%' ) AND";
     }
     if (isset($_POST['zona'])) {
         $sql .= " localizacion_id LIKE '" . $_POST['zona'] . "' AND";
@@ -22,6 +22,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (isset($_POST['doble'])) {
         $sql .= " doble LIKE '" . $_POST['doble'] . "' AND";
+    }
+
+    if (isset($_POST['calefaccion'])) {
+        $sql .= " calefaccion LIKE '" . $_POST['calefaccion'] . "' AND";
     }
 
 

@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="home" class="text-decoration-none">Home</a></li>
                         <li class="breadcrumb-item active">Usuarios</li>
                     </ol>
                 </div>
@@ -33,6 +33,7 @@
                             <th>Id</th>
                             <th>Nombre</th>
                             <th>Imagen</th>
+                            <th>Localizacion</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -46,6 +47,7 @@
                                 <td>
                                     <img src="../views/images/inmuebles/<?= $inmueble['imagen'] ?>" alt="<?= $inmueble['nombre'] ?>" height="150px">
                                 </td>
+                                <td><?= $localizacionesCtrl->getById(array('id' => $inmueble['localizacion_id']))[0]['nombre'] ?></td>
                                 <td>
                                     <a href="index.php?ruta=editinmuebles&id=<?= $inmueble['id'] ?>"><i class="fa-solid fa-pencil"></i></a>
                                     <a class="text-danger" href="index.php?ruta=deleteinmuebles&id=<?= $inmueble['id'] ?>"><i class="fa-solid fa-trash"></i></a>

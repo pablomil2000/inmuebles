@@ -44,31 +44,54 @@
                 <label class="pb-2" for="bedrooms">Habitacion doble</label>
                 <select class="form-control form-select form-control-a" id="bedrooms" name="doble">
                     <option value="%">Elegir</option>
-                    <option value="0">No</option>
-                    <option value="1">Si</option>
+                    <option value="0" <?= isset($_POST['doble']) && $_POST['doble'] == '0' ? 'selected' : '' ?>>No</option>
+                    <option value="1" <?= isset($_POST['doble']) && $_POST['doble'] == '1' ? 'selected' : '' ?>>Si</option>
                 </select>
             </div>
         </div>
         <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
-                <label class="pb-2" for="garages">Terraza</label>
-                <select class="form-control form-select form-control-a" id="garages">
+                <label class="pb-2" for="terraza">Terraza</label>
+                <select class="form-control form-select form-control-a" id="terraza" name="terraza">
                     <option value="%">Elegir</option>
-                    <option value="1">Si</option>
-                    <option value="0">No</option>
+                    <option value="1" <?= isset($_POST['terraza']) && $_POST['terraza'] == '1' ? 'selected' : '' ?>>Si</option>
+                    <option value="0" <?= isset($_POST['terraza']) && $_POST['terraza'] == '0' ? 'selected' : '' ?>>No</option>
                 </select>
             </div>
         </div>
         <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
-                <label class="pb-2" for="bathrooms">Baño privado</label>
-                <select class="form-control form-select form-control-a" id="bathrooms">
+                <label class="pb-2" for="banio">Baño privado</label>
+                <select class="form-control form-select form-control-a" id="banio" name="banio">
                     <option value="%">Elegir</option>
-                    <option value="1">Si</option>
-                    <option value="0">No</option>
+                    <option value="1" <?= isset($_POST['banio']) && $_POST['banio'] == '1' ? 'selected' : '' ?>>Si</option>
+                    <option value="0" <?= isset($_POST['banio']) && $_POST['banio'] == '0' ? 'selected' : '' ?>>No</option>
                 </select>
             </div>
         </div>
+
+        <div class="col-md-6 mb-2">
+            <div class="form-group mt-3">
+                <label class="pb-2" for="piscina">Piscina</label>
+                <select class="form-control form-select form-control-a" id="piscina" name="piscina">
+                    <option value="%">Elegir</option>
+                    <option value="1" <?= isset($_POST['piscina']) && $_POST['piscina'] == '1' ? 'selected' : '' ?>>Si</option>
+                    <option value="0" <?= isset($_POST['piscina']) && $_POST['piscina'] == '0' ? 'selected' : '' ?>>No</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-2">
+            <div class="form-group mt-3">
+                <label class="pb-2" for="calefaccion">Calefaccion</label>
+                <select class="form-control form-select form-control-a" id="calefaccion" name="calefaccion">
+                    <option value="%">Elegir</option>
+                    <option value="1" <?= isset($_POST['calefaccion']) && $_POST['calefaccion'] == '1' ? 'selected' : '' ?>>Si</option>
+                    <option value="0" <?= isset($_POST['calefaccion']) && $_POST['calefaccion'] == '0' ? 'selected' : '' ?>>No</option>
+                </select>
+            </div>
+        </div>
+
         <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
                 <label class="pb-2" for="price">Precio maximo</label>
@@ -78,15 +101,16 @@
                     <?php
                     for ($i = 100; $i <= 3000; $i = $i + 250) {
                     ?>
-                        <option value="<?= $i ?>"><?= $i ?></option>
+                        <option <?= isset($_POST['minPrice']) && $_POST['minPrice'] == $i ? 'selected' : '' ?> value="<?= $i ?>"><?= $i ?> €</option>
                     <?php
                     }
                     ?>
                 </select>
             </div>
         </div>
+
         <div class="col-md-12">
-            <button type="submit" class="btn btn-b">Search Property</button>
+            <button type="submit" class="btn btn-b"><i class="bi bi-search"></i> Buscar </button>
         </div>
     </div>
 </form>

@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-md-12 col-lg-8">
                     <div class="title-single-box">
-                        <h1 class="title-single">Inmueble</h1>
+                        <h1 class="title-single"><?= $inmueble[0]['nombre'] ?></h1>
                         <span class="color-text-a"><?= $zona[0]['nombre'] ?></span>
                     </div>
                 </div>
@@ -13,10 +13,13 @@
                     <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="index.html">Home</a>
+                                <a href="home">Home</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="inmuebles">inmuebles</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                News Grid
+                                <?= $inmueble[0]['nombre'] ?>
                             </li>
                         </ol>
                     </nav>
