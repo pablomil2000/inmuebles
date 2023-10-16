@@ -5,7 +5,7 @@ $inmuebleCtrl = new InmuebleCtrl('inmuebles');
 $localizationCtrl = new LocalizacionCtrl('localizacion');
 $galeriaCtrl = new galeriaCtrl('galeria');
 
-$habitacionesCarrusel = $habitacionesCtrl->getAll();
+$habitacionesCarrusel = $habitacionesCtrl->getLimit('4');
 $haitacionesDestacadas = $habitacionesCtrl->rawSql('', 'ORDER BY rand()');
 // var_dump($habitacionesCarrusel);
 
