@@ -14,11 +14,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['keyword'])) {
         $sql .= " i.nombre LIKE '%" . $_POST['keyword'] . "%' AND";
     }
-
     if (isset($_POST['zona'])) {
         $sql .= " localizacion_id LIKE '" . $_POST['zona'] . "' AND";
     }
-
     if (isset($_POST['minPrice']) && $_POST['minPrice'] != '%') {
         $sql .= " precio <= '" . $_POST['minPrice'] . "' AND";
     }

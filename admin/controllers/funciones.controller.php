@@ -28,6 +28,7 @@ class Funciones
     {
 ?>
         <script>
+            console.log('alert');
             Swal.fire({
                 icon: '<?= $datos['icon'] ?>',
                 title: '<?= $datos['title'] ?>',
@@ -115,5 +116,10 @@ class Funciones
     static function deleteImage($targetImg)
     {
         return unlink($targetImg);
+    }
+
+    static function deleteFolder($targetDir)
+    {
+        return rmdir($targetDir);
     }
 }

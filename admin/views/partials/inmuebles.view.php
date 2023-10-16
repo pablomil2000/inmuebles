@@ -43,8 +43,13 @@
                             <tr>
                                 <td scope="row"><?= $inmueble['id'] ?></td>
                                 <td><?= $inmueble['nombre'] ?></td>
-                                <td><img src="../views/images/inmuebles/<?= $inmueble['imagen'] ?>" alt="<?= $inmueble['nombre'] ?>" height="150px"></td>
-                                <td><a href="index.php?ruta=editinmuebles&id=<?= $inmueble['id'] ?>"><i class="fa-solid fa-pencil"></i></a></td>
+                                <td>
+                                    <img src="../views/images/inmuebles/<?= $inmueble['imagen'] ?>" alt="<?= $inmueble['nombre'] ?>" height="150px">
+                                </td>
+                                <td>
+                                    <a href="index.php?ruta=editinmuebles&id=<?= $inmueble['id'] ?>"><i class="fa-solid fa-pencil"></i></a>
+                                    <a class="text-danger" href="index.php?ruta=deleteinmuebles&id=<?= $inmueble['id'] ?>"><i class="fa-solid fa-trash"></i></a>
+                                </td>
                             </tr>
                         <?php
                         }
