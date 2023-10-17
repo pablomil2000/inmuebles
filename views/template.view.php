@@ -20,7 +20,7 @@ if (isset($_GET['ruta'])) {
 
 // require_once('views/modules/' . $ruta . '.php');
 
-PlantillaCtr::whiteList('home', 'inmuebles', 'login', 'inmueble', 'habitaciones', 'habitacion');
+PlantillaCtr::whiteList('home', 'inmuebles', 'login', 'inmueble', 'habitaciones', 'habitacion', 'contacto');
 ?>
 
 <!-- Footer Section Begin -->
