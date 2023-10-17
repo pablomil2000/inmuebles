@@ -28,6 +28,7 @@ class Funciones
     {
 ?>
         <script>
+            console.log('alert');
             Swal.fire({
                 icon: '<?= $datos['icon'] ?>',
                 title: '<?= $datos['title'] ?>',
@@ -78,48 +79,47 @@ class Funciones
 <?php
     }
 
-    static function nameImg($nameMethod = 'random', $tipo = 'png', $dato = 0)
+    static function uploadImage($targetDir)
     {
-        switch ($nameMethod) {
-            case 'random':
-                $name = rand();
-                break;
-            case 'personal':
-                $name = $dato;
-                break;
-            case 'number':
-                $name = rand();
-                break;
-        }
+        if (isset($_FILES['img']) && $_FILES['img']['tmp_name'] != '') {
+            $result = false;
+            $msg = '';
 
-        if ($tipo != NULL) {
-            return $name . "." . $tipo;
-        } else {
-            return $name;
-        }
-    }
+            $fileName = Funciones::RandomString() . ".png";
+            $targetFilePath = $targetDir .  $fileName;
+            $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
 
-    static function esImg($img)
-    {
-        if (getimagesize($img)) {
-            return true;
-        }
-        return false;
-    }
-
-    public function uploadImg($carpeta, $img, $tipe = array(), $size = null)
-    {
-        $msg = '';
-        if ($this->esImg($_FILES['img']['tmp_name'])) {
-            //mover img a la carpeta que le toca
-            $tama = $_FILES['img']['size'];
-            if ($tama <= $size || $size == null) {
-                if (in_array($_FILES['img']['type'], $tipe) || empty($tipe)) {
-                    move_uploaded_file($_FILES['img']['tmp_name'], $carpeta . $img);
-                    return true;
+            // Verificar si el archivo es una imagen
+            $allowTypes = array('jpg', 'jpeg', 'png', 'gif');
+            if (in_array($fileType, $allowTypes)) {
+                // Mover el archivo subido al directorio de destino
+                if (move_uploaded_file($_FILES["img"]["tmp_name"], $targetFilePath)) {
+                    $result = true;
+                } else {
+                    $msg = "Hubo un error al subir el archivo.";
                 }
+            } else {
+                $msg = "Solo se permiten subir archivos de imagen (jpg, jpeg, png, gif).";
             }
+
+            if ($result) {
+                Funciones::sweetAlert2(array("icon" => "success", 'title' => 'Imagen subida', 'text' => ''));
+                return  $fileName;
+            } else {
+                Funciones::sweetAlert2(array('icon' => 'error', 'title' => 'Datos incorrectos', 'text' => $msg));
+            }
+        } else {
+            return 'default.png';
         }
-        return false;
+    }
+
+    static function deleteImage($targetImg)
+    {
+        return unlink($targetImg);
+    }
+
+    static function deleteFolder($targetDir)
+    {
+        return rmdir($targetDir);
     }
 }

@@ -87,7 +87,7 @@
                 </section><!-- End Services Section -->
 
                 <div class="col-sm-12">
-                    <form class="row">
+                    <form class="row" action="" method="POST">
                         <div class="col-12 m-3">
                             <h3>Formulario de contacto</h3>
                             <p>Rellena estos datos para que nos podamos poner en cotnacto contigo</p>
@@ -95,22 +95,22 @@
                         </div>
 
                         <div class="col-6">
-                            <label for="exampleInputEmail1" class="form-label">Nombre <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text" name="nombre" pattern="^[A-Za-z\s]+$"><br /><br />
+                            <label for="nombre" class="form-label">Nombre <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="nombre" name="nombre" pattern="^[A-Za-z\s]+$" required><br /><br />
                         </div>
 
                         <div class="col-6">
-                            <label for="exampleInputEmail1" class="form-label">Apellido <span class="text-danger">*</span></label>
-                            <input class="form-control" type="tel" name="apellido" pattern="^[A-Za-z\s]+$"><br /><br />
+                            <label for="apellido" class="form-label">Apellido <span class="text-danger">*</span></label>
+                            <input class="form-control" type="tel" id="apellido" name="apellido" pattern="^[A-Za-z\s]+$" required><br /><br />
                         </div>
 
                         <div class="col-6">
-                            <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
-                            <input class="form-control" type="email" name="email">
+                            <label for="email" class="form-label">Correo electronico</label>
+                            <input class="form-control" id="email" type="email" name="email">
                         </div>
                         <div class="col-6">
-                            <label for="exampleInputEmail1" class="form-label">Numero de telefono <span class="text-danger">*</span></label>
-                            <input class="form-control" type="tel" name="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{3}"><br /><br />
+                            <label for="tel" class="form-label">Numero de telefono <span class="text-danger">*</span></label>
+                            <input class="form-control" id="tel" type="tel" name="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{3}"><br /><br />
                         </div>
                         <hr>
                         <div class="col-12 m-3">
@@ -118,13 +118,13 @@
                         </div>
 
                         <div class="col-12">
-                            <label for="exampleFormControlTextarea1">Asunto</label>
-                            <input class="form-control" type="text" name="nombre" pattern="^[A-Za-z\s]+$"><br /><br />
+                            <label for="asunto">Asunto</label>
+                            <input class="form-control" id="asunto" type="text" name="asunto"><br /><br />
                         </div>
 
                         <div class="col-12">
-                            <label for="exampleFormControlTextarea1">Mensaje</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+                            <label for="text">Mensaje</label>
+                            <textarea class="form-control" id="text" rows="10" name="mensaje"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary m-3">Enviar</button>
                     </form>
