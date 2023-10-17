@@ -46,7 +46,7 @@
             <div class="col-md-4">
               <div class="card-box-b card-shadow news-box">
                 <div class="img-box-b">
-                  <img src="views/images/inmuebles/<?= $inmueble['imagen'] ?>" alt="" class="img-b img-fluid" width="100%">
+                  <img src="<?= DOMAIN ?>views/images/<?= $inmueble['imagen'] !== 'default.png' ? "inmuebles/" . $inmueble['imagen'] : $inmueble['imagen'] ?>" alt="" class="img-b img-fluid" width="100%">
                 </div>
                 <div class="card-overlay">
                   <div class="card-header-b">
@@ -55,7 +55,7 @@
                     </div>
                     <div class="card-title-b">
                       <h2 class="title-2">
-                        <a href="index.php?ruta=inmueble&slug=<?= $inmueble['id'] ?>">
+                        <a href="<?= DOMAIN ?>inmueble/<?= $inmueble['id'] ?>">
                           <?= $inmueble['nombre'] ?>
                         </a>
                       </h2>

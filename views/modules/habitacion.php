@@ -5,14 +5,17 @@ $inmuebleCtrl = new InmuebleCtrl('inmuebles');
 $localizationCtrl = new LocalizacionCtrl('localizacion');
 $galeriaCtrl = new galeriaCtrl('galeria');
 
-$slug = $_GET['slug'];
+$id = explode("/", $_GET["url"])[1];
 
-$habitacion = $habitacionesCtrl->getById(array('id' => $slug));
+$habitacion = $habitacionesCtrl->getById(array('id' => $id));
 $inmueble = $inmuebleCtrl->getById(array('id' => $habitacion[0]['inmueble_id']));
 $zona = $localizationCtrl->getById(array('id' => $inmueble[0]['localizacion_id']));
-$galery = $galeriaCtrl->getById(array('habitacion_id' => $slug, 'destacada' => 0));
+$galery = $galeriaCtrl->getById(array('habitacion_id' => $id, 'destacada' => 0));
 
-// var_dump($habitacion);
+if (empty($habitacion)) {
+    Funciones::JsRedirect(DOMAIN . '404');
+}
+
 var_dump($galery);
 
 include('views/partials/habitacion.view.php');

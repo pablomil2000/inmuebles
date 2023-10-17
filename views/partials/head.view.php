@@ -25,22 +25,22 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="home">Home</a>
+                        <a class="nav-link active" href="<?= DOMAIN ?>home">Home</a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="inmuebles" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="<?= DOMAIN ?>inmuebles" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Propiedades
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="inmuebles">Inmuebles</a></li>
-                            <li><a class="dropdown-item" href="habitaciones">Habitaciones</a></li>
+                            <li><a class="dropdown-item" href="<?= DOMAIN ?>inmuebles">Inmuebles</a></li>
+                            <li><a class="dropdown-item" href="<?= DOMAIN ?>habitaciones">Habitaciones</a></li>
                         </ul>
                     </li>
 
 
                     <li class="nav-item">
-                        <a class="nav-link " href="contacto">Contacto</a>
+                        <a class="nav-link " href="<?= DOMAIN ?>contacto">Contacto</a>
                     </li>
 
                 </ul>

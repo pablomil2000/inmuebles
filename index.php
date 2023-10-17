@@ -1,4 +1,7 @@
 <?php
+
+const DOMAIN = "http://localhost/inmuebles/";
+
 session_cache_limiter('public');    //Evitar error de "Documento expirado" para formulario enviado
 session_start();
 

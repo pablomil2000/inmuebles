@@ -10,18 +10,15 @@ class PlantillaCtr
     static public function whiteList(...$validas)
     {
 
-        $ruta = 'home';
-
-
-        if (isset($_GET['ruta'])) {
-            $ruta = Validar::vlt_String($_GET['ruta']);
-
-            if (!in_array($ruta, $validas)) {
-                $ruta = '404';
-            }
+        if (isset($_GET['url'])) {
+            $url = explode("/", $_GET["url"]);
+        } else {
+            $url[] = 'home';
         }
 
-        require_once('views/modules/' . $ruta . '.php');
-        return $ruta;
+        // var_dump($url);
+
+        require_once('views/modules/' . $url[0] . '.php');
+        return $url;
     }
 }

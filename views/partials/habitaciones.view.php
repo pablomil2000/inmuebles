@@ -14,7 +14,7 @@
                     <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="home">Home</a>
+                                <a href="<?= DOMAIN ?>home">Home</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 Habitaciones
@@ -50,7 +50,7 @@
                                     </div>
                                     <div class="card-title-b">
                                         <h2 class="title-2">
-                                            <a href="index.php?ruta=habitacion&slug=<?= $habitacion['id'] ?>">
+                                            <a href="habitacion/<?= $habitacion['id'] ?>">
                                                 <?= $habitacion['nombre'] ?>
                                             </a>
                                         </h2>

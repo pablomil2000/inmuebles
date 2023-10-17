@@ -58,7 +58,7 @@
                                 <div class="card-header-b">
                                     <div class="card-title-b">
                                         <h2 class="title-2">
-                                            <a href="index.php?ruta=habitacion&slug=<?= $habitacion['id'] ?>"><?= $habitacion['nombre'] ?></a>
+                                            <a href="<?= DOMAIN ?>habitacion/<?= $habitacion['id'] ?>"><?= $habitacion['nombre'] ?></a>
                                         </h2>
 
                                         <h3 class="text-white">
