@@ -26,7 +26,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="home" class="brand-link text-decoration-none"">
+            <a href="home" class="brand-link text-decoration-none">
                 <img src=" views/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">Admin panel</span>
             </a>
@@ -49,7 +49,7 @@
                         <!-- Add icons to the links using the .nav-icon class
                                 with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="home" class="nav-link <?= !isset($_GET['ruta']) || $_GET['ruta'] == 'home' ? 'active' : '' ?>">
+                            <a href="home" class="nav-link <?= !isset($_GET['ruta']) || $_GET['ruta'] == 'home' ? 'active' : '' ?> ">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                                 <p>
                                     <i class="nav-icon fas fa-home"></i>
@@ -59,7 +59,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="usuarios" class="nav-link <?= $_GET['ruta'] == 'usuarios' ? 'active' : '' ?>">
+                            <a href="usuarios" class="nav-link <?= isset($_GET['ruta']) && $_GET['ruta'] == 'usuarios' ? 'active' : '' ?>">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                                 <p>
                                     <i class="nav-icon fas fa-users"></i>
@@ -69,7 +69,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="localizaciones" class="nav-link <?= $_GET['ruta'] == 'localizaciones' ? 'active' : '' ?>">
+                            <a href="localizaciones" class="nav-link <?= isset($_GET['ruta']) && $_GET['ruta'] == 'localizaciones' ? 'active' : '' ?>">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                                 <p>
                                     <i class="nav-icon fas fa-th-list"></i>
@@ -79,7 +79,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="inmuebles" class="nav-link <?= $_GET['ruta'] == 'inmuebles' ? 'active' : '' ?>">
+                            <a href="inmuebles" class="nav-link <?= isset($_GET['ruta']) && $_GET['ruta'] == 'inmuebles' ? 'active' : '' ?>">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                                 <p>
                                     <i class="nav-icon fab fa-product-hunt"></i>
@@ -89,11 +89,22 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="habitaciones" class="nav-link <?= $_GET['ruta'] == 'habitaciones' ? 'active' : '' ?>">
+                            <a href="habitaciones" class="nav-link <?= isset($_GET['ruta']) && $_GET['ruta'] == 'habitaciones' ? 'active' : '' ?>">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                                 <p>
                                     <i class="nav-icon fas fa-address-card"></i>
                                     Habitaciones
+                                </p>
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a href="comentarios" class="nav-link <?= isset($_GET['ruta']) && $_GET['ruta'] == 'comentarios' ? 'active' : '' ?>">
+                                <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
+                                <p>
+                                    <i class="nav-icon fas fa-handshake-angle"></i>
+                                    Comentarios
                                 </p>
                             </a>
                         </li>

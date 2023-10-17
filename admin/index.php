@@ -14,6 +14,7 @@ require_once('controllers/localizaciones.controller.php');
 require_once('controllers/inmueble.controller.php');
 require_once('controllers/habitaciones.controller.php');
 require_once('controllers/galeria.controller.php');
+require_once('controllers/contacto.controller.php');
 
 
 //? Modelos
