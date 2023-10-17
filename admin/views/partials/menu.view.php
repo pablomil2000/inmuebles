@@ -1,4 +1,4 @@
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini sidebar-collapse">
     <div class="wrapper">
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -24,7 +24,7 @@
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4 ">
             <!-- Brand Logo -->
             <a href="home" class="brand-link text-decoration-none">
                 <img src=" views/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -32,7 +32,7 @@
             </a>
 
             <!-- Sidebar -->
-            <div class="sidebar" style="height: 94vh;">
+            <div class="sidebar " style="height: 94vh;">
                 <!-- Sidebar user (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">

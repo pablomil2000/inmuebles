@@ -11,7 +11,7 @@ Funciones::isLogin('admin', '../login');
 include('views/modules/menu.php');
 
 //<!-- Content start -->
-PlantillaCtr::whiteList(array('logout'), true, array('admin', 'usuarios', 'localizaciones', 'inmuebles', 'habitaciones', 'editLocation', 'edithabitaciones', 'editinmuebles', 'deletehabitaciones', 'destacar', 'deleteimage', 'deleteinmuebles', 'deleteLocation', 'comentarios'));
+PlantillaCtr::whiteList(array('logout'), true, array('admin', 'usuarios', 'localizaciones', 'inmuebles', 'habitaciones', 'editLocation', 'edithabitaciones', 'editinmuebles', 'deletehabitaciones', 'destacar', 'deleteimage', 'deleteinmuebles', 'deleteLocation', 'comentarios', 'comentario'));
 
 ?>
 <!-- Content end -->
