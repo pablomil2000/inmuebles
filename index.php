@@ -30,13 +30,3 @@ require_once('models/crud.model.php');                  //*Core
 
 
 PlantillaCtr::load();
-
-/*TODO :
-    Terminar traducir
-    Pie de pagina
-    Margen abajo
-    Galeria imagen(proyecto)
-    eliminar paginacion
-    pagina de contacto
-    terminar busqueda
-*/

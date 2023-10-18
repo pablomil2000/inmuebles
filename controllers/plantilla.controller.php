@@ -10,15 +10,22 @@ class PlantillaCtr
     static public function whiteList(...$validas)
     {
 
+
+
         if (isset($_GET['url'])) {
             $url = explode("/", $_GET["url"]);
         } else {
             $url[] = 'home';
         }
 
+        if (in_array($url[0], $validas)) {
+            $redirect = $url[0];
+        } else {
+            $redirect = 404;
+        }
         // var_dump($url);
 
-        require_once('views/modules/' . $url[0] . '.php');
+        require_once('views/modules/' . $redirect . '.php');
         return $url;
     }
 }

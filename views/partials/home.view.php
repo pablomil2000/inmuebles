@@ -25,7 +25,7 @@
                                                 <span class="color-b"><?= $habitacion['nombre'] ?></span>
                                             </h1>
                                             <p class="intro-subtitle intro-price">
-                                                <a href="index.php?ruta=habitacion&slug=<?= $habitacion['id'] ?>"><span class="price-a">Desde | <?= $habitacion['precio'] ?> €</span></a>
+                                                <a href="habitacion/<?= $habitacion['id'] ?>"><span class="price-a">Desde | <?= $habitacion['precio'] ?> €</span></a>
                                             </p>
                                         </div>
                                     </div>
@@ -140,14 +140,14 @@
                                 <div class="card-overlay-a-content">
                                     <div class="card-header-a">
                                         <h2 class="card-title-a">
-                                            <a href="index.php?ruta=habitacion&slug=<?= $habitacion['id'] ?>"><?= $habitacion["nombre"] ?></a>
+                                            <a href="habitacion/<?= $habitacion['id'] ?>"><?= $habitacion["nombre"] ?></a>
                                         </h2>
                                     </div>
                                     <div class="card-body-a">
                                         <div class="price-box d-flex">
                                             <span class="price-a">rent | <?= $habitacion['precio'] ?> €</span>
                                         </div>
-                                        <a href="index.php?ruta=habitacion&slug=<?= $habitacion['id'] ?>" class="link-a">Click here to view
+                                        <a href="habitacion/<?= $habitacion['id'] ?>" class="link-a">Click here to view
                                             <span class="bi bi-chevron-right"></span>
                                         </a>
                                     </div>
