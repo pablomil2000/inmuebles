@@ -1,10 +1,6 @@
 <?php
 
-if (!isset($_GET['id'])) {
-    Funciones::JsRedirect('inmuebles');
-}
-
-$id = $_GET['id'];
+$id = explode("/", $_GET["url"])[1];
 
 $inmueblesCtrl = new inmueblesCtrl('inmuebles');
 $habitacionesCtrl = new habitacionCtrl('habitaciones');
@@ -30,4 +26,4 @@ $inmueblesCtrl->delete($id);
 if ($inmueble[0]['imagen'] != 'default.png') {
     Funciones::deleteImage('../views/images/inmuebles/' . $inmueble[0]['imagen']);
 }
-Funciones::JsRedirect('inmuebles');
+Funciones::JsRedirect(DOMAIN . 'inmuebles');

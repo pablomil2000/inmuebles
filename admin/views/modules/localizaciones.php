@@ -6,7 +6,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     Funciones::sweetAlert2(array('icon' => 'success', 'title' => 'Localizacion creada', 'text' => ''));
 }
 
-
 $Localizaciones = $LocalizacionCtrl->getAll();
 
 include('views/partials/localizaciones.view.php');

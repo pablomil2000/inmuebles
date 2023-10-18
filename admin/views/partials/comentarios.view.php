@@ -39,24 +39,21 @@
                                 <?php
                                 foreach ($comentarios as $key => $comentario) {
                                 ?>
-                                    <tr onclick='window.location="index.php?ruta=comentario&id=<?= $comentario["id"] ?>"'>
-                                        <a href="">
+                                    <tr onclick='window.location="comentario/<?= $comentario["id"] ?>"'>
+                                        <td scope="row">
+                                            <?php
 
-                                            <td scope="row">
-                                                <?php
-
-                                                if (!$comentario['Abierto']) {
-                                                ?>
-                                                    <span class="badge text-bg-warning">New</span>
-                                                <?php
-                                                }
-                                                ?>
-                                                <?= $comentario['id'] ?>
-                                            </td>
-                                            <td><?= $comentario['nombre'] ?></td>
-                                            <td><?= Funciones::dateFormat($comentario['fecha'], "d/m/Y H:m") ?></td>
-                                            <td><?= $comentario['Abierto'] ? 'Abierto' : 'Sin abrir' ?></td>
-                                        </a>
+                                            if (!$comentario['Abierto']) {
+                                            ?>
+                                                <span class="badge text-bg-warning">New</span>
+                                            <?php
+                                            }
+                                            ?>
+                                            <?= $comentario['id'] ?>
+                                        </td>
+                                        <td><?= $comentario['nombre'] ?></td>
+                                        <td><?= Funciones::dateFormat($comentario['fecha'], "d/m/Y H:m") ?></td>
+                                        <td><?= $comentario['Abierto'] ? 'Abierto' : 'Sin abrir' ?></td>
                                     </tr>
                                 <?php
                                 }

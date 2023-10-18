@@ -1,9 +1,6 @@
 <?php
 
-if (!isset($_GET['id'])) {
-    Funciones::JsRedirect('localizaciones');
-}
-$id = $_GET['id'];
+$id = explode("/", $_GET["url"])[1];
 
 $habitacionCtrl = new habitacionCtrl('habitaciones');
 $inmueblesCtrl = new inmueblesCtrl('inmuebles');
@@ -69,6 +66,8 @@ $galerias = $galeriaCtrl->getById(array('habitacion_id' => $id));
 
 $habitacion = $habitacionCtrl->getById(array('id' => $id));
 
-
+if (empty($habitacion)) {
+    Funciones::JsRedirect(DOMAIN . '404');
+}
 
 include('views/partials/edithabitaciones.view.php');

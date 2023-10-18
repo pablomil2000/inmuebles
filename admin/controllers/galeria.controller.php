@@ -3,7 +3,7 @@
 class galeriaCtrl extends CrudCtrl
 {
 
-    private $route = '../views/images/habitacion/';
+    private $route = P_DOMAIN . 'views/images/habitacion/';
 
     public function getDest($id)
     {
@@ -13,12 +13,12 @@ class galeriaCtrl extends CrudCtrl
             return ($this->route . "$id/" . $result[0]['name']);
         }
 
-        return ("../views/images/default.png");
+        return (DOMAIN . "../views/images/default.png");
     }
 
     public function getImage($id, $name)
     {
-        return ("../views/images/habitacion/$id/" . $name);
+        return (DOMAIN . "../views/images/habitacion/$id/" . $name);
     }
 
     public function __get($name)

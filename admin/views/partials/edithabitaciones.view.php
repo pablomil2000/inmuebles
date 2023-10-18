@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="<?= DOMAIN ?>home">Home</a></li>
                         <li class="breadcrumb-item active">Usuarios</li>
                     </ol>
                 </div>
@@ -114,11 +114,11 @@
                                             <?php
                                             } else {
                                             ?>
-                                                <a href="index.php?ruta=destacar&id=<?= $galeria['id'] ?>"><i class="fa-regular fa-star"></i></a>
+                                                <a href="<?= DOMAIN ?>destacar/<?= $galeria['id'] ?>"><i class="fa-regular fa-star"></i></a>
                                             <?php
                                             }
                                             ?>
-                                            <a href="index.php?ruta=deleteimage&id=<?= $galeria['id'] ?>"><i class="fa-solid fa-trash"></i></a>
+                                            <a href="<?= DOMAIN ?>deleteimage/<?= $galeria['id'] ?>"><i class="fa-solid fa-trash"></i></a>
                                         </p>
                                     </div>
                                 </div>

@@ -11,7 +11,7 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/2ac527422a.js" crossorigin="anonymous"></script>
     <!-- Theme style -->
-    <link rel="stylesheet" href="views/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="<?= DOMAIN ?>views/dist/css/adminlte.min.css">
 
     <!-- Sweetalert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

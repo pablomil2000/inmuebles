@@ -1,4 +1,8 @@
 <?php
+
+const DOMAIN = 'http://localhost/inmuebles/admin/';
+const P_DOMAIN = "http://localhost/inmuebles/";
+
 session_start();
 // var_dump($_SESSION);
 //? controllers

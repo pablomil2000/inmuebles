@@ -43,10 +43,10 @@
                                 <td scope="row"><?= $Localizacion['id'] ?></td>
                                 <td><?= $Localizacion['nombre'] ?></td>
                                 <td>
-                                    <a href="index.php?ruta=editLocation&id=<?= $Localizacion['id'] ?>">
+                                    <a href="editLocation/<?= $Localizacion['id'] ?>">
                                         <i class="fa-solid fa-pencil"></i>
                                     </a>
-                                    <a class="text-danger" href="index.php?ruta=deleteLocation&id=<?= $Localizacion['id'] ?>">
+                                    <a class="text-danger" href="deleteLocation/<?= $Localizacion['id'] ?>">
                                         <i class="fa-solid fa-trash"></i>
                                     </a>
                                 </td>

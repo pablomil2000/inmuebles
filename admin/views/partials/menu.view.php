@@ -49,7 +49,7 @@
                         <!-- Add icons to the links using the .nav-icon class
                                 with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="home" class="nav-link <?= !isset($_GET['ruta']) || $_GET['ruta'] == 'home' ? 'active' : '' ?> ">
+                            <a href="home" class="nav-link <?= !isset($_GET['url']) || $_GET['url'] == 'home' ? 'active' : '' ?> ">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                                 <p>
                                     <i class="nav-icon fas fa-home"></i>
@@ -59,7 +59,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="usuarios" class="nav-link <?= isset($_GET['ruta']) && $_GET['ruta'] == 'usuarios' ? 'active' : '' ?>">
+                            <a href="usuarios" class="nav-link <?= isset($_GET['url']) && $_GET['url'] == 'usuarios' ? 'active' : '' ?>">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                                 <p>
                                     <i class="nav-icon fas fa-users"></i>
@@ -69,7 +69,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="localizaciones" class="nav-link <?= isset($_GET['ruta']) && $_GET['ruta'] == 'localizaciones' ? 'active' : '' ?>">
+                            <a href="localizaciones" class="nav-link <?= isset($_GET['url']) && $_GET['url'] == 'localizaciones' ? 'active' : '' ?>">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                                 <p>
                                     <i class="nav-icon fas fa-th-list"></i>
@@ -79,7 +79,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="inmuebles" class="nav-link <?= isset($_GET['ruta']) && $_GET['ruta'] == 'inmuebles' ? 'active' : '' ?>">
+                            <a href="inmuebles" class="nav-link <?= isset($_GET['url']) && $_GET['url'] == 'inmuebles' ? 'active' : '' ?>">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                                 <p>
                                     <i class="nav-icon fab fa-product-hunt"></i>
@@ -89,7 +89,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="habitaciones" class="nav-link <?= isset($_GET['ruta']) && $_GET['ruta'] == 'habitaciones' ? 'active' : '' ?>">
+                            <a href="habitaciones" class="nav-link <?= isset($_GET['url']) && $_GET['url'] == 'habitaciones' ? 'active' : '' ?>">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                                 <p>
                                     <i class="nav-icon fas fa-address-card"></i>
@@ -100,7 +100,7 @@
 
 
                         <li class="nav-item">
-                            <a href="comentarios" class="nav-link <?= isset($_GET['ruta']) && $_GET['ruta'] == 'comentarios' ? 'active' : '' ?>">
+                            <a href="comentarios" class="nav-link <?= isset($_GET['url']) && $_GET['url'] == 'comentarios' ? 'active' : '' ?>">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                                 <p>
                                     <i class="nav-icon fas fa-handshake-angle"></i>

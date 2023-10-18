@@ -77,8 +77,8 @@
                                     ?>
                                 </td>
                                 <td>
-                                    <a href="index.php?ruta=edithabitaciones&id=<?= $habitacion['id'] ?>"><i class="fa-solid fa-pencil"></i></a>
-                                    <a class="text-danger" href="index.php?ruta=deletehabitaciones&id=<?= $habitacion['id'] ?>"><i class="fa-solid fa-trash"></i></a>
+                                    <a href="edithabitaciones/<?= $habitacion['id'] ?>"><i class="fa-solid fa-pencil"></i></a>
+                                    <a class="text-danger" href="deletehabitaciones/<?= $habitacion['id'] ?>"><i class="fa-solid fa-trash"></i></a>
                                 </td>
                             </tr>
                         <?php

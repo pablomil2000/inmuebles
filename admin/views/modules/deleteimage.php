@@ -1,10 +1,7 @@
 <?php
 $galeriaCtrl = new galeriaCtrl('galeria');
 
-if (!isset($_GET['id'])) {
-    Funciones::JsRedirect('localizaciones');
-}
-$id = $_GET['id'];
+$id = explode("/", $_GET["url"])[1];
 
 $image = $galeriaCtrl->getById(array('id' => $id));
 
@@ -13,4 +10,4 @@ Funciones::deleteImage("../views/images/habitacion/" . $image[0]['habitacion_id'
 // var_dump($image);
 
 
-Funciones::JsRedirect("index.php?ruta=edithabitaciones&id=" . $image[0]['habitacion_id']);
+Funciones::JsRedirect(DOMAIN . "edithabitaciones/" . $image[0]['habitacion_id']);

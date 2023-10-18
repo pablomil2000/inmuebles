@@ -62,7 +62,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><?= $habitacion['nombre'] ?></h5>
                             <p class="card-text"><?= $habitacion['text_intro'] ?></p>
-                            <a href="index.php?ruta=edithabitaciones&id=<?= $habitacion['id'] ?>" class="btn btn-outline-primary">Ver mas <i class="fa-solid fa-pencil"></i></a>
+                            <a href="<?= DOMAIN ?>edithabitaciones/<?= $habitacion['id'] ?>" class="btn btn-outline-primary">Ver mas <i class="fa-solid fa-pencil"></i></a>
 
                         </div>
                     </div>

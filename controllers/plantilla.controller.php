@@ -10,8 +10,6 @@ class PlantillaCtr
     static public function whiteList(...$validas)
     {
 
-
-
         if (isset($_GET['url'])) {
             $url = explode("/", $_GET["url"]);
         } else {

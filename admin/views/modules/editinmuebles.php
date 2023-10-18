@@ -1,9 +1,6 @@
 <?php
 
-if (!isset($_GET['id'])) {
-    Funciones::JsRedirect('localizaciones');
-}
-$id = $_GET['id'];
+$id = explode("/", $_GET["url"])[1];
 
 $inmueblesCtrl = new inmueblesCtrl('inmuebles');
 $localizacionesCtrl = new localizacionesCtrl('localizacion');

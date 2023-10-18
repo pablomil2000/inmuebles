@@ -1,10 +1,6 @@
 <?php
 
-if (!isset($_GET['id'])) {
-    Funciones::JsRedirect('localizaciones');
-}
-
-$id = $_GET['id'];
+$id = explode("/", $_GET["url"])[1];
 
 $inmueblesCtrl = new inmueblesCtrl('inmuebles');
 $localizacionCtrl = new localizacionesCtrl('Localizacion');
@@ -17,7 +13,7 @@ foreach ($inmublesAfect as $key => $inmueble) {
 }
 
 if ($localizacionCtrl->delete($id)) {
-    Funciones::sweetAlert2(array('icon' => 'success', 'title' => 'Localizacion eliminada', 'text' => '', 'redirect' => 'localizaciones'));
+    Funciones::sweetAlert2(array('icon' => 'success', 'title' => 'Localizacion eliminada', 'text' => '', 'redirect' => DOMAIN . 'localizaciones'));
 } else {
-    Funciones::sweetAlert2(array('icon' => 'error', 'title' => 'No se pudo eliminar', 'text' => 'ponte en contacto con el desarrollado para comprobar el error code: ' . Funciones::dateFormat(date("F j, Y, g:i a"), "dmyhis"), 'redirect' => 'localizaciones'));
+    Funciones::sweetAlert2(array('icon' => 'error', 'title' => 'No se pudo eliminar', 'text' => 'ponte en contacto con el desarrollado para comprobar el error code: ' . Funciones::dateFormat(date("F j, Y, g:i a"), "dmyhis"), 'redirect' => DOMAIN . 'localizaciones'));
 }

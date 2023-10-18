@@ -49,8 +49,8 @@
                                 </td>
                                 <td><?= $localizacionesCtrl->getById(array('id' => $inmueble['localizacion_id']))[0]['nombre'] ?></td>
                                 <td>
-                                    <a href="index.php?ruta=editinmuebles&id=<?= $inmueble['id'] ?>"><i class="fa-solid fa-pencil"></i></a>
-                                    <a class="text-danger" href="index.php?ruta=deleteinmuebles&id=<?= $inmueble['id'] ?>"><i class="fa-solid fa-trash"></i></a>
+                                    <a href="editinmuebles/<?= $inmueble['id'] ?>"><i class="fa-solid fa-pencil"></i></a>
+                                    <a class="text-danger" href="deleteinmuebles/<?= $inmueble['id'] ?>"><i class="fa-solid fa-trash"></i></a>
                                 </td>
                             </tr>
                         <?php

@@ -9,15 +9,11 @@ class PlantillaCtr
 
     static public function whiteList($validas1 = array(), $privadas = false, $validas2 = array())
     {
-
-        $redirect = 'home';
-        $validas1[] = 'home';
         $ruta = 'home';
+        $validas2[] = 'home';
 
-        if (isset($_GET['ruta'])) {
-
-            $ruta = Validar::vlt_String($_GET['ruta']);
-
+        if (isset($_GET['url'])) {
+            $ruta = explode("/", $_GET["url"])[0];
             if (in_array($ruta, $validas1)) {
                 $redirect = $ruta;
             } elseif ($privadas) {
@@ -27,11 +23,15 @@ class PlantillaCtr
                     $redirect = 404;
                 }
             } else {
+
                 $redirect = 404;
             }
+        } else {
+            $redirect = 'home';
         }
 
+
         require_once('views/modules/' . $redirect . '.php');
-        return $ruta;
+        return $redirect;
     }
 }
