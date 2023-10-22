@@ -67,7 +67,7 @@ $galerias = $galeriaCtrl->getById(array('habitacion_id' => $id));
 $habitacion = $habitacionCtrl->getById(array('id' => $id));
 
 if (empty($habitacion)) {
-    Funciones::JsRedirect(DOMAIN . '404');
+    Funciones::JsRedirect(RutaCtrl::url() . '404');
 }
 
 include('views/partials/edithabitaciones.view.php');

@@ -10,4 +10,4 @@ $galeriaCtrl->update(array('destacada' => '1'), $id);
 var_dump($image);
 
 
-Funciones::JsRedirect(DOMAIN . "edithabitaciones/" . $image[0]['habitacion_id']);
+Funciones::JsRedirect(RutaCtrl::url() . "edithabitaciones/" . $image[0]['habitacion_id']);

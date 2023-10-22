@@ -8,7 +8,7 @@ $habitacion = $habitacionCtrl->getById(array('id' => $id));
 
 
 if (empty($habitacionCtrl->getById(array('id' => $id)))) {
-    Funciones::JsRedirect(DOMAIN . '404');
+    Funciones::JsRedirect(RutaCtrl::url() . '404');
 }
 
 if ($habitacionCtrl->delete($id)) {
@@ -22,4 +22,4 @@ if ($habitacionCtrl->delete($id)) {
     Funciones::deleteFolder('../views/images/habitacion/' . $habitacion[0]['id']);
 }
 
-Funciones::sweetAlert2(array('icon' => 'success', 'title' => 'Habitacion eliminada', 'text' => '', 'redirect' => DOMAIN . 'habitaciones'));
+Funciones::sweetAlert2(array('icon' => 'success', 'title' => 'Habitacion eliminada', 'text' => '', 'redirect' => RutaCtrl::url() . 'habitaciones'));

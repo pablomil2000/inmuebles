@@ -26,8 +26,8 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4 ">
             <!-- Brand Logo -->
-            <a href="home" class="brand-link text-decoration-none">
-                <img src=" views/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+            <a href="<?= RutaCtrl::url('home') ?>" class="brand-link text-decoration-none">
+                <img src="<?= RutaCtrl::url() ?>views/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">Admin panel</span>
             </a>
 
@@ -36,7 +36,7 @@
                 <!-- Sidebar user (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="views/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                        <img src="<?= RutaCtrl::url() ?>views/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
                         <a href="#" class="d-block text-decoration-none"><?= $user[0]['nombre'] ?></a>
@@ -59,7 +59,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="usuarios" class="nav-link <?= isset($_GET['url']) && $_GET['url'] == 'usuarios' ? 'active' : '' ?>">
+                            <a href="<?= RutaCtrl::url('usuarios') ?>" class="nav-link <?= isset($_GET['url']) && $_GET['url'] == 'usuarios' ? 'active' : '' ?>">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                                 <p>
                                     <i class="nav-icon fas fa-users"></i>
@@ -69,7 +69,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="localizaciones" class="nav-link <?= isset($_GET['url']) && $_GET['url'] == 'localizaciones' ? 'active' : '' ?>">
+                            <a href="<?= RutaCtrl::url('localizaciones') ?>" class="nav-link <?= isset($_GET['url']) && $_GET['url'] == 'localizaciones' ? 'active' : '' ?>">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                                 <p>
                                     <i class="nav-icon fas fa-th-list"></i>
@@ -79,7 +79,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="inmuebles" class="nav-link <?= isset($_GET['url']) && $_GET['url'] == 'inmuebles' ? 'active' : '' ?>">
+                            <a href="<?= RutaCtrl::url('inmuebles') ?>" class="nav-link <?= isset($_GET['url']) && $_GET['url'] == 'inmuebles' ? 'active' : '' ?>">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                                 <p>
                                     <i class="nav-icon fab fa-product-hunt"></i>
@@ -89,7 +89,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="habitaciones" class="nav-link <?= isset($_GET['url']) && $_GET['url'] == 'habitaciones' ? 'active' : '' ?>">
+                            <a href="<?= RutaCtrl::url('habitaciones') ?>" class="nav-link <?= isset($_GET['url']) && $_GET['url'] == 'habitaciones' ? 'active' : '' ?>">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                                 <p>
                                     <i class="nav-icon fas fa-address-card"></i>
@@ -100,7 +100,7 @@
 
 
                         <li class="nav-item">
-                            <a href="comentarios" class="nav-link <?= isset($_GET['url']) && $_GET['url'] == 'comentarios' ? 'active' : '' ?>">
+                            <a href="<?= RutaCtrl::url('comentarios') ?>" class="nav-link <?= isset($_GET['url']) && $_GET['url'] == 'comentarios' ? 'active' : '' ?>">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                                 <p>
                                     <i class="nav-icon fas fa-handshake-angle"></i>

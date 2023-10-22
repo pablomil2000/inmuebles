@@ -11,7 +11,7 @@ $inmuebles = $inmueblesCtrl->getById(array('id' => $id));
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $inmueblesCtrl->updateImg($inmuebles, array('nombre', 'imagen', 'localizacion_id'), $_POST);
-    Funciones::sweetAlert2(array('icon' => 'success', 'title' => 'Inmueble actualizada', 'text' => '', 'redirect' => 'inmuebles'));
+    Funciones::sweetAlert2(array('icon' => 'success', 'title' => 'Inmueble actualizada', 'text' => '', 'redirect' => RutaCtrl::url('inmuebles')));
 }
 
 

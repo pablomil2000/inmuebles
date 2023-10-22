@@ -9,7 +9,7 @@ $comentarioCtrl->update(array('Abierto' => '1'), $id);
 $comentario = $comentarioCtrl->getById(array('id' => $id));
 
 if (empty($comentario)) {
-    Funciones::JsRedirect(DOMAIN . '404');
+    Funciones::JsRedirect(RutaCtrl::url() . '404');
 }
 
 

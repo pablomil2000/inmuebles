@@ -26,4 +26,4 @@ $inmueblesCtrl->delete($id);
 if ($inmueble[0]['imagen'] != 'default.png') {
     Funciones::deleteImage('../views/images/inmuebles/' . $inmueble[0]['imagen']);
 }
-Funciones::JsRedirect(DOMAIN . 'inmuebles');
+Funciones::JsRedirect(RutaCtrl::url() . 'inmuebles');
