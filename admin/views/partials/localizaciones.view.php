@@ -4,7 +4,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Usuarios</h1>
+                    <h1>Localizaciones</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -46,9 +46,11 @@
                                     <a href="editLocation/<?= $Localizacion['id'] ?>">
                                         <i class="fa-solid fa-pencil"></i>
                                     </a>
-                                    <a class="text-danger" href="deleteLocation/<?= $Localizacion['id'] ?>">
-                                        <i class="fa-solid fa-trash"></i>
-                                    </a>
+                                    <?php if ($Localizacion['id'] != 0) : ?>
+                                        <a class="text-danger" href="deleteLocation/<?= $Localizacion['id'] ?>">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </a>
+                                    <?php endif; ?>
                                 </td>
 
                             </tr>

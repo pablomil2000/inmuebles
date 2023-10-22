@@ -50,12 +50,12 @@
                                 <td><?= $habitacion['nombre'] ?></td>
                                 <td><img src="<?= $galeriaCtrl->getDest($habitacion['id']) ?>" alt="<?= $habitacion['nombre'] ?>" height="150px"></td>
                                 <td><?= $habitacion['precio'] ?> €</td>
-                                <td>
+                                <td class="justify-content-center">
                                     <?php
                                     $inmueble = $inmueblesCtrl->getById(array('id' => $habitacion['inmueble_id']));
                                     ?>
-                                    <p class="row"><?= $inmueble[0]['nombre'] ?></p>
-                                    <p class="row"><img src="../views/images/inmuebles/<?= $inmueble[0]['imagen'] ?>" alt="<?= $inmueble[0]['nombre'] ?>" height="150px"></p>
+                                    <p class="row justify-content-center"><?= $inmueble[0]['nombre'] ?></p>
+                                    <p><img src="../views/images/inmuebles/<?= $inmueble[0]['imagen'] ?>" alt="<?= $inmueble[0]['nombre'] ?>" height="150px"></p>
                                 </td>
                                 <td>
                                     <?php

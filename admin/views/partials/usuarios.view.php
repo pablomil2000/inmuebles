@@ -22,7 +22,7 @@
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAlta">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAlta">
                     Añadir usuarios
                 </button>
             </div>
@@ -72,7 +72,7 @@
         <div class="modal-content">
             <div class="modal-header bg-primary">
                 <h4 class="modal-title">Añadir usuarios</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -90,7 +90,7 @@
                 </form>
             </div>
             <div class="modal-footer ">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar </button>
+                <button type="button" class="btn btn-default" data-bs-dismiss="modal">Cancelar </button>
             </div>
         </div>
         <!-- /.modal-content -->
