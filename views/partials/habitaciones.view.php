@@ -76,7 +76,7 @@
 
             </div>
 
-            <div class="row d-flex">
+            <!-- <div class="row d-flex">
                 <div class="col-sm-12">
                     <nav class="pagination-a">
                         <ul class="pagination justify-content-end">
@@ -102,7 +102,7 @@
                         </ul>
                     </nav>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section><!-- End Blog Grid-->
 

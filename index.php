@@ -2,16 +2,15 @@
 
 const DOMAIN = "http://localhost/inmuebles/";
 
-
-session_cache_limiter('public');    //Evitar error de "Documento expirado" para formulario enviado
+// session_cache_limiter('public');    //Evitar error de "Documento expirado" para formulario enviado
 session_start();
 
 //? Clases
 
 //? controllers
+require_once('controllers/ruta.controller.php');        //*Core
 require_once('controllers/funciones.controller.php');   //*Core
 require_once('controllers/plantilla.controller.php');   //*Core
-require_once('controllers/ruta.controller.php');        //*Core
 require_once('controllers/crud.controller.php');        //*Core
 require_once('controllers/pagination.controller.php');  //*Core
 require_once('controllers/carrito.controller.php');     //*Core

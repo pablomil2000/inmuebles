@@ -7,17 +7,17 @@
                 <div class="col-md-12 col-lg-8">
                     <div class="title-single-box">
                         <h1 class="title-single"><?= $habitacion[0]['nombre'] ?></h1>
-                        <span class="color-text-a"><a href="<?= DOMAIN ?>inmueble/<?= $habitacion[0]['inmueble_id'] ?>">Mas habitaciones</a></span>
+                        <span class="color-text-a"><a href="<?= RutaCtrl::url() ?>inmueble/<?= $habitacion[0]['inmueble_id'] ?>">Mas habitaciones</a></span>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-4">
                     <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="<?= DOMAIN ?>home">Home</a>
+                                <a href="<?= RutaCtrl::url() ?>home">Home</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                <a href="<?= DOMAIN ?>habitaciones">Habitaciones</a>
+                                <a href="<?= RutaCtrl::url() ?>habitaciones">Habitaciones</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 <?= $habitacion[0]['nombre'] ?>

@@ -10,20 +10,20 @@
     <meta content="casa, habitacion, madrid, alquilar" name="keywords">
 
     <!-- Favicons -->
-    <link href="<?= DOMAIN ?>views/assets/img/favicon.png" rel="icon">
-    <link href="<?= DOMAIN ?>views/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="<?= RutaCtrl::url() ?>views/assets/img/favicon.png" rel="icon">
+    <link href="<?= RutaCtrl::url() ?>views/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="<?= DOMAIN ?>views/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-    <link href="<?= DOMAIN ?>views/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?= DOMAIN ?>views/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="<?= DOMAIN ?>views/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="<?= RutaCtrl::url() ?>views/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="<?= RutaCtrl::url() ?>views/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= RutaCtrl::url() ?>views/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="<?= RutaCtrl::url() ?>views/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="<?= DOMAIN ?>views/assets/css/style.css" rel="stylesheet">
+    <link href="<?= RutaCtrl::url() ?>views/assets/css/style.css" rel="stylesheet">
 
 
     <!-- SweetAlert -->

@@ -145,4 +145,4 @@
 </div>
 
 
-<script src="views/dist/js/summernotes.js"></script>
+<script src="<?= RutaCtrl::url() ?>views/dist/js/summernotes.js"></script>

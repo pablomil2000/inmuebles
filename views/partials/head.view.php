@@ -19,13 +19,13 @@
                 <span></span>
                 <span></span>
             </button>
-            <a class="navbar-brand text-brand" href="home">Estate<span class="color-b">Agency</span></a>
+            <a class="navbar-brand text-brand" href="<?= RutaCtrl::url('home') ?>">Alquileres<span class="color-b">Compartidos</span></a>
 
             <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="<?= DOMAIN ?>home">Home</a>
+                        <a class="nav-link active" href="<?= RutaCtrl::url('home') ?>">Inicio</a>
                     </li>
 
                     <li class="nav-item dropdown">

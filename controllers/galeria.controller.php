@@ -12,8 +12,7 @@ class galeriaCtrl extends CrudCtrl
         if (isset($result[0]['name'])) {
             return ($this->route . "$id/" . $result[0]['name']);
         }
-
-        return (DOMAIN . "views/images/default.png");
+        return (RutaCtrl::url() . "/views/images/default.png");
     }
 
     public function getImage($id, $name)

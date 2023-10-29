@@ -9,7 +9,7 @@
             $inmueble = $inmuebleCtrl->getById(array('id' => $habitacion['inmueble_id']));
             $localizacion = $localizationCtrl->getById(array('id' => $inmueble[0]['localizacion_id']));
         ?>
-            <a href="index.php?ruta=habitacion&slug=<?= $habitacion['id'] ?>">
+            <a href="<?= RutaCtrl::url() ?>habitacion/<?= $habitacion['id'] ?>">
 
                 <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(<?= $galeriaCtrl->getDest($habitacion['id']) ?>)">
                     <div class="overlay overlay-a"></div>
@@ -25,7 +25,7 @@
                                                 <span class="color-b"><?= $habitacion['nombre'] ?></span>
                                             </h1>
                                             <p class="intro-subtitle intro-price">
-                                                <a href="habitacion/<?= $habitacion['id'] ?>"><span class="price-a">Desde | <?= $habitacion['precio'] ?> €</span></a>
+                                                <a href="<?= RutaCtrl::url() ?>/habitacion/<?= $habitacion['id'] ?>"><span class="price-a">Desde | <?= $habitacion['precio'] ?> €</span></a>
                                             </p>
                                         </div>
                                     </div>
@@ -114,10 +114,10 @@
             <div class="col-md-12">
                 <div class="title-wrap d-flex justify-content-between">
                     <div class="title-box">
-                        <h2 class="title-a">Latest Properties</h2>
+                        <h2 class="title-a">Últimas habitaciones disponibles</h2>
                     </div>
                     <div class="title-link">
-                        <a href="property-grid.html">All Property
+                        <a href="property-grid.html">Ver más
                             <span class="bi bi-chevron-right"></span>
                         </a>
                     </div>
