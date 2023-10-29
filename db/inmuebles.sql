@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-10-2023 a las 08:23:54
+-- Tiempo de generación: 29-10-2023 a las 18:47:05
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -39,6 +39,13 @@ CREATE TABLE `contacto` (
   `text` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `contacto`
+--
+
+INSERT INTO `contacto` (`id`, `nombre`, `apellido`, `tel`, `email`, `fecha`, `Abierto`, `asunto`, `text`) VALUES
+(1, 'Pablo', 'Martin lopez', '676688670', 'martinlopezpablo@gmail.com', '2023-10-28 18:01:14', 1, 'Necesito ayuda', 'Ayuda');
+
 -- --------------------------------------------------------
 
 --
@@ -57,8 +64,8 @@ CREATE TABLE `galeria` (
 --
 
 INSERT INTO `galeria` (`id`, `name`, `habitacion_id`, `destacada`) VALUES
-(1, '', 1, 1),
-(2, '9hyHANygVG.png', 2, 1);
+(1, 'DGEPOmEXtZ.png', 72, 1),
+(2, 'CP1HsEhYVT.png', 73, 1);
 
 -- --------------------------------------------------------
 
@@ -86,8 +93,8 @@ CREATE TABLE `habitaciones` (
 --
 
 INSERT INTO `habitaciones` (`id`, `nombre`, `text_intro`, `text`, `precio`, `disponible`, `inmueble_id`, `doble`, `banio`, `terraza`, `calefaccion`, `piscina`) VALUES
-(1, 'h1', 'habitacion 1 en madrid', 'esto es una habitacion en el centro de madrid\r\n                        ', 300, 1, 1, 0, 0, 0, 0, 0),
-(2, 'h2', 'habitacion 2 en madrid', 'esto es otra habitacion en el centro de madrid\r\n                        ', 300, 1, 1, 0, 0, 0, 0, 0);
+(72, 'h1', 'h1', 'h1\r\n                        ', 123, 0, 42, 0, 0, 0, 0, 0),
+(73, 'h2', 'habitacion 2 en rivas', 'Una habitación en Rivas\r\n                        ', 123, 1, 42, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -107,8 +114,7 @@ CREATE TABLE `inmuebles` (
 --
 
 INSERT INTO `inmuebles` (`id`, `nombre`, `imagen`, `localizacion_id`) VALUES
-(1, 'inmueble 1', 'ANBOqdiSKT.png', 1),
-(2, 'inmueble2', 'gBWDj58As9.png', 1);
+(42, 'inmueble', 'xieIzDYT3O.png', 0);
 
 -- --------------------------------------------------------
 
@@ -127,7 +133,7 @@ CREATE TABLE `localizacion` (
 
 INSERT INTO `localizacion` (`id`, `nombre`) VALUES
 (0, 'Sin ubicacion'),
-(1, 'Madrid');
+(11, 'Rivas');
 
 -- --------------------------------------------------------
 
@@ -148,7 +154,9 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `password`, `activo`, `lastLogin`) VALUES
-(1, 'admin', 'admin', 1, '2023-10-21 22:00:00');
+(1, 'admin', 'admin', 1, '2023-10-28 22:00:00'),
+(2, 'Pablo', 'admin', 1, '2023-09-14 11:44:23'),
+(3, 'Habbo', 'Haboo', 1, '2023-09-14 11:45:04');
 
 --
 -- Índices para tablas volcadas
@@ -198,7 +206,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `contacto`
 --
 ALTER TABLE `contacto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `galeria`
@@ -210,25 +218,25 @@ ALTER TABLE `galeria`
 -- AUTO_INCREMENT de la tabla `habitaciones`
 --
 ALTER TABLE `habitaciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT de la tabla `inmuebles`
 --
 ALTER TABLE `inmuebles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT de la tabla `localizacion`
 --
 ALTER TABLE `localizacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

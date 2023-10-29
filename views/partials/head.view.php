@@ -19,36 +19,52 @@
                 <span></span>
                 <span></span>
             </button>
+
+
             <a class="navbar-brand text-brand" href="<?= RutaCtrl::url('home') ?>">Alquileres<span class="color-b">Compartidos</span></a>
 
             <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="<?= RutaCtrl::url('home') ?>">Inicio</a>
+                        <a class="nav-link active" href="<?= RutaCtrl::url('home') ?>"><?= __('Home') ?></a>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="<?= DOMAIN ?>inmuebles" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Propiedades
+                            <?= __('Properties') ?>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="<?= DOMAIN ?>inmuebles">Inmuebles</a></li>
-                            <li><a class="dropdown-item" href="<?= DOMAIN ?>habitaciones">Habitaciones</a></li>
+                            <li><a class="dropdown-item" href="<?= DOMAIN ?>inmuebles"><?= __('Apartment') ?></a></li>
+                            <li><a class="dropdown-item" href="<?= DOMAIN ?>habitaciones"><?= __('Rooms') ?></a></li>
                         </ul>
                     </li>
 
 
                     <li class="nav-item">
-                        <a class="nav-link " href="<?= DOMAIN ?>contacto">Contacto</a>
+                        <a class="nav-link " href="<?= DOMAIN ?>contacto"><?= __('Contact') ?></a>
                     </li>
 
                 </ul>
             </div>
 
-            <button type="button" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
+            <button type="button" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" style="margin-right: 3em;">
                 <i class="bi bi-search"></i>
             </button>
 
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link <?= $_SESSION['lang'] == 'es' ? 'active' : '' ?>" href="<?= RutaCtrl::url() ?>?lang=es"><img src="<?= RutaCtrl::url("views/images/png/002-spain.png") ?>" alt=""></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <?= $_SESSION['lang'] == 'en' ? 'active' : '' ?>" href="<?= RutaCtrl::url() ?>?lang=en"><img src="<?= RutaCtrl::url("views/images/png/003-united-kingdom.png") ?>" alt=""></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <?= $_SESSION['lang'] == 'ar' ? 'active' : '' ?>" href="<?= RutaCtrl::url() ?>?lang=ar"><img src="<?= RutaCtrl::url("views/images/png/001-saudi-arabia.png") ?>" alt=""></a>
+                </li>
+            </ul>
+
+
         </div>
+
     </nav><!-- End Header/Navbar -->

@@ -34,6 +34,8 @@
                             <th>Nombre</th>
                             <th>Imagen</th>
                             <th>Localizacion</th>
+                            <th>Alquiler</th>
+                            <th>¿Disponible?</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -45,9 +47,23 @@
                                 <td scope="row"><?= $inmueble['id'] ?></td>
                                 <td><?= $inmueble['nombre'] ?></td>
                                 <td>
-                                    <img src="../views/images/inmuebles/<?= $inmueble['imagen'] ?>" alt="<?= $inmueble['nombre'] ?>" height="150px">
+                                    <img src="<?= RutaCtrl::url2() ?>views/images/inmuebles/<?= $inmueble['imagen'] ?>" alt="<?= $inmueble['nombre'] ?>" height="150px">
                                 </td>
                                 <td><?= $localizacionesCtrl->getById(array('id' => $inmueble['localizacion_id']))[0]['nombre'] ?></td>
+                                <td><?= $inmueble['precio'] == 0 ? 'Alquilar por habitacion' : $inmueble['precio'] ?></td>
+                                <td>
+                                    <?php
+                                    if ($inmueble['disponible']) {
+                                    ?>
+                                        <button type="button" class="btn btn-outline-success">Disponible</button>
+                                    <?php
+                                    } else {
+                                    ?>
+                                        <button type="button" class="btn btn-outline-danger">No disponible</button>
+                                    <?php
+                                    }
+                                    ?>
+                                </td>
                                 <td>
                                     <a href="editinmuebles/<?= $inmueble['id'] ?>"><i class="fa-solid fa-pencil"></i></a>
                                     <a class="text-danger" href="deleteinmuebles/<?= $inmueble['id'] ?>"><i class="fa-solid fa-trash"></i></a>
@@ -89,6 +105,14 @@
                         <label for="username" class="form-label">Nombre</label>
                         <input type="text" class="form-control" id="nombre" name="nombre" required>
                     </div>
+
+                    <div class="mb-3">
+                        <label for="precio" class="form-label">Precio</label>
+                        <input type="number" min="0" class="form-control" id="precio" name="precio" value="<?= $inmuebles[0]['precio'] ?>">
+                        <div id="precio" class="form-text">Si el piso no se alquila completo, dejar vacio.</div>
+                    </div>
+
+
                     <div class="mb-3">
                         <label for="password" class="form-label">Localizacion</label>
                         <select class="form-control" aria-label="Default select example" name="localizacion">

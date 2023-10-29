@@ -4,9 +4,8 @@ class inmueblesCtrl extends CrudCtrl
     public function insertImg($campos, $datos)
     {
         $datos2['nombre'] = $datos['nombre'];
-
         $datos2['localizacion'] = $datos['localizacion'];
-
+        $datos2['precio'] = $datos['precio'];
 
         $Funciones = new Funciones();
 
@@ -20,7 +19,13 @@ class inmueblesCtrl extends CrudCtrl
     {
         $datos2['nombre'] = $datos['nombre'];
         $datos2['localizacion_id'] = $datos['localizacion_id'];
+        $datos2['precio'] = $datos['precio'];
 
+        if (!isset($datos['disponible'])) {
+            $datos2['disponible'] = 0;
+        } else {
+            $datos2['disponible'] = 1;
+        }
         // var_dump($datos, $datos2);
 
         $Funciones = new Funciones();

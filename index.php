@@ -1,6 +1,6 @@
 <?php
 
-const DOMAIN = "http://localhost/inmuebles/";
+const DOMAIN = "https://trails-annex-coral-soccer.trycloudflare.com/inmuebles/";
 
 // session_cache_limiter('public');    //Evitar error de "Documento expirado" para formulario enviado
 session_start();
@@ -8,6 +8,7 @@ session_start();
 //? Clases
 
 //? controllers
+
 require_once('controllers/ruta.controller.php');        //*Core
 require_once('controllers/funciones.controller.php');   //*Core
 require_once('controllers/plantilla.controller.php');   //*Core
@@ -15,6 +16,8 @@ require_once('controllers/crud.controller.php');        //*Core
 require_once('controllers/pagination.controller.php');  //*Core
 require_once('controllers/carrito.controller.php');     //*Core
 require_once('controllers/validar.controller.php');     //*Core
+
+require('controllers/lang.controller.php');             //*Multi Lang
 
 require_once('controllers/user.controller.php');
 require_once('controllers/habitaciones.controller.php');

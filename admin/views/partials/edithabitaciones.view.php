@@ -89,10 +89,8 @@
 
                     <div class="mb-3 col-6">
                         <label for="password" class="form-label">¿Disponible?</label>
-
                         <input name="disponible" <?= $habitacion[0]['disponible'] ? 'checked' : '' ?> type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
                         <label class="btn btn-outline-success" for="btn-check-outlined">Disponible</label><br>
-
                     </div>
                     <div class="mb-3 col-6">
                         <input class="form-control" type="file" name="img" id="">

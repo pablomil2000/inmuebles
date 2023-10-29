@@ -1,7 +1,7 @@
 <?php
 
-const DOMAIN = 'http://localhost/inmuebles/admin/';
-const P_DOMAIN = "http://localhost/inmuebles/";
+const DOMAIN = 'https://trails-annex-coral-soccer.trycloudflare.com/inmuebles/admin/';
+const P_DOMAIN = "https://trails-annex-coral-soccer.trycloudflare.com/inmuebles/";
 
 session_start();
 // var_dump($_SESSION);

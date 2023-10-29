@@ -25,11 +25,18 @@
                 <h3>Editar inmuebles</h3>
             </div>
             <div class="card-body">
-                <form action="#" method="POST" enctype="multipart/form-data">
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Nombre</label>
+                <form action="#" method="POST" enctype="multipart/form-data" class="row">
+                    <div class="mb-3 col-6">
+                        <label for="nombre" class="form-label">Nombre</label>
                         <input type="text" class="form-control" id="nombre" name="nombre" required value="<?= $inmuebles[0]['nombre'] ?>">
                     </div>
+
+                    <div class="mb-3 col-6">
+                        <label for="precio" class="form-label">Precio</label>
+                        <input type="number" min="0" class="form-control" id="precio" name="precio" value="<?= $inmuebles[0]['precio'] ?>">
+                        <div id="precio" class="form-text">Si el piso no se alquila completo, dejar vacio.</div>
+                    </div>
+
                     <div class="mb-3">
                         <label for="password" class="form-label">Localizacion</label>
                         <select class="form-control" aria-label="Default select example" name="localizacion_id">
@@ -40,9 +47,15 @@
                             <?php
                             }
                             ?>
-
                         </select>
                     </div>
+
+                    <div class="mb-3 col-6">
+                        <label for="password" class="form-label">¿Disponible?</label>
+                        <input name="disponible" <?= $inmuebles[0]['disponible'] ? 'checked' : '' ?> type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+                        <label class="btn btn-outline-success" for="btn-check-outlined">Disponible</label><br>
+                    </div>
+
                     <div class="mb-3">
                         <input class="form-control" type="file" name="img" id="">
                     </div>

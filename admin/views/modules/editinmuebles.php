@@ -10,7 +10,7 @@ $galeryCtrl = new galeriaCtrl('galeria');
 $inmuebles = $inmueblesCtrl->getById(array('id' => $id));
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $inmueblesCtrl->updateImg($inmuebles, array('nombre', 'imagen', 'localizacion_id'), $_POST);
+    $inmueblesCtrl->updateImg($inmuebles, array('nombre', 'imagen', 'disponible', 'precio', 'localizacion_id'), $_POST);
     Funciones::sweetAlert2(array('icon' => 'success', 'title' => 'Inmueble actualizada', 'text' => '', 'redirect' => RutaCtrl::url('inmuebles')));
 }
 
