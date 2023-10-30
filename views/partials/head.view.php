@@ -45,14 +45,24 @@
                         <a class="nav-link " href="<?= DOMAIN ?>contacto"><?= __('Contact') ?></a>
                     </li>
 
+
                 </ul>
+                <li class="nav-item d-none d-md-none d-sm-flex">
+                    <a class="nav-link <?= $_SESSION['lang'] == 'es' ? 'active' : '' ?>" href="<?= RutaCtrl::url() ?>?lang=es"><img src="<?= RutaCtrl::url("views/images/png/002-spain.png") ?>" alt=""></a>
+                </li>
+                <li class="nav-item d-none d-md-none d-sm-flex">
+                    <a class="nav-link <?= $_SESSION['lang'] == 'en' ? 'active' : '' ?>" href="<?= RutaCtrl::url() ?>?lang=en"><img src="<?= RutaCtrl::url("views/images/png/003-united-kingdom.png") ?>" alt=""></a>
+                </li>
+                <li class="nav-item d-none d-md-none d-sm-flex">
+                    <a class="nav-link <?= $_SESSION['lang'] == 'ar' ? 'active' : '' ?>" href="<?= RutaCtrl::url() ?>?lang=ar"><img src="<?= RutaCtrl::url("views/images/png/001-saudi-arabia.png") ?>" alt=""></a>
+                </li>
             </div>
 
             <button type="button" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" style="margin-right: 3em;">
                 <i class="bi bi-search"></i>
             </button>
 
-            <ul class="navbar-nav">
+            <ul class="navbar-nav d-none d-xl-flex">
                 <li class="nav-item">
                     <a class="nav-link <?= $_SESSION['lang'] == 'es' ? 'active' : '' ?>" href="<?= RutaCtrl::url() ?>?lang=es"><img src="<?= RutaCtrl::url("views/images/png/002-spain.png") ?>" alt=""></a>
                 </li>

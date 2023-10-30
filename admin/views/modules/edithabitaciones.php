@@ -23,6 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $datos['piscina'] = Validar::vlt_checkBox('piscina');
 
     $datos['disponible'] = Validar::vlt_checkBox('disponible');
+    $datos['piso'] = Validar::vlt_Int('piso');
+    $datos['mixto'] = Validar::vlt_checkBox('mixto');
 
     $datos['inmueble_id'] = $_POST['inmueble_id'];
 
@@ -38,7 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             'banio' => $datos['banio'],
             'terraza' => $datos['terraza'],
             'calefaccion' => $datos['calefaccion'],
-            'piscina' => $datos['piscina']
+            'piscina' => $datos['piscina'],
+            'piso' => $datos['piso'],
+            'mixto' => $datos['mixto'],
         ),
         $id
     );

@@ -77,6 +77,7 @@ Dentro de la pagina de inmuebles pueden crear nuevos inmuebles rellenando:
 
 - Nombre
 - Localizacion [ Entre todas las localizaciones ]
+- Precio [ Solo es necesario si los inmuebles se van a alquilar completos, si se alquilan por habitacion hay que dearlo a 0 ]
 - Imagen [ opcional ]
 
 Todos estos datos se pueden modificar, dentro de este formulario de edicion se pueden ver las habtiaciones relacionados a este inmueble
@@ -93,6 +94,17 @@ Dentro de la pagina de habitacioen se pueden crear nuevas habitaciones con los d
 - Precio
 - Inmueble
 - imagen
+
+Las habitaciones tienen una serie de servicios:
+
+- Habitacion doble
+- Baño privado
+- Terraza
+- Calefaccion
+- Piscina
+- Ascensor
+- mixto
+- piso
 
 Todas las habitaciones se pueden editar y borrar
 

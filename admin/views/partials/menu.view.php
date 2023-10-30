@@ -8,7 +8,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="home" class="nav-link">Inicio</a>
+                    <a href="<?= RutaCtrl::url('home') ?>" class="nav-link">Inicio</a>
                 </li>
             </ul>
 
@@ -16,7 +16,7 @@
             <ul class="navbar-nav ml-auto">
                 <!-- Navbar Search -->
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="logout" class="nav-link">Salir</a>
+                    <a href="<?= RutaCtrl::url('logout') ?>" class="nav-link">Salir</a>
                 </li>
 
             </ul>
@@ -49,7 +49,7 @@
                         <!-- Add icons to the links using the .nav-icon class
                                 with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="home" class="nav-link <?= !isset($_GET['url']) || $_GET['url'] == 'home' ? 'active' : '' ?> ">
+                            <a href="<?= RutaCtrl::url('home') ?>" class="nav-link <?= !isset($_GET['url']) || $_GET['url'] == 'home' ? 'active' : '' ?> ">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                                 <p>
                                     <i class="nav-icon fas fa-home"></i>

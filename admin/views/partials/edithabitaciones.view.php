@@ -65,6 +65,26 @@
                                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" <?= $habitacion[0]['piscina'] ? 'checked' : '' ?> name="piscina">
                                 <label class="form-check-label" for="flexSwitchCheckDefault">Piscina</label>
                             </li>
+
+                            <li>
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" <?= $habitacion[0]['mixto'] ? 'checked' : '' ?> name="mixto">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Piso mixto</label>
+                            </li>
+
+                            <li>
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Planta</label>
+                                <select name="piso" class="form-select">
+                                    <option value="0">Bajo</option>
+                                    <?php
+                                    for ($i = 1; $i <= 15; $i++) {
+                                    ?>
+                                        <option value="<?= $i ?>"><?= $i ?></option>
+                                    <?php
+                                    }
+                                    ?>
+                                    <option value="999">Ultima planta</option>
+                                </select>
+                            </li>
                         </ul>
 
                     </div>
