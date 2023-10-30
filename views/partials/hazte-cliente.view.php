@@ -6,8 +6,8 @@
             <div class="row">
                 <div class="col-md-12 col-lg-8">
                     <div class="title-single-box">
-                        <h1 class="title-single"><?= __('Contact') ?></h1>
-                        <span class="color-text-a"><?= __('Get in contact with us') ?></span>
+                        <h1 class="title-single"><?= __('Become a client') ?></h1>
+                        <span class="color-text-a"><?= __("Do you have apartments and don't know how to rent them? <b>Work with us</b>") ?></span>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-4">
@@ -17,7 +17,7 @@
                                 <a href="home"><?= __('Home') ?></a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                <a href="habitaciones"><?= __('Contact') ?></a>
+                                <a href="habitaciones"><?= __('Become a client') ?></a>
                             </li>
                         </ol>
                     </nav>
@@ -42,12 +42,13 @@
                                         </div>
                                         <div class="card-title-c align-self-center">
                                             <h2 class="title-c"><?= __('Movil') ?></h2>
-                                            <h3 class="title-d">622170774</h3>
                                         </div>
                                     </div>
                                     <div class="card-body-c">
                                         <p class="content-c">
-                                            <!-- 622170774 -->
+                                            <!-- Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
+                            convallis a pellentesque
+                            nec, egestas non nisi. -->
                                         </p>
                                     </div>
                                     <div class="card-footer-c">
@@ -77,7 +78,6 @@
                                         </div>
                                         <div class="card-title-c align-self-center">
                                             <h2 class="title-c"><?= __('Email') ?></h2>
-                                            <h3 class="title-d">evagallegosaavedra1@gmail.com </h3>
                                         </div>
                                     </div>
                                 </div>

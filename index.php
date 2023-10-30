@@ -1,6 +1,6 @@
 <?php
 
-const DOMAIN = "http://syndication-harvard-homework-auckland.trycloudflare.com/inmuebles/";
+const DOMAIN = "http://incl-soccer-constraints-restricted.trycloudflare.com/inmuebles/";
 
 // session_cache_limiter('public');    //Evitar error de "Documento expirado" para formulario enviado
 session_start();

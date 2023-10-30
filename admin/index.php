@@ -1,6 +1,6 @@
 <?php
 
-const P_DOMAIN = "http://syndication-harvard-homework-auckland.trycloudflare.com/inmuebles/";
+const P_DOMAIN = "https://incl-soccer-constraints-restricted.trycloudflare.com/inmuebles/";
 const DOMAIN = P_DOMAIN . 'admin/';
 
 session_start();

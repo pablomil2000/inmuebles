@@ -5,16 +5,16 @@
                 <nav class="nav-footer">
                     <ul class="list-inline">
                         <li class="list-inline-item">
-                            <a href="home">Home</a>
+                            <a class="" href="<?= RutaCtrl::url('home') ?>"><?= __('Home') ?></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="inmuebles">Inmuebles</a>
+                            <a class="" href="<?= RutaCtrl::url('inmuebles') ?>"><?= __('Apartment') ?></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="habitaciones">Habitaciones</a>
+                            <a href="<?= RutaCtrl::url('habitaciones') ?>"><?= __('Rooms') ?></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="contacto">Contacto</a>
+                            <a href="<?= RutaCtrl::url('contacto') ?>"><?= __('Contact') ?></a>
                         </li>
                     </ul>
                 </nav>

@@ -21,7 +21,7 @@
             </button>
 
 
-            <a class="navbar-brand text-brand" href="<?= RutaCtrl::url('home') ?>">Alquileres<span class="color-b">Compartidos</span></a>
+            <h1><a class="navbar-brand text-brand" href="<?= RutaCtrl::url('home') ?>">Alquileres<span class="color-b">Compartidos</span></a></h1>
 
             <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
                 <ul class="navbar-nav">
@@ -31,20 +31,26 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="<?= DOMAIN ?>inmuebles" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="<?= RutaCtrl::url('inmuebles') ?>" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <?= __('Properties') ?>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="<?= DOMAIN ?>inmuebles"><?= __('Apartment') ?></a></li>
-                            <li><a class="dropdown-item" href="<?= DOMAIN ?>habitaciones"><?= __('Rooms') ?></a></li>
+                            <li><a class="dropdown-item" href="<?= RutaCtrl::url('inmuebles') ?>"><?= __('Apartment') ?></a></li>
+                            <li><a class="dropdown-item" href="<?= RutaCtrl::url('habitaciones') ?>"><?= __('Rooms') ?></a></li>
                         </ul>
                     </li>
 
 
-                    <li class="nav-item">
-                        <a class="nav-link " href="<?= DOMAIN ?>contacto"><?= __('Contact') ?></a>
-                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link " href="<?= RutaCtrl::url('contacto') ?>"><?= __('Contact') ?></a>
+                    </li> -->
 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="<?= RutaCtrl::url('contacto') ?>"><?= __('Contact') ?></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="<?= RutaCtrl::url('hazte-cliente') ?>"><?= __('Hazte cliente') ?></a></li>
+                        </ul>
+                    </li>
 
                 </ul>
                 <li class="nav-item d-none d-md-none d-sm-flex">

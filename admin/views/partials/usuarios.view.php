@@ -18,7 +18,6 @@
 
     <!-- Main content -->
     <section class="content">
-
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
@@ -27,13 +26,13 @@
                 </button>
             </div>
             <div class="card-body">
-                <table class="table">
+                <table class="table" id="datatable">
                     <thead>
                         <tr>
                             <th>Id</th>
                             <th>Nombre</th>
                             <th>Ultimo login</th>
-
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -45,6 +44,7 @@
                                 <td scope="row"><?= $user['id'] ?></td>
                                 <td><?= $user['nombre'] ?></td>
                                 <td><?= Funciones::dateFormat($user['lastLogin']) ?></td>
+                                <td><a href="edituser/<?= $user['id'] ?>"><i class="fa-solid fa-pencil"></i></a></td>
                             </tr>
                         <?php
                         }
@@ -98,3 +98,5 @@
     <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
+
+<script src="<?= RutaCtrl::url() ?>views/dist/js/datatable.js"></script>

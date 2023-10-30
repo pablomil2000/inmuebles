@@ -7,11 +7,7 @@ include('modules/head.php');
 
 <?php
 //Controlador de navegacion
-$ruta = 'home';
-
-// require_once('views/modules/' . $ruta . '.php');
-
-PlantillaCtr::whiteList('home', 'inmuebles', 'login', 'inmueble', 'habitaciones', 'habitacion', 'contacto');
+PlantillaCtr::whiteList('home', 'inmuebles', 'login', 'inmueble', 'habitaciones', 'habitacion', 'contacto', 'hazte-cliente');
 ?>
 
 <!-- Footer Section Begin -->

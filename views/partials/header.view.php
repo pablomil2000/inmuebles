@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Work in progress -- Inmobiliaria KVL</title>
     <meta content="Pagina web en desarrollo de inmobiliara en madrid sur" name="description">
     <meta content="casa, habitacion, madrid, alquilar" name="keywords">

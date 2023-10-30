@@ -60,7 +60,9 @@ Los administradores pueden registrar nuevos usuarios administradores. Estos se p
 Solo son necesarios los campos:
 
 - Nombre
-- Contraseña
+- Contraseña [ Encriptada con sha512 ]
+- Activo [ Este campo se usara para bloquear el acceso a algunos usuarios ]
+- LastLogin [ Ultima vez que el usuario se logeo ]
 
 ### Localizaciones
 

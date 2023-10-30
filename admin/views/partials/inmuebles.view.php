@@ -142,4 +142,4 @@
 </div>
 <!-- /.modal -->
 
-<script src="views/dist/js/datatable.js"></script>
+<script src="<?= RutaCtrl::url() ?>views/dist/js/datatable.js"></script>
