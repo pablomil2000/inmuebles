@@ -26,18 +26,19 @@ A continuacion en la barra de navegacion tienes los enlaces correspontientes par
 
 Si filtramos por inmuebles nos saldran todos los inmuebles disponibles y dentro de este nos apareceran todas las habitaciones de este, si alguna ya esta ocupada cambiara el sombreado de la imagen y lo indicara sobre la misma.
 
-La pagina de Contacto es un formulario con los siguientes campos:
+La pagina de Contacto y de Hazte cliente es un formulario con los siguientes campos:
 
-    1. Informacion de contacto
+1. Informacion de contacto
 
-    - Nombre
-    - Apellidos
-    - Correo electronico
-    - Numero de telefono
+- Nombre
+- Apellidos
+- Correo electronico
+- Numero de telefono
 
-    1. ¿En que te podemos ayudar?
-    - Asunto
-    - Mensaje
+2. ¿En que te podemos ayudar?
+
+- Asunto
+- Mensaje
 
 Toda esta informacion se guardara en la base de datos y se podra revisar posteriormente por un administrador
 
@@ -54,7 +55,7 @@ En el menu lateral tiene los enlaces para poder modificar todos los apartados re
 - Habitaciones
 - Comentarios
 
-### Usuarios
+### <u>Usuarios</u>
 
 Los administradores pueden registrar nuevos usuarios administradores. Estos se pueden logear y contaran con los mismos privilegios que los administradores creados inicialmente.
 Solo son necesarios los campos:
@@ -64,7 +65,7 @@ Solo son necesarios los campos:
 - Activo [ Este campo se usara para bloquear el acceso a algunos usuarios ]
 - LastLogin [ Ultima vez que el usuario se logeo ]
 
-### Localizaciones
+### <u>Localizaciones</u>
 
 Los administradores pueden registrar nuvas ubicaciones para los inmubles.
 La relacion entre estas dos entidades es 1:N siendo N los inmuebles.
@@ -73,7 +74,7 @@ El unico dato necesario para crear una localización es el nombre de esta
 
 Todas las localizaciones se pueeden borrar salvo la localización 0, esta se usa por defecto para aquellos inmuebles en los que no se espeficique su localización
 
-### Inmuebles
+### <u>Inmuebles</u>
 
 Dentro de la pagina de inmuebles pueden crear nuevos inmuebles rellenando:
 
@@ -86,7 +87,7 @@ Todos estos datos se pueden modificar, dentro de este formulario de edicion se p
 
 Si se elimina el inmueble, y tiene una imagen relacionada, esta se borra de disco.
 
-### Habitacioens
+### <u>Habitacioens</u>
 
 Dentro de la pagina de habitacioen se pueden crear nuevas habitaciones con los datos:
 
@@ -110,7 +111,9 @@ Las habitaciones tienen una serie de servicios:
 
 Todas las habitaciones se pueden editar y borrar
 
-### Comentarios
+### <u>Comentarios</u>
 
 En esta seccion aparecen los comentariosde los usuarios que han rellenado el formulario de contacto.
 Cuando hay un mensaje nuevo aparecera marcado y una vez se habra se quitara esa marca.
+
+### <u>Hazte cliente</u>

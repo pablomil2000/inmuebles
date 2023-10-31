@@ -14,8 +14,8 @@ $lang = [
 	'Get in contact with us' => 'Ponte en contacto con nosotros',
 	'Contact Form' => 'Formulario de contacto',
 	'Fill in this information so we can contact you' => 'Rellena estos datos para que nos podamos poner en cotnacto contigo',
-	'Contact information' => 'Informacion de contacto',
-	'How can we help?' => '¿En que te podemos ayudar?',
+	'Contact information' => 'Información de contacto',
+	'How can we help?' => '¿En qué te podemos ayudar?',
 
 	//Textos
 	'Help' => '¿Necesitas ayuda?',

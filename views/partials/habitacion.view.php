@@ -65,28 +65,109 @@
 
                             <hr />
 
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Tipo habitacion</th>
-                                        <th scope="col">¿Baño</th>
-                                        <th scope="col">¿Piscina</th>
-                                        <th scope="col">¿Calefaccion</th>
-                                        <th scope="col">Terraza</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><?= $habitacion[0]['doble'] ? 'Doble' : 'Individual' ?></td>
-                                        <td><?= $habitacion[0]['banio'] ? "Si" : "No" ?></td>
-                                        <td><?= $habitacion[0]['piscina'] ? 'Si' : 'No' ?></td>
-                                        <td><?= $habitacion[0]['calefaccion'] ? 'Si' : 'No' ?></td>
-                                        <td><?= $habitacion[0]['terraza'] ? 'Si' : 'No' ?></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="d-flex justify-content-around">
+                                <div class="row d-flex justify-content-around">
+                                    <div class="card col-3 m-2 p-0">
+                                        <div class="card-header card-head-bg">
+                                            Tipo habitacion
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><?= $habitacion[0]['doble'] ? 'Doble' : 'Individual' ?></li>
+                                        </ul>
+                                    </div>
 
+                                    <div class="card col-3 m-2">
+                                        <div class="card-header">
+                                            Piso mixto
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><?= $habitacion[0]['mixto'] ? 'Si' : 'No' ?></li>
+                                        </ul>
+                                    </div>
 
+                                    <div class="card col-3 m-2">
+                                        <div class="card-header">
+                                            Baño privado
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><?= $habitacion[0]['banio'] ? 'Si' : 'No' ?></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="card col-3 m-2">
+                                        <div class="card-header">
+                                            Piscina
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><?= $habitacion[0]['piscina'] ? 'Si' : 'No' ?></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="card col-3 m-2">
+                                        <div class="card-header">
+                                            Calefacción
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><?= $habitacion[0]['piscina'] ? 'Si' : 'No' ?></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="card col-3 m-2">
+                                        <div class="card-header">
+                                            Terraza
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><?= $habitacion[0]['piscina'] ? 'Si' : 'No' ?></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="card col-3 m-2">
+                                        <div class="card-header">
+                                            Planta
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <?php
+                                                switch ($habitacion[0]['piso']) {
+                                                    case '0':
+                                                        echo 'Planta baja';
+                                                        break;
+                                                    case '999':
+                                                        echo 'Ultimo piso';
+                                                        break;
+
+                                                    default:
+                                                        echo $habitacion[0]['piso'];
+                                                        break;
+                                                }
+                                                ?>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="card col-3 m-2">
+                                        <div class="card-header">
+                                            Cerradura
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                Si
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="card col-3 m-2">
+                                        <div class="card-header">
+                                            Wifi
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                Si
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </ul>
                     </div>
                     <div class="post-content color-text-a">

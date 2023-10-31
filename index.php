@@ -1,6 +1,6 @@
 <?php
 
-const DOMAIN = "http://incl-soccer-constraints-restricted.trycloudflare.com/inmuebles/";
+const DOMAIN = "http://partly-jungle-bands-certified.trycloudflare.com/inmuebles/";
 
 // session_cache_limiter('public');    //Evitar error de "Documento expirado" para formulario enviado
 session_start();
@@ -22,7 +22,7 @@ require('controllers/lang.controller.php');             //*Multi Lang
 require_once('controllers/user.controller.php');
 require_once('controllers/habitaciones.controller.php');
 require_once('controllers/Inmueble.controller.php');
-require_once('controllers/Localizacion.controller.php');
+require_once('controllers/localizacion.controller.php');
 require_once('controllers/galeria.controller.php');
 require_once('controllers/contacto.controller.php');
 
