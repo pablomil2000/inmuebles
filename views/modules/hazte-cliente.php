@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     var_dump($datos);
 
-    $contactoCtrl = new ContactoCtrl('contacto');
+    $contactoCtrl = new ContactoCtrl('newclient');
 
     if ($contactoCtrl->insert(
         array(

@@ -44,7 +44,7 @@
                     foreach ($galery as $key => $image) {
                     ?>
                         <div class="news-img-box mb-1">
-                            <img src="<?= $galeriaCtrl->route . $slug . "/" . $image['name'] ?>" alt="" class="img-fluid">
+                            <img src="<?= $galeriaCtrl->route . $id . "/" . $image['name'] ?>" alt="" class="img-fluid">
                         </div>
                     <?php
                     }
@@ -67,65 +67,65 @@
 
                             <div class="d-flex justify-content-around">
                                 <div class="row d-flex justify-content-around">
-                                    <div class="card col-3 m-2 p-0">
+                                    <div class="card col-3 m-2 p-0 border border-2 border-bottom-0 border-dark">
                                         <div class="card-header card-head-bg">
                                             Tipo habitacion
                                         </div>
-                                        <ul class="list-group list-group-flush">
+                                        <ul class="list-group list-group-flush border border-2 border-dark">
                                             <li class="list-group-item"><?= $habitacion[0]['doble'] ? 'Doble' : 'Individual' ?></li>
                                         </ul>
                                     </div>
 
-                                    <div class="card col-3 m-2">
-                                        <div class="card-header">
+                                    <div class="card col-3 m-2 p-0 border border-2 border-bottom-0 border-dark">
+                                        <div class="card-header card-head-bg">
                                             Piso mixto
                                         </div>
-                                        <ul class="list-group list-group-flush">
+                                        <ul class="list-group list-group-flush border border-2 border-dark">
                                             <li class="list-group-item"><?= $habitacion[0]['mixto'] ? 'Si' : 'No' ?></li>
                                         </ul>
                                     </div>
 
-                                    <div class="card col-3 m-2">
-                                        <div class="card-header">
+                                    <div class="card col-3 m-2 p-0 border border-2 border-bottom-0 border-dark">
+                                        <div class="card-header card-head-bg">
                                             Baño privado
                                         </div>
-                                        <ul class="list-group list-group-flush">
+                                        <ul class="list-group list-group-flush border border-2 border-dark">
                                             <li class="list-group-item"><?= $habitacion[0]['banio'] ? 'Si' : 'No' ?></li>
                                         </ul>
                                     </div>
 
-                                    <div class="card col-3 m-2">
-                                        <div class="card-header">
+                                    <div class="card col-3 m-2 p-0 border border-2 border-bottom-0 border-dark">
+                                        <div class="card-header card-head-bg">
                                             Piscina
                                         </div>
-                                        <ul class="list-group list-group-flush">
+                                        <ul class="list-group list-group-flush border border-2 border-dark">
                                             <li class="list-group-item"><?= $habitacion[0]['piscina'] ? 'Si' : 'No' ?></li>
                                         </ul>
                                     </div>
 
-                                    <div class="card col-3 m-2">
-                                        <div class="card-header">
+                                    <div class="card col-3 m-2 p-0 ">
+                                        <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             Calefacción
                                         </div>
-                                        <ul class="list-group list-group-flush">
+                                        <ul class="list-group list-group-flush border border-2 border-dark">
                                             <li class="list-group-item"><?= $habitacion[0]['piscina'] ? 'Si' : 'No' ?></li>
                                         </ul>
                                     </div>
 
-                                    <div class="card col-3 m-2">
-                                        <div class="card-header">
+                                    <div class="card col-3 m-2 p-0 ">
+                                        <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             Terraza
                                         </div>
-                                        <ul class="list-group list-group-flush">
+                                        <ul class="list-group list-group-flush border border-2 border-dark">
                                             <li class="list-group-item"><?= $habitacion[0]['piscina'] ? 'Si' : 'No' ?></li>
                                         </ul>
                                     </div>
 
-                                    <div class="card col-3 m-2">
-                                        <div class="card-header">
+                                    <div class="card col-3 m-2 p-0">
+                                        <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             Planta
                                         </div>
-                                        <ul class="list-group list-group-flush">
+                                        <ul class="list-group list-group-flush border border-2 border-dark">
                                             <li class="list-group-item">
                                                 <?php
                                                 switch ($habitacion[0]['piso']) {
@@ -145,22 +145,22 @@
                                         </ul>
                                     </div>
 
-                                    <div class="card col-3 m-2">
-                                        <div class="card-header">
+                                    <div class="card col-3 m-2 p-0 ">
+                                        <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             Cerradura
                                         </div>
-                                        <ul class="list-group list-group-flush">
+                                        <ul class="list-group list-group-flush border border-2 border-dark">
                                             <li class="list-group-item">
                                                 Si
                                             </li>
                                         </ul>
                                     </div>
 
-                                    <div class="card col-3 m-2">
-                                        <div class="card-header">
+                                    <div class="card col-3 m-2 p-0">
+                                        <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             Wifi
                                         </div>
-                                        <ul class="list-group list-group-flush">
+                                        <ul class="list-group list-group-flush  border border-2 border-dark">
                                             <li class="list-group-item">
                                                 Si
                                             </li>

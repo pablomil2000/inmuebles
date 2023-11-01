@@ -1,6 +1,6 @@
 <?php
 
-const DOMAIN = "http://partly-jungle-bands-certified.trycloudflare.com/inmuebles/";
+const DOMAIN = "https://localhost/inmuebles/";
 
 // session_cache_limiter('public');    //Evitar error de "Documento expirado" para formulario enviado
 session_start();

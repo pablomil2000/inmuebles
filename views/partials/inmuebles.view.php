@@ -66,11 +66,14 @@
                     <div class="card-date">
                       <span class="date-b">
                         <?php
-                        if (count($precio) && count($precio) == 1) {
+                        if ($inmueble['precio'] != 0) {
+                          echo $inmueble['precio'];
+                        } else if (count($precio) && count($precio) == 1) {
                           echo $precio[0] . ' €/mes';
                         } elseif (count($precio) && count($precio) > 1) {
                           echo 'Desde ' . min($precio) . ' €/mes';
                         }
+
                         ?>
                       </span>
                     </div>

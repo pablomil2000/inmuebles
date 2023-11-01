@@ -115,7 +115,7 @@
 
                     <div class="mb-3">
                         <label for="password" class="form-label">Localizacion</label>
-                        <select class="form-control" aria-label="Default select example" name="localizacion">
+                        <select class="form-control" aria-label="Default select example" name="localizacion_id">
                             <?php
                             foreach ($localizaciones as $key => $localizacion) {
                             ?>

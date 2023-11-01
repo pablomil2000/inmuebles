@@ -48,8 +48,8 @@
                         </div>
 
                         <div class="col-6">
-                            <label for="email" class="form-label"><?= __('Email') ?></label>
-                            <input class="form-control" id="email" type="email" name="email">
+                            <label for="email" class="form-label"><?= __('Email') ?><span class="text-danger">*</span></label>
+                            <input class="form-control" id="email" type="email" name="email" require>
                         </div>
                         <div class="col-6">
                             <label for="tel" class="form-label"><?= __('Number phone') ?><span class="text-danger">*</span></label>

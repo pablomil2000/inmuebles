@@ -55,51 +55,30 @@
             </div>
         </div>
         <div class="row">
+            <!-- Card -->
             <div class="col-md-4">
-                <div class="card-box-c foo">
-                    <div class="card-header-c d-flex">
-                        <div class="card-box-ico">
-                            <span class="bi bi-cart"></span>
-                        </div>
-                        <div class="card-title-c align-self-center">
-                            <h2 class="title-c">Mejores precios</h2>
-                        </div>
-                    </div>
-                    <div class="card-body-c">
-                        <p class="content-c">
-                            <!-- Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                            convallis a pellentesque
-                            nec, egestas non nisi. -->
-                        </p>
-                    </div>
-                    <div class="card-footer-c">
-                        <!-- <a href="#" class="link-c link-icon">Read more
-                            <span class="bi bi-chevron-right"></span>
-                        </a> -->
+                <div class="card justify-content-center border-0" style="width: 20rem; text-align: center;">
+                    <span style="font-size: 10em;" class="card-title bi bi-cart"></span>
+                    <div class="card-title-c align-self-center">
+                        <h2 class="title-d">Mejores precios</h2>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4">
-                <div class="card-box-c foo">
-                    <div class="card-header-c d-flex">
-                        <div class="card-box-ico">
-                            <span class="bi bi-calendar4-week"></span>
-                        </div>
-                        <div class="card-title-c align-self-center">
-                            <h2 class="title-c">Alquiler</h2>
-                        </div>
+                <div class="card justify-content-center border-0" style="width: 20rem; text-align: center;">
+                    <span style="font-size: 10em;" class="card-title bi bi-calendar4-week"></span>
+                    <div class="card-title-c align-self-center">
+                        <h2 class="title-d">Alquiler</h2>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4">
-                <div class="card-box-c foo">
-                    <div class="card-header-c d-flex">
-                        <div class="card-box-ico">
-                            <span class="bi bi-card-checklist"></span>
-                        </div>
-                        <div class="card-title-c align-self-center">
-                            <h2 class="title-c">No se que mas poner aqui</h2>
-                        </div>
+                <div class="card justify-content-center border-0" style="width: 20rem; text-align: center; ">
+                    <span style="font-size: 10em;" class="card-title bi bi-card-checklist"></span>
+                    <div class="card-title-c align-self-center">
+                        <h2 class="title-d">Mejores precios</h2>
                     </div>
                 </div>
             </div>

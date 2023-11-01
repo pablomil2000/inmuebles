@@ -2,8 +2,8 @@
 
 class galeriaCtrl extends CrudCtrl
 {
-
     private $route = DOMAIN . 'views/images/habitacion/';
+
 
     public function getDest($id)
     {
@@ -22,6 +22,6 @@ class galeriaCtrl extends CrudCtrl
 
     public function __get($name)
     {
-        return DOMAIN . $this->$name;
+        return $this->$name;
     }
 }

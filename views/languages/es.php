@@ -9,6 +9,7 @@ $lang = [
 	'Contact' => 'Contacto',
 	'Become a client' => 'Hazte Cliente',
 	"Do you have apartments and don't know how to rent them? <b>Work with us</b>" => ' ¿Tienes pisos y no sabes como alquilarlos? <b>Trabaja con nosotros</b>',
+	"Ask for information" => "Pedir información",
 
 	//Frases
 	'Get in contact with us' => 'Ponte en contacto con nosotros',
