@@ -37,9 +37,14 @@
                         <div id="precio" class="form-text">Si el piso no se alquila completo, dejar vacio.</div>
                     </div>
 
+                    <div class="mb-3 col-8">
+                        <label for="precio" class="form-label">Texto</label>
+                        <textarea name="text" class="form-control" id="summernote" cols="30" rows="10"><?= $inmuebles[0]['text'] ?></textarea>
+                    </div>
+
                     <div class="mb-3">
-                        <label for="password" class="form-label">Localizacion</label>
-                        <select class="form-control" aria-label="Default select example" name="localizacion_id">
+                        <label for="Localizacion" class="form-label">Localizacion</label>
+                        <select class="form-control" aria-label="Default select example" name="localizacion_id" id="Localizacion">
                             <?php
                             foreach ($localizaciones as $key => $localizacion) {
                             ?>

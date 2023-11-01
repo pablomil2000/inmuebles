@@ -7,6 +7,7 @@ class inmueblesCtrl extends CrudCtrl
 
         $datos2['nombre'] = $datos['nombre'];
         $datos2['precio'] = $datos['precio'];
+        $datos2['text'] = $datos['text'];
         $datos2['localizacion_id'] = $datos['localizacion_id'];
 
         $Funciones = new Funciones();

@@ -51,4 +51,10 @@ class CrudCtrl
     {
         return CrudMdl::delete($this->tabla, $datos);
     }
+
+    public function raw($sql)
+    {
+
+        return CrudMdl::raw($sql);
+    }
 }

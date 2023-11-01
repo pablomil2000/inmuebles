@@ -108,8 +108,14 @@
 
                     <div class="mb-3">
                         <label for="precio" class="form-label">Precio</label>
-                        <input type="number" min="0" class="form-control" id="precio" name="precio" value="<?= $inmuebles[0]['precio'] ?>">
+                        <input type="number" min="0" class="form-control" id="precio" name="precio" value="">
                         <div id="precio" class="form-text">Si el piso no se alquila completo, dejar vacio.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="precio" class="form-label">Texto</label>
+                        <textarea name="text" class="form-control" id="summernote" cols="30" rows="10"></textarea>
+                        <div id="precio" class="form-text"></div>
                     </div>
 
 
