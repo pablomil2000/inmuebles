@@ -67,8 +67,8 @@
 
                             <div class="d-flex justify-content-around">
                                 <div class="row d-flex justify-content-around">
-                                    <div class="card col-3 m-2 p-0 border border-2 border-bottom-0 border-dark">
-                                        <div class="card-header card-head-bg">
+                                    <div class="card col-3 m-2 p-0">
+                                        <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             Tipo habitacion
                                         </div>
                                         <ul class="list-group list-group-flush border border-2 border-dark">
@@ -76,8 +76,8 @@
                                         </ul>
                                     </div>
 
-                                    <div class="card col-3 m-2 p-0 border border-2 border-bottom-0 border-dark">
-                                        <div class="card-header card-head-bg">
+                                    <div class="card col-3 m-2 p-0">
+                                        <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             Piso mixto
                                         </div>
                                         <ul class="list-group list-group-flush border border-2 border-dark">
@@ -85,8 +85,8 @@
                                         </ul>
                                     </div>
 
-                                    <div class="card col-3 m-2 p-0 border border-2 border-bottom-0 border-dark">
-                                        <div class="card-header card-head-bg">
+                                    <div class="card col-3 m-2 p-0">
+                                        <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             Baño privado
                                         </div>
                                         <ul class="list-group list-group-flush border border-2 border-dark">
@@ -94,8 +94,8 @@
                                         </ul>
                                     </div>
 
-                                    <div class="card col-3 m-2 p-0 border border-2 border-bottom-0 border-dark">
-                                        <div class="card-header card-head-bg">
+                                    <div class="card col-3 m-2 p-0">
+                                        <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             Piscina
                                         </div>
                                         <ul class="list-group list-group-flush border border-2 border-dark">
@@ -160,7 +160,7 @@
                                         <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             Wifi
                                         </div>
-                                        <ul class="list-group list-group-flush  border border-2 border-dark">
+                                        <ul class="list-group list-group-flush border border-2 border-dark">
                                             <li class="list-group-item">
                                                 Si
                                             </li>

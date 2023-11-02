@@ -33,7 +33,12 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="news-img-box">
-                        <img src="views/images/inmuebles/<?= $inmueble[0]['imagen'] ?>" alt="" class="img-fluid">
+                        <img src="<?= RutaCtrl::url() ?>views/images/inmuebles/<?= $inmueble[0]['imagen'] ?>" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="testimonial-text">
+                        <?= $inmueble[0]['text'] ?>
                     </div>
                 </div>
             </div>

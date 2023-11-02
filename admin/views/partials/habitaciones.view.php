@@ -124,7 +124,7 @@
 
                     <div class="mb-3">
                         <label for="precio" class="form-label">Texto</label>
-                        <textarea name="text" class="form-control" id="" cols="30" rows="10">
+                        <textarea name="text" class="form-control" id="summernote" cols="30" rows="10">
 
                         </textarea>
                     </div>

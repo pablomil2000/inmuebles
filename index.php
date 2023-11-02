@@ -1,6 +1,6 @@
 <?php
 
-const DOMAIN = "https://localhost/inmuebles/";
+const DOMAIN = "http://secretariat-recognize-cargo-financing.trycloudflare.com/inmuebles/";
 
 // session_cache_limiter('public');    //Evitar error de "Documento expirado" para formulario enviado
 session_start();
@@ -25,6 +25,12 @@ require_once('controllers/Inmueble.controller.php');
 require_once('controllers/localizacion.controller.php');
 require_once('controllers/galeria.controller.php');
 require_once('controllers/contacto.controller.php');
+
+
+
+require_once('controllers/log.controller.php');
+
+// var_dump($logs);
 
 //? Modelos
 require_once('models/conexion.model.php');              //*Core

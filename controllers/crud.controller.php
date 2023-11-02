@@ -50,7 +50,6 @@ class CrudCtrl
 
     public function raw($sql)
     {
-
         return CrudMdl::raw($sql);
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-const P_DOMAIN = "https://localhost/inmuebles/";
+const P_DOMAIN = "http://secretariat-recognize-cargo-financing.trycloudflare.com/inmuebles/";
 const DOMAIN = P_DOMAIN . 'admin/';
 
 session_start();

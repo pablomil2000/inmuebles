@@ -161,3 +161,5 @@
     </section>
     <!-- /.content -->
 </div>
+
+<script src="<?= RutaCtrl::url() ?>views\dist\js\summernotes.js"></script>

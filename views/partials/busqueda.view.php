@@ -99,7 +99,7 @@
                     <option value="%">Unlimite</option>
 
                     <?php
-                    for ($i = 100; $i <= 3000; $i = $i + 250) {
+                    for ($i = 200; $i <= 600; $i = $i + 50) {
                     ?>
                         <option <?= isset($_POST['minPrice']) && $_POST['minPrice'] == $i ? 'selected' : '' ?> value="<?= $i ?>"><?= $i ?> €</option>
                     <?php

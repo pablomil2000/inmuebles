@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     )) {
         Funciones::sweetAlert2(array('icon' => 'success', 'title' => 'Gracias por tu comentario', 'text' => 'Uno de nuestros agentes se pondra en contacto contigo lo antes posible'));
     } else {
-        Funciones::sweetAlert2(array('icon' => 'error', 'title' => 'Algo a salido mal', 'text' => 'ponte en contacto con algun responsable para comprobar el error code: ' . Funciones::dateFormat(date("F j, Y, g:i a"), "dmyhis")));
+        Funciones::sweetAlert2(array('icon' => 'error', 'title' => 'Algo ha salido mal', 'text' => 'Ponte en contacto con algun responsable para comprobar el error code: ' . Funciones::dateFormat(date("F j, Y, g:i a"), "dmyhis")));
     }
 }
 

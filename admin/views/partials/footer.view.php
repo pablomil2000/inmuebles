@@ -35,6 +35,7 @@
 <script src="<?= RutaCtrl::url() ?>views/dist/js/plugins/summernote-0.8.18-dist/summernote.min.js"></script>
 
 <script src="<?= RutaCtrl::url() ?>views/dist/js/plugins/summernote-0.8.18-dist/lang/summernote-es-ES.js"></script>
+<script src="<?= RutaCtrl::url() ?>views\dist\js\summernotes.js"></script>
 </body>
 
 
