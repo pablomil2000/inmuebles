@@ -5,7 +5,7 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $datos['nombre'] = Validar::vlt_String($_POST['nombre']);
-    $datos['apellidos'] = Validar::vlt_String($_POST['apellido']);
+    $datos['apellido'] = Validar::vlt_String($_POST['apellido']);
     $datos['email'] = Validar::vlt_Email($_POST['email']);
     $datos['tel'] = Validar::vlt_Int($_POST['tel']);
     $datos['asunto'] = Validar::vlt_String($_POST['asunto']);
@@ -26,10 +26,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         ),
         $datos
     )) {
+        // Show a success message
         Funciones::sweetAlert2(array('icon' => 'success', 'title' => 'Gracias por tu comentario', 'text' => 'Uno de nuestros agentes se pondra en contacto contigo lo antes posible'));
     } else {
+        // Show an error message
         $code = Funciones::dateFormat(date("F j, Y, g:i a"), "dmyHis");
         Funciones::sweetAlert2(array('icon' => 'error', 'title' => 'Algo ha salido mal', 'text' => 'Ponte en contacto con nosotros para comprobar el codigo de error: ' . $code));
+        // Log the error
         $logs = new LogController();
         $logs->log($code, $_GET['url'], $datos);
     }

@@ -8,7 +8,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Comentarios</h1>
+                            <h1>Nuevos clientes</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -39,7 +39,7 @@
                                 <?php
                                 foreach ($comentarios as $key => $comentario) {
                                 ?>
-                                    <tr onclick='window.location="comentario/<?= $comentario["id"] ?>"'>
+                                    <tr onclick='window.location="<?= RutaCtrl::url() ?>nuevo-cliente/<?= $comentario["id"] ?>"'>
                                         <td scope="row">
                                             <?php
 

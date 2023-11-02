@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 // $sql .= ' GROUP BY i.id';
-var_dump($sql);
+// var_dump($sql);
 $habitaciones = $habitacionesCtrl->raw($sql)->fetchAll();
 
 

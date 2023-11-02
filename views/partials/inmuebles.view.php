@@ -45,8 +45,8 @@
         ?>
             <div class="col-md-4">
               <div class="card-box-b card-shadow news-box">
-                <div class="img-box-b" style="height: 20vh;">
-                  <img src="<?= DOMAIN ?>views/images/<?= $inmueble['imagen'] !== 'default.png' ? "inmuebles/" . $inmueble['imagen'] : $inmueble['imagen'] ?>" alt="" class="img-b img-fluid" width="100%" style="object-fit: cover;">
+                <div class="img-box-b" style="height: 19vh;">
+                  <img src="<?= DOMAIN ?>views/images/<?= $inmueble['imagen'] !== 'default.png' ? "inmuebles/" . $inmueble['imagen'] : $inmueble['imagen'] ?>" alt="" class="img-b img-fluid" height="100%">
                 </div>
                 <div class="card-overlay">
                   <div class="card-header-b">

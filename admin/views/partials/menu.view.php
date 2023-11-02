@@ -98,13 +98,22 @@
                             </a>
                         </li>
 
-
                         <li class="nav-item">
                             <a href="<?= RutaCtrl::url('comentarios') ?>" class="nav-link <?= isset($_GET['url']) && $_GET['url'] == 'comentarios' ? 'active' : '' ?>">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                                 <p>
                                     <i class="nav-icon fas fa-handshake-angle"></i>
                                     Comentarios
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="<?= RutaCtrl::url('nuevos-clientes') ?>" class="nav-link <?= isset($_GET['url']) && $_GET['url'] == 'nuevos-clientes' ? 'active' : '' ?>">
+                                <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
+                                <p>
+                                    <i class="nav-icon fas fa-handshake-angle"></i>
+                                    Nuevos clientes
                                 </p>
                             </a>
                         </li>

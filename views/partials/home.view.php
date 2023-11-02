@@ -87,7 +87,7 @@
 </section><!-- End Services Section -->
 
 <!-- ======= Latest Properties Section ======= -->
-<section class="section-property section-t8">
+<section class="section-property section-t8 mb-3">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -96,7 +96,7 @@
                         <h2 class="title-a">Últimas habitaciones disponibles</h2>
                     </div>
                     <div class="title-link">
-                        <a href="property-grid.html">Ver más
+                        <a href="property-grid.html"><?= __("Ver más") ?>
                             <span class="bi bi-chevron-right"></span>
                         </a>
                     </div>
@@ -124,9 +124,9 @@
                                     </div>
                                     <div class="card-body-a">
                                         <div class="price-box d-flex">
-                                            <span class="price-a">rent | <?= $habitacion['precio'] ?> €</span>
+                                            <span class="price-a"><?= __('Rent') ?> | <?= $habitacion['precio'] ?> €</span>
                                         </div>
-                                        <a href="habitacion/<?= $habitacion['id'] ?>" class="link-a">Click here to view
+                                        <a href="habitacion/<?= $habitacion['id'] ?>" class="link-a"><?= __("Click here to view") ?>
                                             <span class="bi bi-chevron-right"></span>
                                         </a>
                                     </div>

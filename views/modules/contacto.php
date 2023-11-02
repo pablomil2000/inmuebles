@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $datos['asunto'] = Validar::vlt_String($_POST['asunto']);
     $datos['text'] = Validar::vlt_String($_POST['mensaje']);
 
-    var_dump($datos);
+    // var_dump($datos);
 
     $contactoCtrl = new ContactoCtrl('contacto');
 

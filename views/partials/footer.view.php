@@ -56,6 +56,11 @@
 <div id="preloader"></div>
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+<!-- Jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js" integrity="sha512-4GsgvzFFry8SXj8c/VcCjjEZ+du9RZp/627AEQRVLatx6d60AUnUYXg0lGn538p44cgRs5E2GXq+8IOetJ+6ow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="<?= RutaCtrl::url() ?>views/assets/js/mio.js"></script>
+
 <!-- Vendor JS Files -->
 <script src="<?= RutaCtrl::url() ?>views/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="<?= RutaCtrl::url() ?>views/assets/vendor/swiper/swiper-bundle.min.js"></script>

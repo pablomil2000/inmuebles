@@ -35,23 +35,23 @@
             <div class="row">
                 <div class="col-sm-8">
                     <div class="news-img-box">
-                        <img src="<?= $galeriaCtrl->getDest($id) ?>" alt="" class="img-fluid">
+                        <img src="<?= $galeriaCtrl->getDest($id) ?>" alt="" class="img-fluid" id="imagen-principal">
                     </div>
                 </div>
 
-                <div class="col-sm-4">
+                <div class="col-sm-4 miniaturas">
                     <?php
                     foreach ($galery as $key => $image) {
                     ?>
                         <div class="news-img-box mb-1">
-                            <img src="<?= $galeriaCtrl->route . $id . "/" . $image['name'] ?>" alt="" class="img-fluid">
+                            <img src="<?= $galeriaCtrl->route . $id . "/" . $image['name'] ?>" alt="" id="galeria1" class="img-fluid" id="imagen-principal" data-imagen="<?= $galeriaCtrl->route . $id . "/" . $image['name'] ?>">
                         </div>
                     <?php
                     }
                     ?>
 
                 </div>
-                <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                <div class=" col-md-10 offset-md-1 col-lg-8 offset-lg-2">
                     <div class="post-information">
                         <ul class="list-inline text-center color-a">
                             <li class="list-inline-item mr-2">

@@ -1,6 +1,39 @@
+<?php
+// var_dump($_POST['type']);
+if (!isset($_POST['type']) || (isset($_POST['type']) && $_POST['type'] == 'inmuebles')) {
+?>
+    <style>
+        .room {
+            display: none;
+        }
+    </style>
+<?php
+}
+?>
+
 <script>
     const cambiarAction = (f) => {
         document.getElementById("form").action = f.Type.value;
+
+        element1 = document.getElementsByClassName("room");
+
+        if (f.Type.value === "habitaciones") {
+            for (let index = 0; index < element1.length; index++) {
+                const element = element1[index];
+                console.log(element);
+                element.classList.remove("d-none");
+                element.classList.add("d-block");
+            }
+
+            // document.getElementsByClassName("room").classList.add("d-block");
+        } else {
+            for (let index = 0; index < element1.length; index++) {
+                const element = element1[index];
+                element.classList.remove("d-block");
+                element.classList.add("d-none");
+            }
+            // document.getElementsByClassName("room").classList.add("d-none");
+        }
     }
 </script>
 
@@ -27,7 +60,6 @@
                 <label class="pb-2" for="city">Zona</label>
                 <select class="form-control form-select form-control-a" id="city" name="zona">
                     <option value="%">All City</option>
-
                     <?php
                     foreach ($localizaciones as $key => $localizacio) {
                     ?>
@@ -35,11 +67,10 @@
                     <?php
                     }
                     ?>
-
                 </select>
             </div>
         </div>
-        <div class="col-md-6 mb-2">
+        <div class="col-md-6 mb-2 room">
             <div class="form-group mt-3">
                 <label class="pb-2" for="bedrooms">Habitacion doble</label>
                 <select class="form-control form-select form-control-a" id="bedrooms" name="doble">
@@ -49,7 +80,7 @@
                 </select>
             </div>
         </div>
-        <div class="col-md-6 mb-2">
+        <div class="col-md-6 mb-2 room">
             <div class="form-group mt-3">
                 <label class="pb-2" for="terraza">Terraza</label>
                 <select class="form-control form-select form-control-a" id="terraza" name="terraza">
@@ -59,7 +90,7 @@
                 </select>
             </div>
         </div>
-        <div class="col-md-6 mb-2">
+        <div class="col-md-6 mb-2 room">
             <div class="form-group mt-3">
                 <label class="pb-2" for="banio">Baño privado</label>
                 <select class="form-control form-select form-control-a" id="banio" name="banio">
@@ -70,7 +101,7 @@
             </div>
         </div>
 
-        <div class="col-md-6 mb-2">
+        <div class="col-md-6 mb-2 room">
             <div class="form-group mt-3">
                 <label class="pb-2" for="piscina">Piscina</label>
                 <select class="form-control form-select form-control-a" id="piscina" name="piscina">
@@ -81,7 +112,7 @@
             </div>
         </div>
 
-        <div class="col-md-6 mb-2">
+        <div class="col-md-6 mb-2 room">
             <div class="form-group mt-3">
                 <label class="pb-2" for="calefaccion">Calefaccion</label>
                 <select class="form-control form-select form-control-a" id="calefaccion" name="calefaccion">
