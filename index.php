@@ -1,6 +1,6 @@
 <?php
 
-const DOMAIN = "http://localhost/inmuebles/";
+const DOMAIN = "https://326c-90-168-203-200.ngrok-free.app/inmuebles/";
 
 // session_cache_limiter('public');    //Evitar error de "Documento expirado" para formulario enviado
 session_start();

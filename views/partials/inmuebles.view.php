@@ -67,9 +67,9 @@
                       <span class="date-b">
                         <?php
                         if ($inmueble['precio'] != 0) {
-                          echo $inmueble['precio'];
+                          echo "Alquila completo desde: " . $inmueble['precio'] . ' €/mes';
                         } else if (count($precio) && count($precio) == 1) {
-                          echo $precio[0] . ' €/mes';
+                          echo "Alquila por habitaciones desde: " . $precio[0] . ' €/mes';
                         } elseif (count($precio) && count($precio) > 1) {
                           echo 'Desde ' . min($precio) . ' €/mes';
                         }

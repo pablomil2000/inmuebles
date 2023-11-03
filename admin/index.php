@@ -1,6 +1,6 @@
 <?php
 
-const P_DOMAIN = "http://localhost/inmuebles/";
+const P_DOMAIN = "https://326c-90-168-203-200.ngrok-free.app/inmuebles/";
 const DOMAIN = P_DOMAIN . 'admin/';
 
 session_start();
