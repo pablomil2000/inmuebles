@@ -4,10 +4,10 @@
     <div class="swiper-wrapper">
 
         <?php
-        foreach ($habitacionesCarrusel as $key => $habitacion) {
 
-            $inmueble = $inmuebleCtrl->getById(array('id' => $habitacion['inmueble_id']));
-            $localizacion = $localizationCtrl->getById(array('id' => $inmueble[0]['localizacion_id']));
+        foreach ($habitacionesCarrusel as $key => $habitacion) {
+            // var_dump($habitacion);
+            $localizacion = $localizationCtrl->getById(array('id' => $habitacion['zona_id']));
         ?>
             <a href="<?= RutaCtrl::url() ?>habitacion/<?= $habitacion['id'] ?>">
 

@@ -10,13 +10,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // var_dump($_POST);
     $datos['nombre'] = $_POST['nombre'];
-    $datos['inmueble_id'] = $_POST['inmueble_id'];
+    $datos['zona_id'] = $_POST['zona'];
     $datos['precio'] = $_POST['precio'];
     $datos['text_intro'] = $_POST['text_intro'];
     $datos['text'] = $_POST['text'];
     // die();
 
-    $id = $habitacionCtrl->insert(array('nombre', 'inmueble_id', 'precio', 'text_intro', 'text'), $datos);
+    $id = $habitacionCtrl->insert(array('nombre', 'zona_id', 'precio', 'text_intro', 'text'), $datos);
     if (isset($_FILES['img']) && $_FILES['img']['tmp_name'] != '') {
         if (!is_dir("../views/images/habitacion/$id")) {
             mkdir("../views/images/habitacion/$id");
@@ -29,8 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     Funciones::sweetAlert2(array('icon' => 'success', 'title' => 'Habitacion creada', 'text' => ''));
 }
 
-$inmuebles = $inmueblesCtrl->getAll();
+// $inmuebles = $inmueblesCtrl->getAll();
 $habitaciones = $habitacionCtrl->getAll();
-
+$localizaciones = $localizacionCtrl->getAll();
 
 include('views/partials/habitaciones.view.php');

@@ -95,12 +95,13 @@
                     </div>
 
                     <div class="mb-3 col-6">
-                        <label for="password" class="form-label">Inmueble</label>
-                        <select class="form-control" name="inmueble_id">
+                        <label for="zona_id" class="form-label">Inmueble</label>
+                        <select class="form-control" name="zona_id">
                             <?php
-                            foreach ($inmuebles as $key => $inmueble) {
+                            foreach ($localizaciones as $key => $zona) {
+
                             ?>
-                                <option value="<?= $inmueble['id'] ?>" <?= $habitacion[0]['inmueble_id'] == $inmueble['id'] ? 'selected' : '' ?>><?= $inmueble['nombre'] ?></option>
+                                <option value="<?= $zona['id'] ?>" <?= $habitacion[0]['zona_id'] == $zona['id'] ? 'selected' : '' ?>><?= $zona['nombre'] ?></option>
                             <?php
                             }
                             ?>

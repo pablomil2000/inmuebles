@@ -23,6 +23,7 @@ class inmueblesCtrl extends CrudCtrl
         $datos2['nombre'] = $datos['nombre'];
         $datos2['localizacion_id'] = $datos['localizacion_id'];
         $datos2['precio'] = $datos['precio'];
+        $datos2['text'] = $datos['text'];
 
         if (!isset($datos['disponible'])) {
             $datos2['disponible'] = 0;

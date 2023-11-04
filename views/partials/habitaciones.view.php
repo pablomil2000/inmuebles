@@ -6,18 +6,18 @@
             <div class="row">
                 <div class="col-md-12 col-lg-8">
                     <div class="title-single-box">
-                        <h1 class="title-single">Habitaciones</h1>
-                        <span class="color-text-a">Estas son las habitaciones que mejor se adaptan a tus necesidades</span>
+                        <h1 class="title-single"><?= __('Rooms') ?></h1>
+                        <span class="color-text-a"><?= __('These are the properties that best suit your needs') ?></span>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-4">
                     <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="<?= DOMAIN ?>home">Home</a>
+                                <a href="<?= RutaCtrl::url('home') ?>">Home</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                Habitaciones
+                                <?= __('Rooms') ?>
                             </li>
                         </ol>
                     </nav>
@@ -33,10 +33,7 @@
 
                 <?php
                 foreach ($habitaciones as $key => $habitacion) {
-
-                    $inmueble = $inmuebleCtrl->getById(array('id' => $habitacion['inmueble_id']));
-                    $zona = $localizationCtrl->getById(array('id' => $inmueble[0]['localizacion_id']));
-
+                    $zona = $localizationCtrl->getById(array('id' => $habitacion['zona_id']));
                 ?>
                     <div class="col-md-4">
                         <div class="card-box-b <?= $habitacion['disponible'] ? 'card-shadow' : 'card-shadow2' ?> news-box">

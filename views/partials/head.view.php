@@ -3,7 +3,7 @@
     <!--/ Form Search Star /-->
     <div class="box-collapse">
         <div class="title-box-d">
-            <h3 class="title-d">Buscar...</h3>
+            <h3 class="title-d"><?= __('Search') ?></h3>
         </div>
         <span class="close-box-collapse right-boxed bi bi-x"></span>
         <div class="box-collapse-wrap form">
@@ -53,19 +53,19 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="<?= RutaCtrl::url('contacto') ?>"><?= __('Ask for information') ?></a></li>
-                            <li><a class="dropdown-item" href="<?= RutaCtrl::url('hazte-cliente') ?>"><?= __('Hazte cliente') ?></a></li>
+                            <li><a class="dropdown-item" href="<?= RutaCtrl::url('alquila-tu-propiedad') ?>"><?= __('Rent your property') ?></a></li>
                         </ul>
                     </li>
 
                 </ul>
                 <li class="nav-item d-flex d-xl-none">
-                    <a class="nav-link <?= $_SESSION['lang'] == 'es' ? 'active' : '' ?>" href="<?= RutaCtrl::url() ?>?lang=es"><img src="<?= RutaCtrl::url("views/images/png/002-spain.png") ?>" alt=""></a>
+                    <a class="nav-link <?= $_SESSION['lang'] == 'es' ? 'active' : '' ?>" href="<?= RutaCtrl::url() ?>?lang=es"><img class="bandera-movil  img-fluid" src="<?= RutaCtrl::url("views/images/png/002-spain.png") ?>" alt=""></a>
                 </li>
                 <li class="nav-item d-flex d-xl-none">
-                    <a class="nav-link <?= $_SESSION['lang'] == 'en' ? 'active' : '' ?>" href="<?= RutaCtrl::url() ?>?lang=en"><img src="<?= RutaCtrl::url("views/images/png/003-united-kingdom.png") ?>" alt=""></a>
+                    <a class="nav-link <?= $_SESSION['lang'] == 'en' ? 'active' : '' ?>" href="<?= RutaCtrl::url() ?>?lang=en"><img class="bandera-movil  img-fluid" src="<?= RutaCtrl::url("views/images/png/003-united-kingdom.png") ?>" alt=""></a>
                 </li>
                 <li class="nav-item d-flex d-xl-none">
-                    <a class="nav-link <?= $_SESSION['lang'] == 'ar' ? 'active' : '' ?>" href="<?= RutaCtrl::url() ?>?lang=ar"><img src="<?= RutaCtrl::url("views/images/png/001-saudi-arabia.png") ?>" alt=""></a>
+                    <a class="nav-link <?= $_SESSION['lang'] == 'ar' ? 'active' : '' ?>" href="<?= RutaCtrl::url() ?>?lang=ar"><img class="bandera-movil  img-fluid" src="<?= RutaCtrl::url("views/images/png/001-saudi-arabia.png") ?>" alt=""></a>
                 </li>
             </div>
 
@@ -78,13 +78,13 @@
         </div>
         <ul class="navbar-nav d-none d-xl-flex" style="margin-right: 7vw;">
             <li class="nav-item">
-                <a class="nav-link <?= $_SESSION['lang'] == 'es' ? 'active' : '' ?>" href="<?= RutaCtrl::url() ?>?lang=es"><img src="<?= RutaCtrl::url("views/images/png/002-spain.png") ?>" alt=""></a>
+                <a class="nav-link <?= $_SESSION['lang'] == 'es' ? 'active' : '' ?>" href="<?= RutaCtrl::url() ?>?lang=es"><img class="bandera img-fluid" src="<?= RutaCtrl::url("views/images/png/002-spain.png") ?>" alt=""></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?= $_SESSION['lang'] == 'en' ? 'active' : '' ?>" href="<?= RutaCtrl::url() ?>?lang=en"><img src="<?= RutaCtrl::url("views/images/png/003-united-kingdom.png") ?>" alt=""></a>
+                <a class="nav-link <?= $_SESSION['lang'] == 'en' ? 'active' : '' ?>" href="<?= RutaCtrl::url() ?>?lang=en"><img class="bandera img-fluid" src="<?= RutaCtrl::url("views/images/png/003-united-kingdom.png") ?>" alt=""></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?= $_SESSION['lang'] == 'ar' ? 'active' : '' ?>" href="<?= RutaCtrl::url() ?>?lang=ar"><img src="<?= RutaCtrl::url("views/images/png/001-saudi-arabia.png") ?>" alt=""></a>
+                <a class="nav-link <?= $_SESSION['lang'] == 'ar' ? 'active' : '' ?>" href="<?= RutaCtrl::url() ?>?lang=ar"><img class="bandera img-fluid" src="<?= RutaCtrl::url("views/images/png/001-saudi-arabia.png") ?>" alt=""></a>
             </li>
         </ul>
 

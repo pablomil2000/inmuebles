@@ -21,5 +21,4 @@ $habitaciones = $habitacionCtrl->getById(array('id' => $id));
 
 
 
-
 include('views/partials/edithabitaciones.view.php');

@@ -2193,3 +2193,11 @@ footer .copyright-footer {
 footer .credits {
   font-size: 14px;
 }
+
+.bandera {
+  width: 2vw;
+}
+
+.bandera-movil {
+  width: 7vw;
+}

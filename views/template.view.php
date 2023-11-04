@@ -7,7 +7,7 @@ include('modules/head.php');
 
 <?php
 //Controlador de navegacion
-PlantillaCtr::whiteList('home', 'inmuebles', 'login', 'inmueble', 'habitaciones', 'habitacion', 'contacto', 'hazte-cliente');
+PlantillaCtr::whiteList('home', 'inmuebles', 'login', 'inmueble', 'habitaciones', 'habitacion', 'contacto', 'alquila-tu-propiedad');
 ?>
 
 <!-- Footer Section Begin -->

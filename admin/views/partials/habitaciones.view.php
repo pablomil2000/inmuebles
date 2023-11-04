@@ -35,7 +35,6 @@
                             <th>Nombre</th>
                             <th>Imagen</th>
                             <th>Precio</th>
-                            <th>Inmueble</th>
                             <th>Zona</th>
                             <th>Disponible</th>
                             <th>Acciones</th>
@@ -50,16 +49,9 @@
                                 <td><?= $habitacion['nombre'] ?></td>
                                 <td><img src="<?= $galeriaCtrl->getDest($habitacion['id']) ?>" alt="<?= $habitacion['nombre'] ?>" height="150px"></td>
                                 <td><?= $habitacion['precio'] ?> €</td>
-                                <td class="justify-content-center">
-                                    <?php
-                                    $inmueble = $inmueblesCtrl->getById(array('id' => $habitacion['inmueble_id']));
-                                    ?>
-                                    <p class="row justify-content-center"><?= $inmueble[0]['nombre'] ?></p>
-                                    <p><img src="../views/images/inmuebles/<?= $inmueble[0]['imagen'] ?>" alt="<?= $inmueble[0]['nombre'] ?>" height="150px"></p>
-                                </td>
                                 <td>
                                     <?php
-                                    $localizacion = $localizacionCtrl->getById(array('id' => $inmueble[0]['localizacion_id']));
+                                    $localizacion = $localizacionCtrl->getById(array('id' => $habitacion['zona_id']));
                                     ?>
                                     <p class="row"><?= $localizacion[0]['nombre'] ?></p>
                                 </td>
@@ -78,7 +70,7 @@
                                 </td>
                                 <td>
                                     <a href="edithabitaciones/<?= $habitacion['id'] ?>"><i class="fa-solid fa-pencil"></i></a>
-                                    <a class="text-danger" href="deletehabitaciones/<?= $habitacion['id'] ?>"><i class="fa-solid fa-trash"></i></a>
+                                    <a class="text-danger" href="<?= RutaCtrl::url("deletehabitaciones/" . $habitacion['id']) ?>"><i class="fa-solid fa-trash"></i></a>
                                 </td>
                             </tr>
                         <?php
@@ -135,12 +127,12 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="password" class="form-label">Inmueble</label>
-                        <select class="form-control" name="inmueble_id">
+                        <label for="zona" class="form-label">Zona</label>
+                        <select class="form-control" name="zona">
                             <?php
-                            foreach ($inmuebles as $key => $inmueble) {
+                            foreach ($localizaciones as $key => $zona) {
                             ?>
-                                <option value="<?= $inmueble['id'] ?>"><?= $inmueble['nombre'] ?></option>
+                                <option value="<?= $zona['id'] ?>"><?= $zona['nombre'] ?></option>
                             <?php
                             }
                             ?>

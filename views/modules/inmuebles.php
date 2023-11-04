@@ -2,7 +2,6 @@
 
 $inmuebleCtrl = new InmuebleCtrl('inmuebles');
 $localizationCtrl = new LocalizacionCtrl('localizacion');
-
 $habitacionesCtrl = new habitacionCtrl('habitaciones');
 
 $sql = 'SELECT i.* FROM `inmuebles` i LEFT JOIN habitaciones h ON i.id LIKE h.inmueble_id ';
@@ -26,8 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 $sql .= ' GROUP BY i.id';
-$inmuebles = $inmuebleCtrl->raw($sql)->fetchAll();
-
+// $inmuebles = $inmuebleCtrl->raw($sql)->fetchAll();
+$inmuebles = $inmuebleCtrl->getAll();
 // var_dump($sql);
 // var_dump($habitaciones);
 

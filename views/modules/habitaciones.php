@@ -6,7 +6,7 @@ $localizationCtrl = new LocalizacionCtrl('localizacion');
 $galeriaCtrl = new GaleriaCtrl('galeria');
 // $habitaciones = $habitacionesCtrl->getAll();
 
-$sql = 'SELECT h.* FROM `inmuebles` i JOIN habitaciones h ON i.id LIKE h.inmueble_id ';
+$sql = 'SELECT * FROM habitaciones ';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql .= ' WHERE ';
@@ -41,8 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 // $sql .= ' GROUP BY i.id';
-// var_dump($sql);
+var_dump($sql);
 $habitaciones = $habitacionesCtrl->raw($sql)->fetchAll();
-
+// $habitaciones = $habitacionesCtrl->getAll();
 
 include('views/partials/habitaciones.view.php');

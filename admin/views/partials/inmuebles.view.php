@@ -50,7 +50,7 @@
                                     <img src="<?= RutaCtrl::url2() ?>views/images/inmuebles/<?= $inmueble['imagen'] ?>" alt="<?= $inmueble['nombre'] ?>" height="150px">
                                 </td>
                                 <td><?= $localizacionesCtrl->getById(array('id' => $inmueble['localizacion_id']))[0]['nombre'] ?></td>
-                                <td><?= $inmueble['precio'] == 0 ? 'Alquilar por habitacion' : $inmueble['precio'] ?></td>
+                                <td><?= $inmueble['precio'] ?> €/mes</td>
                                 <td>
                                     <?php
                                     if ($inmueble['disponible']) {
@@ -109,7 +109,6 @@
                     <div class="mb-3">
                         <label for="precio" class="form-label">Precio</label>
                         <input type="number" min="0" class="form-control" id="precio" name="precio" value="">
-                        <div id="precio" class="form-text">Si el piso no se alquila completo, dejar vacio.</div>
                     </div>
 
                     <div class="mb-3">

@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-12 col-lg-8">
                     <div class="title-single-box">
-                        <h1 class="title-single"><?= __('Become a client') ?></h1>
+                        <h1 class="title-single"><?= __('Rent your property') ?></h1>
                         <span class="color-text-a"><?= __("Do you have apartments and don't know how to rent them? <b>Work with us</b>") ?></span>
                     </div>
                 </div>
@@ -17,7 +17,7 @@
                                 <a href="home"><?= __('Home') ?></a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                <a href="habitaciones"><?= __('Become a client') ?></a>
+                                <a href="habitaciones"><?= __('Rent your property') ?></a>
                             </li>
                         </ol>
                     </nav>

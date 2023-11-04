@@ -34,32 +34,52 @@
                     <div class="mb-3 col-6">
                         <label for="precio" class="form-label">Precio</label>
                         <input type="number" min="0" class="form-control" id="precio" name="precio" value="<?= $inmuebles[0]['precio'] ?>">
-                        <div id="precio" class="form-text">Si el piso no se alquila completo, dejar vacio.</div>
-                    </div>
-
-                    <div class="mb-3 col-8">
-                        <label for="precio" class="form-label">Texto</label>
-                        <textarea name="text" class="form-control" id="summernote" cols="30" rows="10"><?= $inmuebles[0]['text'] ?></textarea>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="Localizacion" class="form-label">Localizacion</label>
-                        <select class="form-control" aria-label="Default select example" name="localizacion_id" id="Localizacion">
-                            <?php
-                            foreach ($localizaciones as $key => $localizacion) {
-                            ?>
-                                <option value="<?= $localizacion['id'] ?>" <?= $inmuebles[0]['localizacion_id'] == $localizacion['id'] ? 'selected' : '' ?>><?= $localizacion['nombre'] ?></option>
-                            <?php
-                            }
-                            ?>
-                        </select>
+                        <!-- <div id="precio" class="form-text">Si el piso no se alquila completo, dejar vacio.</div> -->
                     </div>
 
                     <div class="mb-3 col-6">
-                        <label for="password" class="form-label">¿Disponible?</label>
-                        <input name="disponible" <?= $inmuebles[0]['disponible'] ? 'checked' : '' ?> type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
-                        <label class="btn btn-outline-success" for="btn-check-outlined">Disponible</label><br>
+                        <label for="precio" class="form-label">Texto</label>
+                        <textarea name="text" class="form-control" id="summernote" cols="30" rows="10"><?= $inmuebles[0]['text'] ?></textarea>
                     </div>
+                    <div class="mb-3 col-6">
+                        <label for="precio" class="form-label">Características</label>
+                        <ul class="form-check form-switch">
+
+                            <?php
+                            foreach ($caracts as $key => $caract) {
+                                $result = $caractPropiedadCtrl->getByid(array('caracteristica_id' => $caract['id'], "inmuble_id" => $id));
+                            ?>
+                                <li>
+                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" <?= $result[0]['value'] ? 'checked' : '' ?> name="caract-<?= $caract['id'] ?>">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault"><?= $caract['nombre'] ?></label>
+                                </li>
+                            <?php
+                            }
+                            ?>
+
+                        </ul>
+
+                        <div class="mb-3 col-6">
+                            <label for="disponible" class="form-label">¿Disponible?</label>
+                            <input name="disponible" <?= $inmuebles[0]['disponible'] ? 'checked' : '' ?> type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+                            <label class="btn btn-outline-success" for="btn-check-outlined">Disponible</label><br>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Localizacion" class="form-label">Localizacion</label>
+                            <select class="form-control" aria-label="Default select example" name="localizacion_id" id="Localizacion">
+                                <?php
+                                foreach ($localizaciones as $key => $localizacion) {
+                                ?>
+                                    <option value="<?= $localizacion['id'] ?>" <?= $inmuebles[0]['localizacion_id'] == $localizacion['id'] ? 'selected' : '' ?>><?= $localizacion['nombre'] ?></option>
+                                <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+
+
+
 
                     <div class="mb-3">
                         <input class="form-control" type="file" name="img" id="">
@@ -69,28 +89,6 @@
 
             </div>
             <!-- /.card-body -->
-            <div class="card-footer row">
-                <!-- Footer -->
-                <?php
-
-                foreach ($habitaciones as $key => $habitacion) {
-                ?>
-                    <div class="card col-3 m-3 p-2">
-                        <img class="card-img-top" src="<?= $galeryCtrl->getDest($habitacion['id']) ?>" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title"><?= $habitacion['nombre'] ?></h5>
-                            <p class="card-text"><?= $habitacion['text_intro'] ?></p>
-                            <a href="<?= DOMAIN ?>edithabitaciones/<?= $habitacion['id'] ?>" class="btn btn-outline-primary">Ver mas <i class="fa-solid fa-pencil"></i></a>
-
-                        </div>
-                    </div>
-                <?php
-                }
-                ?>
-
-
-            </div>
-            <!-- /.card-footer-->
         </div>
         <!-- /.card -->
 

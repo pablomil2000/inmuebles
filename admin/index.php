@@ -1,6 +1,6 @@
 <?php
 
-const P_DOMAIN = "https://326c-90-168-203-200.ngrok-free.app/inmuebles/";
+const P_DOMAIN = "http://localhost/inmuebles/";
 const DOMAIN = P_DOMAIN . 'admin/';
 
 session_start();
@@ -19,6 +19,8 @@ require_once('controllers/inmueble.controller.php');
 require_once('controllers/habitaciones.controller.php');
 require_once('controllers/galeria.controller.php');
 require_once('controllers/contacto.controller.php');
+require_once('controllers/caracteristicas.controller.php');
+require_once('controllers/caracteristicas-propiedad.controller.php');
 
 
 //? Modelos

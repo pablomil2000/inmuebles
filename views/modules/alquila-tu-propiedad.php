@@ -4,6 +4,8 @@
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+    $error = 1;
+
     $datos['nombre'] = Validar::vlt_String($_POST['nombre']);
     $datos['apellido'] = Validar::vlt_String($_POST['apellido']);
     $datos['email'] = Validar::vlt_Email($_POST['email']);
@@ -11,11 +13,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $datos['asunto'] = Validar::vlt_String($_POST['asunto']);
     $datos['text'] = Validar::vlt_String($_POST['mensaje']);
 
-    var_dump($datos);
+    if ($datos['nombre'] && $datos['apellidos'] && $datos['email'] && $datos['tel']) {
+        $error = 0;
+    }
+
+    // var_dump($datos);
 
     $contactoCtrl = new ContactoCtrl('newclient');
 
-    if ($contactoCtrl->insert(
+    if ($error == 0 && $contactoCtrl->insert(
         array(
             'nombre',
             'apellido',
@@ -38,4 +44,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-include('views/partials/hazte-cliente.view.php');
+include('views/partials/alquila-tu-propiedad.view.php');

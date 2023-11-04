@@ -97,7 +97,6 @@ class CrudMdl
     static public function update2($tabla, $datos, $condiciones)
     {
         // var_dump($datos);
-
         $c = Conexion::conectar();
         $sql = "UPDATE $tabla SET ";
 
@@ -109,6 +108,8 @@ class CrudMdl
         $sql = rtrim($sql, ", ") . " ";
 
         $sql .= "WHERE $condiciones";
+
+        // var_dump($sql);
         return $c->exec($sql);
     }
 

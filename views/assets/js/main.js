@@ -1,10 +1,3 @@
-/**
-* Template Name: EstateAgency
-* Updated: Jul 27 2023 with Bootstrap v5.3.1
-* Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 (function () {
   "use strict";
 
@@ -106,7 +99,7 @@
     speed: 600,
     loop: true,
     autoplay: {
-      delay: 2000,
+      delay: 4000,
       disableOnInteraction: false
     },
     slidesPerView: 'auto',

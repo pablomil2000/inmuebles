@@ -3,10 +3,9 @@
 $id = explode("/", $_GET["url"])[1];
 
 $habitacionCtrl = new habitacionCtrl('habitaciones');
-$inmueblesCtrl = new inmueblesCtrl('inmuebles');
 $galeriaCtrl = new galeriaCtrl('galeria');
 $Funciones = new Funciones();
-
+$localizacionesCtrl = new localizacionesCtrl('localizacion');
 
 
 
@@ -26,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $datos['piso'] = Validar::vlt_Int('piso');
     $datos['mixto'] = Validar::vlt_checkBox('mixto');
 
-    $datos['inmueble_id'] = $_POST['inmueble_id'];
+    $datos['zona_id'] = $_POST['zona_id'];
 
     $habitacionCtrl->update(
         array(
@@ -35,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             'text' => $datos['text'],
             'precio' => $datos['precio'],
             'disponible' => $datos['disponible'],
-            'inmueble_id' => $datos['inmueble_id'],
+            'zona_id' => $datos['zona_id'],
             'doble' => $datos['doble'],
             'banio' => $datos['banio'],
             'terraza' => $datos['terraza'],
@@ -64,9 +63,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 $habitacion = $habitacionCtrl->getById(array('id' => $id));
-$inmuebles = $inmueblesCtrl->getAll();
 $galerias = $galeriaCtrl->getById(array('habitacion_id' => $id));
-
+$localizaciones = $localizacionesCtrl->getAll();
 
 $habitacion = $habitacionCtrl->getById(array('id' => $id));
 

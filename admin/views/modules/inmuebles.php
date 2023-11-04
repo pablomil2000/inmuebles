@@ -4,12 +4,19 @@ $inmueblesCtrl = new inmueblesCtrl('inmuebles');
 $localizacionesCtrl = new localizacionesCtrl('localizacion');
 $localizaciones = $localizacionesCtrl->getAll();
 
+$caractCtrl = new caractCtrl('caracteristicas');
+$caractPropiedadCtrl = new caractpropiedadCtrl('caracteristicas_inmueble');
+$caracts = $caractCtrl->getById(array('piso' => 1));
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $inmueblesCtrl->insertImg(array('nombre', 'precio', 'text', 'localizacion_id', 'imagen'), $_POST);
+    $id = $inmueblesCtrl->insertImg(array('nombre', 'precio', 'text', 'localizacion_id', 'imagen'), $_POST);
+    foreach ($caracts as $key => $caract) {
+        $caractPropiedadCtrl->insert(array('caracteristica_id', 'inmuble_id'), array($caract['id'], $id));
+    }
 }
 
 
-$inmuebles = $inmueblesCtrl->raw("SELECT i.* FROM `inmuebles` i LEFT JOIN habitaciones h ON i.id LIKE h.inmueble_id WHERE i.nombre LIKE '%%' AND localizacion_id LIKE '%' GROUP BY i.id;")->fetchAll();
+$inmuebles = $inmueblesCtrl->getAll();
 
 
 

@@ -6,18 +6,18 @@
       <div class="row">
         <div class="col-md-12 col-lg-8">
           <div class="title-single-box">
-            <h1 class="title-single">Inmuebles</h1>
-            <span class="color-text-a">Estos son los inmuebles que mejor se adaptan a tus necesidades</span>
+            <h1 class="title-single"><?= __('Apartment') ?></h1>
+            <span class="color-text-a"><?= __('These are the properties that best suit your needs') ?></span>
           </div>
         </div>
         <div class="col-md-12 col-lg-4">
           <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="home">Home</a>
+                <a href="home"><?= __('Home') ?></a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
-                Inmuebles
+                <?= __('Apartment') ?>
               </li>
             </ol>
           </nav>
@@ -35,18 +35,12 @@
         if (count($inmuebles)) {
           foreach ($inmuebles as $key => $inmueble) {
             $precio = array();
-
-            $habitaciones = $habitacionesCtrl->getById(array('inmueble_id' => $inmueble['id']));
-
             // var_dump($habitaciones);
-            foreach ($habitaciones as $key => $habitacion) {
-              $precio[] = $habitacion['precio'];
-            }
         ?>
             <div class="col-md-4">
               <div class="card-box-b card-shadow news-box">
                 <div class="img-box-b" style="height: 19vh;">
-                  <img src="<?= DOMAIN ?>views/images/<?= $inmueble['imagen'] !== 'default.png' ? "inmuebles/" . $inmueble['imagen'] : $inmueble['imagen'] ?>" alt="" class="img-b img-fluid" height="100%">
+                  <img src="<?= RutaCtrl::url() ?>views/images/<?= $inmueble['imagen'] !== 'default.png' ? "inmuebles/" . $inmueble['imagen'] : $inmueble['imagen'] ?>" alt="" class="img-b img-fluid" height="100%">
                 </div>
                 <div class="card-overlay">
                   <div class="card-header-b">
@@ -55,7 +49,7 @@
                     </div>
                     <div class="card-title-b">
                       <h2 class="title-2">
-                        <a href="<?= DOMAIN ?>inmueble/<?= $inmueble['id'] ?>">
+                        <a href="<?= RutaCtrl::url() ?>inmueble/<?= $inmueble['id'] ?>">
                           <?= $inmueble['nombre'] ?>
                         </a>
                       </h2>
@@ -65,16 +59,7 @@
                     </div>
                     <div class="card-date">
                       <span class="date-b">
-                        <?php
-                        if ($inmueble['precio'] != 0) {
-                          echo "Alquila completo desde: " . $inmueble['precio'] . ' €/mes';
-                        } else if (count($precio) && count($precio) == 1) {
-                          echo "Alquila por habitaciones desde: " . $precio[0] . ' €/mes';
-                        } elseif (count($precio) && count($precio) > 1) {
-                          echo 'Desde ' . min($precio) . ' €/mes';
-                        }
-
-                        ?>
+                        <?= $inmueble['precio'] ?>€/mes
                       </span>
                     </div>
                   </div>
@@ -85,7 +70,7 @@
           }
         } else {
           ?>
-          <h3>No hay inmuebles disponibles</h3>
+          <h3><?= __('There are no properties available') ?></h3>
         <?php
         }
         ?>

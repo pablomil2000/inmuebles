@@ -45,7 +45,7 @@
                 <div class="copyright-footer">
                     <p class="copyright color-text-a">
                         &copy; Developed
-                        <span class="color-a">Pablo Martín López</span>
+                        <a href="https://github.com/pablomil2000/"><span class="color-a">Pablo Martín López</span></a>
                     </p>
                 </div>
             </div>
