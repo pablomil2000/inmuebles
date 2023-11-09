@@ -132,7 +132,7 @@
                         </select>
                     </div>
                     <div class="mb-3">
-                        <input class="form-control" type="file" name="img" id="">
+                        <!-- <input class="form-control" type="file" name="img" id=""> -->
                     </div>
                     <button type="submit" class="btn btn-primary">Crear inmueble</button>
                 </form>

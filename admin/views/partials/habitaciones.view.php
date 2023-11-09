@@ -127,6 +127,21 @@
                     </div>
 
                     <div class="mb-3">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Planta</label>
+                        <select name="piso" class="form-select">
+                            <option value="0">Bajo</option>
+                            <?php
+                            for ($i = 1; $i <= 15; $i++) {
+                            ?>
+                                <option value="<?= $i ?>"><?= $i ?></option>
+                            <?php
+                            }
+                            ?>
+                            <option value="999">Ultima planta</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
                         <label for="zona" class="form-label">Zona</label>
                         <select class="form-control" name="zona">
                             <?php

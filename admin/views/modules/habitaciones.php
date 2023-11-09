@@ -14,9 +14,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $datos['precio'] = $_POST['precio'];
     $datos['text_intro'] = $_POST['text_intro'];
     $datos['text'] = $_POST['text'];
+    $datos['piso'] = $_POST['piso'];
     // die();
 
-    $id = $habitacionCtrl->insert(array('nombre', 'zona_id', 'precio', 'text_intro', 'text'), $datos);
+    $id = $habitacionCtrl->insert(array('nombre', 'zona_id', 'precio', 'text_intro', 'text', 'piso'), $datos);
     if (isset($_FILES['img']) && $_FILES['img']['tmp_name'] != '') {
         if (!is_dir("../views/images/habitacion/$id")) {
             mkdir("../views/images/habitacion/$id");

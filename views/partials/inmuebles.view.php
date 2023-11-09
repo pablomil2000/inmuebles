@@ -39,8 +39,8 @@
         ?>
             <div class="col-md-4">
               <div class="card-box-b card-shadow news-box">
-                <div class="img-box-b" style="height: 19vh;">
-                  <img src="<?= RutaCtrl::url() ?>views/images/<?= $inmueble['imagen'] !== 'default.png' ? "inmuebles/" . $inmueble['imagen'] : $inmueble['imagen'] ?>" alt="" class="img-b img-fluid" height="100%">
+                <div class="img-box-b" style="height: 25vh;">
+                  <img src="<?= $galeriaCtrl->getDest($inmueble['id']) ?>" alt="" class="img-b img-fluid" height="100%">
                 </div>
                 <div class="card-overlay">
                   <div class="card-header-b">

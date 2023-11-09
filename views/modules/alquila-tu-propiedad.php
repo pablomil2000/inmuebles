@@ -2,22 +2,21 @@
 
 // var_dump($_POST);
 
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $error = 1;
 
     $datos['nombre'] = Validar::vlt_String($_POST['nombre']);
-    $datos['apellido'] = Validar::vlt_String($_POST['apellido']);
+    $datos['apellidos'] = Validar::vlt_String($_POST['apellido']);
     $datos['email'] = Validar::vlt_Email($_POST['email']);
-    $datos['tel'] = Validar::vlt_Int($_POST['tel']);
+    $datos['tel'] = $_POST['tel'];
     $datos['asunto'] = Validar::vlt_String($_POST['asunto']);
     $datos['text'] = Validar::vlt_String($_POST['mensaje']);
 
     if ($datos['nombre'] && $datos['apellidos'] && $datos['email'] && $datos['tel']) {
         $error = 0;
     }
-
-    // var_dump($datos);
 
     $contactoCtrl = new ContactoCtrl('newclient');
 
@@ -32,7 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         ),
         $datos
     )) {
-        // Show a success message
         Funciones::sweetAlert2(array('icon' => 'success', 'title' => 'Gracias por tu comentario', 'text' => 'Uno de nuestros agentes se pondra en contacto contigo lo antes posible'));
     } else {
         // Show an error message

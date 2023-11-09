@@ -53,7 +53,8 @@
                         </div>
                         <div class="col-6">
                             <label for="tel" class="form-label"><?= __('Number phone') ?> <span class="text-danger">*</span></label>
-                            <input style="width: 29vw;" class="form-control" id="phone" type="tel" name="tel" pattern="^[0-9]{3}[0-9]{3}[0-9]{3}$" require><br /><br />
+                            <input onkeyup="process()" style="width: 29vw;" class="form-control" id="phone" type="tel" require><br /><br />
+                            <input class="form-control" type="hidden" name="tel" id="phone_real"><br /><br />
                         </div>
                         <hr>
                         <div class="col-12 m-3">
@@ -69,7 +70,7 @@
                             <label for="text"><?= __('Message') ?></label>
                             <textarea class="form-control" id="text" rows="10" name="mensaje"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary m-3"><?= __('Send') ?></button>
+                        <button type="submit" onclick="process()" class="btn btn-primary m-3"><?= __('Send') ?></button>
                     </form>
                 </div>
 
@@ -84,15 +85,21 @@
 </main><!-- End #main -->
 
 <script>
-    const input = document.querySelector("#phone");
-    window.intlTelInput(input, {
-        initialCountry: "auto",
-        geoIpLookup: callback => {
-            fetch("https://ipapi.co/json")
-                .then(res => res.json())
-                .then(data => callback(data.country_code))
-                .catch(() => callback("us"));
-        },
-        // utilsScript: "/intl-tel-input/js/utils.js?1695806485509" // just for formatting/placeholders etc
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        initialCountry: "es",
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
     });
+
+    const info = document.querySelector(".alert-info");
+
+    function process() {
+        const phoneNumber = phoneInput;
+
+        console.log(phoneNumber.getSelectedCountryData().dialCode);
+
+
+        let campoMobil = document.getElementById("phone_real");
+        campoMobil.value = "(+" + phoneNumber.getSelectedCountryData().dialCode + ") " + phoneNumber.getNumber();
+    }
 </script>

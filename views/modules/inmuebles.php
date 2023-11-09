@@ -3,6 +3,7 @@
 $inmuebleCtrl = new InmuebleCtrl('inmuebles');
 $localizationCtrl = new LocalizacionCtrl('localizacion');
 $habitacionesCtrl = new habitacionCtrl('habitaciones');
+$galeriaCtrl = new galeria_inmueblesCtrl('galeria_inmuebles');
 
 $sql = 'SELECT i.* FROM `inmuebles` i LEFT JOIN habitaciones h ON i.id LIKE h.inmueble_id ';
 

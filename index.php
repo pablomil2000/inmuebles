@@ -1,6 +1,6 @@
 <?php
 
-const DOMAIN = "http://localhost/inmuebles/";
+const DOMAIN = "http://draw-principle-regarding-kai.trycloudflare.com/inmuebles/";
 
 // session_cache_limiter('public');    //Evitar error de "Documento expirado" para formulario enviado
 session_start();
@@ -24,6 +24,7 @@ require_once('controllers/habitaciones.controller.php');
 require_once('controllers/Inmueble.controller.php');
 require_once('controllers/localizacion.controller.php');
 require_once('controllers/galeria.controller.php');
+require_once('controllers/galeria_inmuebles.controller.php');
 require_once('controllers/contacto.controller.php');
 
 

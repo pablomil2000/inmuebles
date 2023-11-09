@@ -81,8 +81,40 @@
 
 
 
-                    <div class="mb-3">
+                    <div class="mb-3 col-6">
                         <input class="form-control" type="file" name="img" id="">
+                    </div>
+
+                    <div class="mb-3 col-6">
+                        <div class="d-flex">
+                            <?php
+                            foreach ($galerias as $key => $galeria) {
+                            ?>
+                                <div class="card m-3" style="width: 18rem;">
+                                    <img class="card-img-top" src="<?= $galeriaCtrl->getImage($id, $galeria['name']) ?>" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            <?php
+
+                                            if ($galeria['destacada']) {
+                                            ?>
+                                                <i class="fa-solid fa-star text-primary"></i>
+                                            <?php
+                                            } else {
+                                            ?>
+                                                <a href="<?= DOMAIN ?>destacarInmueble/<?= $galeria['id'] ?>"><i class="fa-regular fa-star"></i></a>
+                                            <?php
+                                            }
+                                            ?>
+                                            <a href="<?= DOMAIN ?>deleteimageInmueble/<?= $galeria['id'] ?>"><i class="fa-solid fa-trash"></i></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            <?php
+                            }
+                            ?>
+
+                        </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Actualizar inmueble</button>
                 </form>

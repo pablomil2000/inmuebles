@@ -28,14 +28,14 @@ class Validar
                 return $int;
             }
         }
-        return false;
+        return 0;
     }
     static public function vlt_checkBox($post_Name)
     {
         if (isset($_POST[$post_Name])) {
-            return true;
+            return 1;
         }
 
-        return false;
+        return 0;
     }
 }

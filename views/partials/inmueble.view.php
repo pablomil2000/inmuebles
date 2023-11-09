@@ -31,10 +31,14 @@
     <section class="news-single nav-arrow-b mb-5">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-8">
                     <div class="news-img-box">
                         <img src="<?= RutaCtrl::url() ?>views/images/inmuebles/<?= $inmueble[0]['imagen'] ?>" alt="" class="img-fluid">
                     </div>
+                </div>
+                <div class="col-sm-4 d-flex flex-column ">
+                    <h3>Precio: <?= $inmueble[0]['precio'] ?> €/mes</h3>
+                    <p><?= $inmueble[0]['text'] ?></p>
                 </div>
                 <div class="col-sm-12">
                     <div class="testimonial-text">

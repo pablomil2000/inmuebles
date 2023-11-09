@@ -31,105 +31,61 @@
         <div class="container">
             <div class="row">
                 <!-- ======= Services Section ======= -->
-                <section class="section-services section-t8">
+                <section class="news-single nav-arrow-b">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-4">
-                                <div class="card-box-c foo">
-                                    <div class="card-header-c d-flex">
-                                        <div class="card-box-ico">
-                                            <span class="bi bi-telephone"></span>
-                                        </div>
-                                        <div class="card-title-c align-self-center">
-                                            <h2 class="title-c"><?= __('Movil') ?></h2>
-                                        </div>
+                            <div class="col-sm-12">
+                                <form class="row" action="" method="POST">
+                                    <div class="col-12 m-3">
+                                        <h3><?= __('Contact Form') ?></h3>
+                                        <p><?= __('Fill in this information so we can contact you') ?></p>
+                                        <h4><?= __('Contact information') ?></h4>
                                     </div>
-                                    <div class="card-body-c">
-                                        <p class="content-c">
-                                            <!-- Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                            convallis a pellentesque
-                            nec, egestas non nisi. -->
-                                        </p>
+
+                                    <div class="col-6">
+                                        <label for="nombre" class="form-label"><?= __('Name') ?> <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="nombre" name="nombre" pattern="^[A-Za-z\s]+$" required><br /><br />
                                     </div>
-                                    <div class="card-footer-c">
-                                        <!-- <a href="#" class="link-c link-icon">Read more
-                            <span class="bi bi-chevron-right"></span>
-                        </a> -->
+
+                                    <div class="col-6">
+                                        <label for="apellido" class="form-label"><?= __('Last name') ?> <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="tel" id="apellido" name="apellido" pattern="^[A-Za-z\s]+$" required><br /><br />
                                     </div>
-                                </div>
+
+                                    <div class="col-6">
+                                        <label for="email" class="form-label"><?= __('Email') ?> <span class="text-danger">*</span></label>
+                                        <input class="form-control" id="email" type="email" name="email" require>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="tel" class="form-label"><?= __('Number phone') ?> <span class="text-danger">*</span></label>
+                                        <input onkeyup="process()" style="width: 29vw;" class="form-control" id="phone" type="tel" require><br /><br />
+                                        <input class="form-control" type="hidden" name="tel" id="phone_real"><br /><br />
+                                    </div>
+                                    <hr>
+                                    <div class="col-12 m-3">
+                                        <h4><?= __('How can we help?') ?></h4>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="asunto"><?= __('Affair') ?></label>
+                                        <input class="form-control" id="asunto" type="text" name="asunto"><br /><br />
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="text"><?= __('Message') ?></label>
+                                        <textarea class="form-control" id="text" rows="10" name="mensaje"></textarea>
+                                    </div>
+                                    <button type="submit" onclick="process()" class="btn btn-primary m-3"><?= __('Send') ?></button>
+                                </form>
                             </div>
-                            <div class="col-md-4">
-                                <div class="card-box-c foo">
-                                    <div class="card-header-c d-flex">
-                                        <div class="card-box-ico">
-                                            <span class="bi bi-info-circle"></span>
-                                        </div>
-                                        <div class="card-title-c align-self-center">
-                                            <h2 class="title-c"><?= __('Help') ?></h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card-box-c foo">
-                                    <div class="card-header-c d-flex">
-                                        <div class="card-box-ico">
-                                            <span class="bi bi-envelope"></span>
-                                        </div>
-                                        <div class="card-title-c align-self-center">
-                                            <h2 class="title-c"><?= __('Email') ?></h2>
-                                        </div>
-                                    </div>
-                                </div>
+
+
+                            <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+
                             </div>
                         </div>
                     </div>
-                </section><!-- End Services Section -->
-
-                <div class="col-sm-12">
-                    <form class="row" action="" method="POST">
-                        <div class="col-12 m-3">
-                            <h3><?= __('Contact Form') ?></h3>
-                            <p><?= __('Fill in this information so we can contact you') ?></p>
-                            <h4><?= __('Contact information') ?></h4>
-                        </div>
-
-                        <div class="col-6">
-                            <label for="nombre" class="form-label"><?= __('Name') ?> <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text" id="nombre" name="nombre" pattern="^[A-Za-z\s]+$" required><br /><br />
-                        </div>
-
-                        <div class="col-6">
-                            <label for="apellido" class="form-label"><?= __('Last name') ?><span class="text-danger">*</span></label>
-                            <input class="form-control" type="tel" id="apellido" name="apellido" pattern="^[A-Za-z\s]+$" required><br /><br />
-                        </div>
-
-                        <div class="col-6">
-                            <label for="email" class="form-label"><?= __('Email') ?></label>
-                            <input class="form-control" id="email" type="email" name="email">
-                        </div>
-                        <div class="col-6">
-                            <label for="tel" class="form-label"><?= __('Number phone') ?><span class="text-danger">*</span></label>
-                            <input class="form-control" id="tel" type="tel" name="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{3}"><br /><br />
-                        </div>
-                        <hr>
-                        <div class="col-12 m-3">
-                            <h4><?= __('How can we help?') ?></h4>
-                        </div>
-
-                        <div class="col-12">
-                            <label for="asunto"><?= __('Affair') ?></label>
-                            <input class="form-control" id="asunto" type="text" name="asunto"><br /><br />
-                        </div>
-
-                        <div class="col-12">
-                            <label for="text"><?= __('Message') ?></label>
-                            <textarea class="form-control" id="text" rows="10" name="mensaje"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary m-3"><?= __('Send') ?></button>
-                    </form>
-                </div>
-
+                </section>
 
                 <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 
@@ -139,3 +95,24 @@
     </section><!-- End Blog Single-->
 
 </main><!-- End #main -->
+
+<script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        initialCountry: "es",
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+
+    });
+
+    const info = document.querySelector(".alert-info");
+
+    function process() {
+        const phoneNumber = phoneInput;
+
+        console.log(phoneNumber.getSelectedCountryData().dialCode);
+
+
+        let campoMobil = document.getElementById("phone_real");
+        campoMobil.value = "(+" + phoneNumber.getSelectedCountryData().dialCode + ") " + phoneNumber.getNumber();
+    }
+</script>
