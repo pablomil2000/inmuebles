@@ -1,6 +1,6 @@
 <?php
 
-const P_DOMAIN = "http://draw-principle-regarding-kai.trycloudflare.com/inmuebles/";
+const P_DOMAIN = "https://howto-switch-ultimately-grip.trycloudflare.com/inmuebles/";
 const DOMAIN = P_DOMAIN . 'admin/';
 
 session_start();

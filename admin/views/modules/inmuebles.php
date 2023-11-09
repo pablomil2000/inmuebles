@@ -3,7 +3,7 @@
 $inmueblesCtrl = new inmueblesCtrl('inmuebles');
 $localizacionesCtrl = new localizacionesCtrl('localizacion');
 $localizaciones = $localizacionesCtrl->getAll();
-$galeriaCtrl = new galeriaCtrl('galeria_inmuebles');
+$galeriaCtrl = new galeria_inmueblesCtrl('galeria_inmuebles');
 $Funciones = new Funciones();
 
 $caractCtrl = new caractCtrl('caracteristicas');

@@ -47,7 +47,7 @@
                                 <td scope="row"><?= $inmueble['id'] ?></td>
                                 <td><?= $inmueble['nombre'] ?></td>
                                 <td>
-                                    <img src="<?= RutaCtrl::url2() ?>views/images/inmuebles/<?= $inmueble['imagen'] ?>" alt="<?= $inmueble['nombre'] ?>" height="150px">
+                                    <img src="<?= $galeriaCtrl->getDest($inmueble['id']) ?>" alt="<?= $inmueble['nombre'] ?>" height="150px">
                                 </td>
                                 <td><?= $localizacionesCtrl->getById(array('id' => $inmueble['localizacion_id']))[0]['nombre'] ?></td>
                                 <td><?= $inmueble['precio'] ?> €/mes</td>

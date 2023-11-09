@@ -33,17 +33,26 @@
             <div class="row">
                 <div class="col-sm-8">
                     <div class="news-img-box">
-                        <img src="<?= RutaCtrl::url() ?>views/images/inmuebles/<?= $inmueble[0]['imagen'] ?>" alt="" class="img-fluid">
+                        <img src="<?= $galeryCtrl->getDest($id) ?>" alt="" class="img-fluid" id="imagen-principal">
                     </div>
                 </div>
-                <div class="col-sm-4 d-flex flex-column ">
+
+                <div class="col-sm-4 miniaturas mt-2">
+                    <?php
+                    foreach ($galery as $key => $image) {
+                    ?>
+                        <div class="news-img-box mb-1">
+                            <img style="max-width: 15vw;" src="<?= $galeryCtrl->route . $id . "/" . $image['name'] ?>" alt="" id="galeria1" class="img-fluid" id="imagen-principal" data-imagen="<?= $galeryCtrl->route . $id . "/" . $image['name'] ?>">
+                        </div>
+                    <?php
+                    }
+                    ?>
+
+                </div>
+
+                <div class="mt-3 col-sm-12 d-flex flex-column ">
                     <h3>Precio: <?= $inmueble[0]['precio'] ?> €/mes</h3>
                     <p><?= $inmueble[0]['text'] ?></p>
-                </div>
-                <div class="col-sm-12">
-                    <div class="testimonial-text">
-                        <?= $inmueble[0]['text'] ?>
-                    </div>
                 </div>
             </div>
         </div>

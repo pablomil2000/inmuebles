@@ -2201,3 +2201,17 @@ footer .credits {
 .bandera-movil {
   width: 7vw;
 }
+
+.card {
+  border: transparent !important;
+}
+
+#imagen-principal {
+  max-height: 50vh;
+  min-height: 50vh;
+}
+
+.miniaturas {
+  max-height: 50vh;
+  overflow-y: scroll;
+}

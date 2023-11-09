@@ -34,7 +34,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-8">
-                    <div class="news-img-box">
+                    <div class="news-img-box d-none d-sm-block">
                         <img src="<?= $galeriaCtrl->getDest($id) ?>" alt="" class="img-fluid" id="imagen-principal">
                     </div>
                 </div>
@@ -67,7 +67,7 @@
 
                             <div class="d-flex justify-content-around">
                                 <div class="row d-flex justify-content-around">
-                                    <div class="card col-3">
+                                    <div class="card col-3 mt-2">
                                         <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             <?= __('Room type') ?>
                                         </div>
@@ -75,7 +75,7 @@
                                             <li class="list-group-item"><?= $habitacion[0]['doble'] ? __('Double') : __('Single') ?></li>
                                         </ul>
                                     </div>
-                                    <div class="card col-3">
+                                    <div class="card col-3 mt-2">
                                         <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             <?= __('Mixed') ?>
                                         </div>
@@ -83,7 +83,7 @@
                                             <li class="list-group-item"><?= $habitacion[0]['mixto'] ? 'Si' : 'No' ?></li>
                                         </ul>
                                     </div>
-                                    <div class="card col-3">
+                                    <div class="card col-3 mt-2">
                                         <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             <?= __('Plant') ?>
                                         </div>
@@ -107,11 +107,7 @@
                                         </ul>
                                     </div>
 
-
-
-
-
-                                    <div class="card col-3">
+                                    <div class="card col-3 mt-2">
                                         <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             <?= __('Ascensor') ?>
                                         </div>
@@ -122,7 +118,7 @@
                                         </ul>
                                     </div>
 
-                                    <div class="card col-3">
+                                    <div class="card col-3  mt-2">
                                         <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             <?= __("Private bathroom") ?>
                                         </div>
@@ -131,7 +127,7 @@
                                         </ul>
                                     </div>
 
-                                    <div class="card col-3">
+                                    <div class="card col-3 mt-2 ">
                                         <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             <?= __('Pool') ?>
                                         </div>
@@ -142,7 +138,7 @@
 
 
 
-                                    <div class="card col-3">
+                                    <div class="card col-3 mt-2">
                                         <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             <?= __('Terrace') ?>
                                         </div>
@@ -153,7 +149,7 @@
 
 
 
-                                    <div class="card col-3">
+                                    <div class="card col-3 mt-2">
                                         <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             <?= __('Lock') ?>
                                         </div>
@@ -163,7 +159,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="card col-3">
+                                    <div class="card col-3 mt-2">
                                         <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             <?= __('Heating') ?>
                                         </div>
@@ -175,7 +171,7 @@
 
 
 
-                                    <div class="card col-3">
+                                    <div class="card col-3 mt-2">
                                         <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             <?= __('Aire Acondicionado') ?>
                                         </div>
@@ -186,7 +182,7 @@
                                         </ul>
                                     </div>
 
-                                    <div class="card col-3">
+                                    <div class="card col-3 mt-2">
                                         <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             <?= __('Wifi') ?>
                                         </div>
@@ -196,7 +192,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="card col-3">
+                                    <div class="card col-3 mt-2">
                                         <div class="card-header card-head-bg border border-2 border-bottom-0 border-dark">
                                             <?= __('Estancia mínima') ?>
                                         </div>

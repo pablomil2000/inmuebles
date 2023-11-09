@@ -1,6 +1,6 @@
 <?php
 
-const DOMAIN = "http://draw-principle-regarding-kai.trycloudflare.com/inmuebles/";
+const DOMAIN = "https://howto-switch-ultimately-grip.trycloudflare.com/inmuebles/";
 
 // session_cache_limiter('public');    //Evitar error de "Documento expirado" para formulario enviado
 session_start();

@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 $habitacion = $habitacionCtrl->getById(array('id' => $id));
-$galerias = $galeriaCtrl->getById(array('habitacion_id' => $id));
+$galerias = $galeriaCtrl->rawSql("WHERE habitacion_id like $id", " ORDER BY destacada DESC");
 $localizaciones = $localizacionesCtrl->getAll();
 
 $habitacion = $habitacionCtrl->getById(array('id' => $id));

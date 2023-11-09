@@ -7,7 +7,8 @@ $id = explode("/", $_GET["url"])[1];
 
 $inmuebleCtrl = new InmuebleCtrl('inmuebles');
 $localizationCtrl = new LocalizacionCtrl('localizacion');
-$galeryCtrl = new galeriaCtrl('galeria');
+$galeryCtrl = new galeria_inmueblesCtrl('galeria_inmuebles');
+$galery = $galeryCtrl->getById(array('inmueble_id' => $id));
 
 $inmueble = $inmuebleCtrl->getById(array('id' => $id));
 $zona = $localizationCtrl->getById(array('id' => $inmueble[0]['localizacion_id']));
