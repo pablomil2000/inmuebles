@@ -38,7 +38,7 @@
                         <p><b><i class="fa-solid fa-user"></i> Autor:</b> <?= $comentario[0]['nombre'] . ' ' . $comentario[0]['apellido'] ?></p>
                         <p><b><i class="fa-solid fa-envelope"></i> Email:</b> <?= $comentario[0]['email'] ?></p>
                         <p><b><i class="fa-solid fa-phone"></i> Phone:</b> <?= $comentario[0]['tel'] ?></p>
-                        <a href="comentarios">Volver</a>
+                        <a href="<?=RutaCtrl::url('comentarios')?>">Volver</a>
                     </div>
                     <!-- /.card-footer-->
                 </div>

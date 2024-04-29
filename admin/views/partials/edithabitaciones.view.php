@@ -111,7 +111,7 @@
                     <div class="mb-3 col-6">
                         <label for="password" class="form-label">¿Disponible?</label>
                         <input name="disponible" <?= $habitacion[0]['disponible'] ? 'checked' : '' ?> type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
-                        <label class="btn btn-outline-success" for="btn-check-outlined">Disponible</label><br>
+                        <label class="btn btn-outline-success" id="text-buton" for="btn-check-outlined">Disponible</label><br>
                     </div>
                     <div class="mb-3 col-6">
                         <input class="form-control" type="file" name="img" id="">
@@ -162,5 +162,25 @@
     </section>
     <!-- /.content -->
 </div>
+
+<script>
+    //chante text btn-check-outlined and class
+
+    const btnCheck = document.getElementById('btn-check-outlined');
+    const btnCheckLabel = document.querySelector('#text-buton');
+
+    btnCheck.addEventListener('change', () => {
+        if (btnCheck.checked) {
+            btnCheckLabel.textContent = 'Disponible';
+            btnCheckLabel.classList.remove('btn-outline-danger');
+            btnCheckLabel.classList.add('btn-outline-success');
+        } else {
+            btnCheckLabel.textContent = 'No disponible';
+            btnCheckLabel.classList.remove('btn-outline-success');
+            btnCheckLabel.classList.add('btn-outline-danger');
+        }
+    });
+
+</script>
 
 <script src="<?= RutaCtrl::url() ?>views\dist\js\summernotes.js"></script>
