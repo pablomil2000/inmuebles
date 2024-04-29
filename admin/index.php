@@ -1,6 +1,7 @@
 <?php
 
-const P_DOMAIN = "https://howto-switch-ultimately-grip.trycloudflare.com/inmuebles/";
+const P_DOMAIN = "http://localhost/inmuebles/";
+
 const DOMAIN = P_DOMAIN . 'admin/';
 
 session_start();

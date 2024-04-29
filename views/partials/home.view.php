@@ -25,7 +25,7 @@
                                                 <span class="color-b"><?= $habitacion['nombre'] ?></span>
                                             </h1>
                                             <p class="intro-subtitle intro-price">
-                                                <a href="<?= RutaCtrl::url() ?>/habitacion/<?= $habitacion['id'] ?>"><span class="price-a"><?= __('Rent') ?> | <?= $habitacion['precio'] ?> €</span></a>
+                                                <a href="<?= RutaCtrl::url() ?>habitacion/<?= $habitacion['id'] ?>"><span class="price-a"><?= __('Rent') ?> | <?= $habitacion['precio'] ?> €</span></a>
                                             </p>
                                         </div>
                                     </div>
@@ -129,28 +129,6 @@
                                         <a href="habitacion/<?= $habitacion['id'] ?>" class="link-a"><?= __("Click here to view") ?>
                                             <span class="bi bi-chevron-right"></span>
                                         </a>
-                                    </div>
-                                    <div class="card-footer-a">
-                                        <ul class="card-info d-flex justify-content-around">
-                                            <li>
-                                                <h4 class="card-info-title">Area</h4>
-                                                <span>340m
-                                                    <sup>2</sup>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">Beds</h4>
-                                                <span>2</span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">Baths</h4>
-                                                <span>4</span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">Garages</h4>
-                                                <span>1</span>
-                                            </li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>

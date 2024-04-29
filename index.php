@@ -1,6 +1,6 @@
 <?php
 
-const DOMAIN = "https://howto-switch-ultimately-grip.trycloudflare.com/inmuebles/";
+const DOMAIN = "http://localhost/inmuebles/";
 
 // session_cache_limiter('public');    //Evitar error de "Documento expirado" para formulario enviado
 session_start();
@@ -26,6 +26,7 @@ require_once('controllers/localizacion.controller.php');
 require_once('controllers/galeria.controller.php');
 require_once('controllers/galeria_inmuebles.controller.php');
 require_once('controllers/contacto.controller.php');
+require_once('controllers/caracteristicas-propiedad.controller.php');
 
 
 

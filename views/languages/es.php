@@ -12,6 +12,7 @@ $lang = [
 	"Ask for information" => "Pedir información",
 	"About Us" => "Sobre nosotros",
 	"More rooms" => "Más habitaciones",
+	"Click here to view" => "Clic aqui para ver mas",
 
 	//Frases
 	'Get in contact with us' => 'Ponte en contacto con nosotros',
