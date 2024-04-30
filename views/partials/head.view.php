@@ -20,7 +20,6 @@
                 <span></span>
             </button>
 
-
             <h1><a class="navbar-brand text-brand" href="<?= RutaCtrl::url('home') ?>">Alquileres<span class="color-b">Compartidos</span><span class="fs-6 text">.com</span></a></h1>
 
             <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
@@ -69,9 +68,10 @@
                 </li>
             </div>
 
-            <button type="button" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" style="margin-right: 3em;">
+            <button type="button" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" style="margin-right: 3em;" aria-label="Abrir búsqueda" title="Abrir búsqueda">
                 <i class="bi bi-search"></i>
             </button>
+
 
 
 
