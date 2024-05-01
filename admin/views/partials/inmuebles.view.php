@@ -42,34 +42,37 @@
                     <tbody>
                         <?php
                         foreach ($inmuebles as $key => $inmueble) {
-                        ?>
+                            ?>
                             <tr>
                                 <td scope="row"><?= $inmueble['id'] ?></td>
                                 <td><?= $inmueble['nombre'] ?></td>
                                 <td>
-                                    <img src="<?= $galeriaCtrl->getDest($inmueble['id']) ?>" alt="<?= $inmueble['nombre'] ?>" height="150px">
+                                    <img src="<?= RutaCtrl::url2('views/images/inmuebles/' . $inmueble['imagen']) ?>"
+                                        alt="<?= $inmueble['nombre'] ?>" height="150px">
                                 </td>
-                                <td><?= $localizacionesCtrl->getById(array('id' => $inmueble['localizacion_id']))[0]['nombre'] ?></td>
+                                <td><?= $localizacionesCtrl->getById(array('id' => $inmueble['localizacion_id']))[0]['nombre'] ?>
+                                </td>
                                 <td><?= $inmueble['precio'] ?> €/mes</td>
                                 <td>
                                     <?php
                                     if ($inmueble['disponible']) {
-                                    ?>
+                                        ?>
                                         <button type="button" class="btn btn-outline-success">Disponible</button>
-                                    <?php
+                                        <?php
                                     } else {
-                                    ?>
+                                        ?>
                                         <button type="button" class="btn btn-outline-danger">No disponible</button>
-                                    <?php
+                                        <?php
                                     }
                                     ?>
                                 </td>
                                 <td>
                                     <a href="editinmuebles/<?= $inmueble['id'] ?>"><i class="fa-solid fa-pencil"></i></a>
-                                    <a class="text-danger" href="deleteinmuebles/<?= $inmueble['id'] ?>"><i class="fa-solid fa-trash"></i></a>
+                                    <a class="text-danger" href="deleteinmuebles/<?= $inmueble['id'] ?>"><i
+                                            class="fa-solid fa-trash"></i></a>
                                 </td>
                             </tr>
-                        <?php
+                            <?php
                         }
                         ?>
 
@@ -123,9 +126,9 @@
                         <select class="form-control" aria-label="Default select example" name="localizacion_id">
                             <?php
                             foreach ($localizaciones as $key => $localizacion) {
-                            ?>
+                                ?>
                                 <option value="<?= $localizacion['id'] ?>"><?= $localizacion['nombre'] ?></option>
-                            <?php
+                                <?php
                             }
                             ?>
 

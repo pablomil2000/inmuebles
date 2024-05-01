@@ -95,7 +95,7 @@
                     </div>
 
                     <div class="mb-3 col-6">
-                        <label for="zona_id" class="form-label">Inmueble</label>
+                        <label for="zona_id" class="form-label">Zona</label>
                         <select class="form-control" name="zona_id">
                             <?php
                             foreach ($localizaciones as $key => $zona) {

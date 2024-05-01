@@ -3,7 +3,6 @@
 $inmueblesCtrl = new inmueblesCtrl('inmuebles');
 $localizacionesCtrl = new localizacionesCtrl('localizacion');
 $localizaciones = $localizacionesCtrl->getAll();
-$galeriaCtrl = new galeria_inmueblesCtrl('galeria_inmuebles');
 $Funciones = new Funciones();
 
 $caractCtrl = new caractCtrl('caracteristicas');
@@ -34,4 +33,4 @@ $inmuebles = $inmueblesCtrl->getAll();
 
 
 
-include('views/partials/inmuebles.view.php');
+include ('views/partials/inmuebles.view.php');
