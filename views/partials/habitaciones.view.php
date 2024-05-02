@@ -1,4 +1,4 @@
-<main id="main">
+*-<main id="main">
 
     <!-- ======= Intro Single ======= -->
     <section class="intro-single">
@@ -7,14 +7,15 @@
                 <div class="col-md-12 col-lg-8">
                     <div class="title-single-box">
                         <h1 class="title-single"><?= __('Rooms') ?></h1>
-                        <span class="color-text-a"><?= __('These are the properties that best suit your needs') ?></span>
+                        <span
+                            class="color-text-a"><?= __('These are the properties that best suit your needs') ?></span>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-4">
                     <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="<?= RutaCtrl::url('home') ?>">Home</a>
+                                <a href="<?= RutaCtrl::url('home') ?>"><?= __('Home') ?></a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 <?= __('Rooms') ?>
@@ -34,11 +35,12 @@
                 <?php
                 foreach ($habitaciones as $key => $habitacion) {
                     $zona = $localizationCtrl->getById(array('id' => $habitacion['zona_id']));
-                ?>
+                    ?>
                     <div class="col-md-4">
                         <div class="card-box-b <?= $habitacion['disponible'] ? 'card-shadow' : 'card-shadow2' ?> news-box">
                             <div class="img-box-b">
-                                <img src="<?= $galeriaCtrl->getDest($habitacion['id']) ?>" alt="" class="img-b img-fluid" width="100%">
+                                <img src="<?= $galeriaCtrl->getDest($habitacion['id']) ?>" alt="" class="img-b img-fluid"
+                                    width="100%">
                             </div>
                             <div class="card-overlay">
                                 <div class="card-header-b">
@@ -55,19 +57,19 @@
                                             <?= $habitacion['disponible'] ? '' : 'NO DISPONIBLE' ?>
                                         </h4>
                                         <span class="date-b">
-                                            Zona: <?= $zona[0]['nombre'] ?>
+                                            <?= __('Zona') . ': ' . $zona[0]['nombre'] ?>
                                         </span>
                                     </div>
                                     <div class="card-date">
                                         <span class="date-b">
-                                            <?= $habitacion['precio'] ?> €/mes
+                                            <?= $habitacion['precio'] . __('€/mes0') ?>
                                         </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                <?php
+                    <?php
                 }
                 ?>
 
