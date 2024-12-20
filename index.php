@@ -1,6 +1,6 @@
 <?php
 
-const DOMAIN = "https://habbo-inmuebles-demo-78ca7f469cba.herokuapp.com/";
+const DOMAIN = "https://inmuebles-feea46fcd286.herokuapp.com/";
 
 // session_cache_limiter('public');    //Evitar error de "Documento expirado" para formulario enviado
 session_start();
